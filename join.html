@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>join</title>
+	<script src="https://kit.fontawesome.com/12eb31fefd.js" crossorigin="anonymous"></script>
+	<link rel="stylesheet" href="css/style.css">
+	<script defer src="js/custom.js"></script>
+</head>
+<body>
+
+	<header id="header_sub">
+		<div class="inner">
+			<h1>
+				<a href="index.html">SIMU</a>
+			</h1>
+
+			<nav class="menuWeb">
+				<ul class="gnb">
+					<li><a href="department.html">DEPARTMENT</a></li>
+					<li><a href="community.html">COMMUNITY</a></li>
+					<li><a href="gallery.html">GALLERY</a></li>
+					<li><a href="youtube.html">YOUTUBE</a></li>
+					<li><a href="contact.html">CONTACT</a></li>
+				</ul>
+
+				<ul class="util">
+					<li><a href="join.html">Join</a></li>
+					<li><a href="#">Login</a></li>
+					<li><a href="contact.html">Contact</a></li>
+					<li><a href="#">Help</a></li>
+				</ul>
+			</nav>			
+
+			<a href="#" class="btnMo">
+				<span>메뉴호출</span>
+				<!-- <i class="fas fa-bars"></i> -->
+			</a>
+
+			<nav class="menuMo">
+				<h1>
+					<a href="index.html">SIMU</a>
+					<span>UI/UX DEVELOPMENT INSTITUTE</span>
+				</h1>
+
+				<ul id="gnbMo">
+					<li><a href="department.html">DEPARTMENT</a></li>
+					<li><a href="community.html">COMMUNITY</a></li>
+					<li><a href="gallery.html">GALLERY</a></li>
+					<li><a href="youtube.html">YOUTUBE</a></li>
+					<li><a href="contact.html">CONTACT</a></li>
+				</ul>
+			</nav>
+		</div>
+	</header>
+
+	<section class="content join">
+		<div class="sub_visual"></div>
+        <div class="inner">
+            <h1>Join <span>회원가입</span> </h1>
+					
+			<form action="/" method="post">
+				<fieldset>
+					<legend class="h">회원가입 입력 양식폼</legend>
+
+					<h2><label for="terms">Terms & Policy</label></h2>
+					<textarea name="terms" id="terms" cols="30" rows="10">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi a vero corrupti repudiandae totam sit alias quidem eaque molestias ipsum debitis perspiciatis similique nostrum, ut perferendis harum assumenda quo ullam soluta nobis suscipit itaque iusto minima ad. Suscipit voluptas libero maxime nobis magni facilis vero. Deserunt excepturi iure recusandae fugit sequi similique quod animi eveniet amet voluptatum temporibus dolor voluptates sapiente harum, quo et alias nostrum? Cupiditate, reiciendis nemo sunt ipsam officia harum sequi ea, deserunt deleniti consequatur et perspiciatis illum quisquam recusandae voluptatibus necessitatibus corrupti labore aspernatur quo sit voluptate perferendis dolorem fugiat. Veniam qui inventore aperiam ducimus nobis. Deserunt excepturi iure recusandae fugit sequi similique quod animi eveniet amet voluptatum temporibus dolor voluptates sapiente harum, quo et alias nostrum? Cupiditate, reiciendis nemo sunt ipsam officia harum sequi ea, deserunt deleniti consequatur et perspiciatis illum quisquam recusandae voluptatibus necessitatibus corrupti labore aspernatur quo sit voluptate perferendis dolorem fugiat. Veniam qui inventore aperiam ducimus nobis.
+					</textarea>
+
+					<div class="agreement">
+						<input type="checkbox" name="agree" id="agree"><label for="agree">약관에 동의합니다.</label>
+					</div>
+
+					<h2>Member Information</h2>
+					<table summary="회원의 아이디, 비밀번호, 성별, 취미 입력양식폼">
+						<caption class="h">회원정보 입력장식 테이블</caption>
+
+						<tr>
+							<th scope="row"><label for="id">USER ID</label></th>
+							<td><input type="text" name="id" id="id" placeholder="아이디를 입력해 주세요." required></td>
+						</tr>
+						<tr>
+							<th scope="row"><label for="pwd">PASSWORD</label></th>
+							<td><input type="password" name="pwd" id="pwd" placeholder="비밀번호를 입력해 주세요." required></td>
+						</tr>
+						<tr>
+							<th scope="row"><label for="pwd2">RE PASSWORD</label></th>
+							<td><input type="password" name="pwd2" id="pwd2" placeholder="비밀번호를 재입력해 주세요." required></td>
+						</tr>
+						<tr>
+							<th scope="row">HOBBY</th>
+							<td>
+								<label for="reading"><input type="checkbox" name="hobby" id="reading" value="reading">READING</label>
+								<label for="music"><input type="checkbox" name="hobby" id="music" value="music">MUSIC</label>
+								<label for="game"><input type="checkbox" name="hobby" id="game" value="game">GAME</label>
+								<p class="hobbyTxt">취미를 하나이상 선택해주세요.</p>
+							</td>
+						</tr>
+						<tr>
+							<th scope="row">GENDER</th>
+							<td>
+								<label for="male"><input type="radio" name="gender" id="male" value="male">MALE</label>
+								<label for="female"><input type="radio" name="gender" id="female" value="male">FEMALE</label>
+								<p class="genderTxt">성별을 선택해주세요.</p>
+							</td>
+						</tr>
+						<tr>
+							<th scope="row"><label for="email">E-MAIL</label></th>
+							<td>
+								<input type="text" name="email" id="email">
+								<select name="company" id="company">
+									<option value="naver">@naver.com</option>
+									<option value="google">@google.com</option>
+									<option value="nate">@nate.com</option>
+								</select>
+							</td>
+						</tr>
+						<tr>
+							<th scope="row"><label for="comments">COMMENTS</label></th>
+							<td>
+								<textarea name="comments" id="comments" cols="30" rows="10" placeholder="코멘트를 입력해 주세요."></textarea>
+							</td>
+						</tr>
+						<tr>
+							<th colspan="2">
+								<input type="reset" value="cancle">
+								<input type="submit" value="submit">
+							</th>
+						</tr>
+
+
+					</table>
+	
+
+				</fieldset>
+			
+			</form>
+
+        </div>
+    </section>
+
+	<section id="footer_sub">
+		<div class="inner">
+			<h1>SIMU</h1>
+		
+			<ul>
+				<li><a href="#">Policy</a></li>
+				<li><a href="#">Terms</a></li>
+				<li><a href="#">Customer</a></li>
+				<li><a href="#">Contact us</a></li>
+			</ul>
+
+			<address>
+				Address : Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, placeat! <br>
+				TEL : 02-123-456 C.P : 123-456-789
+			</address>
+
+			<p>2021 SIMU &copy; All Right reserved.</p>
+
+			</div>
+		</div>
+	</section>
+
+</body>
+</html>
+

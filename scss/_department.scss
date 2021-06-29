@@ -1,0 +1,101 @@
+@charset "utf-8";
+
+.department { 
+    .sub_visual { 
+        background: bisque;
+    }
+
+    .division{
+        width: 100%;
+        height: 600px;
+        background: url(../img/organization.jpg) no-repeat center/contain;
+
+        .div_tree { 
+            opacity: 0;
+            position: absolute;
+            top: -999999px;
+            transition: all 0.3s;
+
+            //1단계
+            li { 
+                span { 
+                    display: block;
+                    width: 40%;
+                    height: 50px; 
+                    background: #111;
+                    margin-bottom: 20px;
+                    font: bold 13px/50px "arial";
+                    color: #fff;
+                    text-align: center;
+                    border-radius: 25px;
+
+                    &::after { 
+                        content: "";
+                        background: #aaa;
+                        position: absolute;
+                        top: 50px;
+                        left: 50px;
+                        width: 1px;
+                        height: calc( (70px * 15) - 25px);
+                    }
+                }        
+                //2단계
+                ul li { 
+                    span { 
+                        background: #666;
+                        transform: translateX(70px);
+                        
+                        &::before { 
+                            content: "";
+                            height: 1px;
+                            width: 20px;
+                            position: absolute;
+                            top: 50%;
+                            left: -20px;
+                            background: #aaa;
+                        }
+                    }
+                    &:nth-of-type(1) span::after{display: none;}
+                    &:nth-of-type(2) span::after{display: none;}
+                    &:nth-of-type(3) span::after{display: none;}
+                    &:nth-of-type(4) span::after{height: calc(70px * 3 - 25px);}
+                    &:nth-of-type(5) span::after{height: calc(70px * 3 - 25px);}
+                    &:nth-of-type(6) span::after{height: calc(70px * 2 - 25px);}
+                    &:nth-of-type(7) span::after{height: calc(70px * 2 - 25px);}
+                    
+                    //3단계
+                    ul li { 
+                        span {
+                            background: #999;
+                            transform: translateX(140px);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+/* Tablet---------------- */
+@media screen and (max-width:$tablet) {
+    .department { 
+        .division { 
+            height: 60vw;
+        }
+    }
+ }
+
+ /* mobile---------------- */
+@media screen and (max-width:$mobile) {
+    .department { 
+        .division { 
+            height: auto;
+            background: none; 
+
+            .div_tree { 
+                opacity: 1;
+                position: relative;
+                top:0;
+            }
+        }
+    }
+}

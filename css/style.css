@@ -1,0 +1,861 @@
+@charset "UTF-8";
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box; }
+
+ul, ol {
+  list-style: none; }
+
+a {
+  text-decoration: none; }
+
+table, th, td {
+  border-collapse: collapse; }
+
+fieldset {
+  border: none; }
+
+.wrap::after {
+  content: "";
+  display: block;
+  clear: both; }
+
+.h {
+  position: absolute;
+  top: -999999px;
+  opacity: 0; }
+
+input, a, img, span, label, select {
+  vertical-align: middle; }
+
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box; }
+
+ul, ol {
+  list-style: none; }
+
+a {
+  text-decoration: none; }
+
+table, th, td {
+  border-collapse: collapse; }
+
+fieldset {
+  border: none; }
+
+.wrap::after {
+  content: "";
+  display: block;
+  clear: both; }
+
+.h {
+  position: absolute;
+  top: -999999px;
+  opacity: 0; }
+
+input, a, img, span, label, select {
+  vertical-align: middle; }
+
+/* header--------------------------- */
+#header_sub {
+  width: 100%;
+  border-bottom: 1px solid #ddd; }
+  #header_sub .inner {
+    width: 1180px;
+    height: 120px;
+    margin: 0px auto;
+    position: relative; }
+    #header_sub .inner > h1 {
+      position: absolute;
+      left: 0px;
+      bottom: 15px; }
+      #header_sub .inner > h1 a {
+        font: bold 24px/1 "arial";
+        color: #333; }
+    #header_sub .inner .menuWeb .gnb {
+      position: absolute;
+      bottom: 0;
+      right: 0; }
+      #header_sub .inner .menuWeb .gnb::after {
+        content: "";
+        display: block;
+        clear: both; }
+      #header_sub .inner .menuWeb .gnb li {
+        float: left; }
+        #header_sub .inner .menuWeb .gnb li a {
+          display: block;
+          padding: 20px 40px;
+          font: bold 15px/1 "arial";
+          color: #555;
+          transition: all 0.5s; }
+        #header_sub .inner .menuWeb .gnb li:hover a {
+          background: #555;
+          color: #fff; }
+    #header_sub .inner .menuWeb .util {
+      position: absolute;
+      top: 20px;
+      right: 0px; }
+      #header_sub .inner .menuWeb .util::after {
+        content: "";
+        display: block;
+        clear: both; }
+      #header_sub .inner .menuWeb .util li {
+        float: left; }
+        #header_sub .inner .menuWeb .util li a {
+          display: block;
+          font: 12px/1 "arial";
+          color: #999;
+          padding: 0px 10px;
+          border-right: 1px solid #aaa; }
+        #header_sub .inner .menuWeb .util li:last-child a {
+          border-right: none; }
+    #header_sub .inner .btnMo {
+      position: absolute;
+      color: #555;
+      font-size: 30px;
+      right: 30px;
+      top: 50%;
+      transform: translateY(-50%);
+      display: none;
+      width: 20px;
+      height: 20px; }
+      #header_sub .inner .btnMo::before {
+        content: "";
+        display: block;
+        width: 100%;
+        height: 2px;
+        background: #000;
+        position: absolute;
+        top: 0;
+        left: 0;
+        transition: top 0.5s 0s, transform 0.5s 0.5s; }
+      #header_sub .inner .btnMo::after {
+        content: "";
+        display: block;
+        width: 100%;
+        height: 2px;
+        background: #000;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        transition: bottom 0.5s 0s, transform 0.5s 0.5s; }
+      #header_sub .inner .btnMo span {
+        display: block;
+        width: 100%;
+        height: 2px;
+        background: #000;
+        position: absolute;
+        top: 50%;
+        margin-top: -1px;
+        text-indent: -9999px;
+        transition: 0.5s; }
+      #header_sub .inner .btnMo.on::before {
+        top: 50%;
+        margin-top: -1px;
+        transform: rotate(45deg); }
+      #header_sub .inner .btnMo.on::after {
+        bottom: 50%;
+        margin-bottom: -1px;
+        transform: rotate(-45deg); }
+      #header_sub .inner .btnMo.on span {
+        transform: translateX(100%);
+        opacity: 0; }
+    #header_sub .inner .menuMo {
+      width: 270px;
+      height: 100vh;
+      background: rgba(0, 0, 0, 0.8);
+      position: fixed;
+      top: 0;
+      left: -270px;
+      z-index: 10;
+      transition: all 0.5s;
+      padding: 35px 30px;
+      box-sizing: border-box; }
+      #header_sub .inner .menuMo h1 {
+        border-bottom: 1px solid #666;
+        padding-bottom: 30px; }
+        #header_sub .inner .menuMo h1 a {
+          display: block;
+          font: bold 24px/1 "arial";
+          color: #fff;
+          text-align: center; }
+        #header_sub .inner .menuMo h1 span {
+          font-size: 12px;
+          color: #aaa; }
+      #header_sub .inner .menuMo #gnbMo li a {
+        display: block;
+        width: 100%;
+        padding: 20px 0;
+        border-bottom: 1px solid #444;
+        font: bold 14px/1 "arial";
+        color: #888;
+        text-align: center; }
+      #header_sub .inner .menuMo.on {
+        left: 0; }
+
+/* content-------------------------- */
+.content {
+  width: 100%;
+  padding: 0px 0px 100px; }
+  .content .sub_visual {
+    width: 100%;
+    height: 250px;
+    background: #bbb;
+    margin-bottom: 100px; }
+  .content .inner {
+    width: 1180px;
+    margin: 0px auto;
+    min-height: 500px; }
+    .content .inner h1 {
+      font: normal 40px/1 "arial";
+      color: #000;
+      margin-bottom: 60px; }
+      .content .inner h1 span {
+        font: normal 20px/1 "arial";
+        color: #aaa; }
+        .content .inner h1 span::before {
+          content: "/";
+          margin-right: 20px;
+          margin-left: 10px; }
+
+/* footer--------------------------- */
+#footer_sub {
+  width: 100%;
+  padding: 50px 0px;
+  background: #555; }
+  #footer_sub .inner {
+    width: 1180px;
+    margin: 0px auto; }
+    #footer_sub .inner::after {
+      content: "";
+      display: block;
+      clear: both; }
+    #footer_sub .inner h1 {
+      float: left;
+      font: bold 24px/1 "arial";
+      color: #aaa; }
+    #footer_sub .inner ul {
+      float: right; }
+      #footer_sub .inner ul li {
+        float: left;
+        margin-left: 20px; }
+        #footer_sub .inner ul li a {
+          font: 14px/1 "arial";
+          color: #888; }
+    #footer_sub .inner address {
+      width: 100%;
+      float: left;
+      font: 10px/1.3 "arial";
+      color: #999;
+      margin-top: 20px;
+      padding-top: 20px;
+      margin-bottom: 20px;
+      letter-spacing: 1px; }
+    #footer_sub .inner p {
+      width: 100%;
+      float: left;
+      font: 9px/1.3 "arial";
+      color: #888;
+      letter-spacing: 1px; }
+
+/* tablet------------------------------------------ */
+@media screen and (max-width: 1179px) {
+  /* header--------------------------- */
+  #header_sub .inner {
+    width: 100%;
+    height: 100px; }
+    #header_sub .inner > h1 {
+      left: 20px; }
+    #header_sub .inner .menuWeb {
+      display: none; }
+    #header_sub .inner .btnMo {
+      display: block; }
+
+  /* content-------------------------- */
+  .content {
+    width: 100%;
+    padding: 0px 0px 100px; }
+    .content .sub_visual {
+      height: 200px; }
+    .content .inner {
+      width: 100%;
+      padding: 0px 30px; }
+
+  /* footer--------------------------- */
+  #footer_sub {
+    padding: 30px 30px; }
+    #footer_sub .inner {
+      width: 100%; } }
+/* mobile------------------------------------------ */
+@media screen and (max-width: 539px) {
+  /* content-------------------------- */
+  .content {
+    width: 100%;
+    padding: 0px 0px 100px; }
+    .content .sub_visual {
+      height: 200px; }
+    .content .inner {
+      width: 100%;
+      padding: 0px 30px; }
+      .content .inner h1 {
+        font: normal 30px/1 "arial"; }
+        .content .inner h1 span {
+          display: block;
+          font: normal 15px/1 "arial"; }
+
+  /* footer--------------------------- */
+  #footer_sub .inner h1 {
+    margin-bottom: 20px; }
+  #footer_sub .inner ul {
+    width: 100%; }
+    #footer_sub .inner ul li {
+      margin-left: 0px;
+      margin-right: 20px; } }
+.community .sub_visual {
+  background: lavender no-repeat center/cover; }
+.community .inner {
+  position: relative; }
+  .community .inner table {
+    width: 100%;
+    border-top: 2px solid #999;
+    border-bottom: 2px solid #999;
+    margin-bottom: 50px; }
+    .community .inner table tr:hover td {
+      background: rgba(211, 211, 211, 0.486); }
+    .community .inner table tr th {
+      padding: 15px;
+      background: #fff;
+      color: #444;
+      border-bottom: 1px solid #ddd; }
+      .community .inner table tr th:nth-of-type(1) {
+        width: 10%; }
+      .community .inner table tr th:nth-of-type(2) {
+        width: 60%; }
+      .community .inner table tr th:nth-of-type(3) {
+        width: 15%; }
+      .community .inner table tr th:nth-of-type(4) {
+        width: 15%; }
+    .community .inner table tr td {
+      padding: 13px;
+      border-bottom: 1px solid #ddd;
+      text-align: center;
+      color: #555; }
+      .community .inner table tr td:nth-of-type(2) {
+        text-align: left; }
+      .community .inner table tr td:nth-of-type(3) {
+        font-family: "맑은 고딕"; }
+      .community .inner table tr td a {
+        float: left;
+        color: #333;
+        font-family: "arial";
+        line-height: 1.4; }
+  .community .inner .pagination {
+    width: 100%;
+    position: absolute;
+    bottom: -60px;
+    text-align: center; }
+    .community .inner .pagination .prev {
+      display: inline-block;
+      width: 30px;
+      height: 30px;
+      font-size: 20px;
+      line-height: 40px;
+      color: #555;
+      text-align: center; }
+    .community .inner .pagination .numbers {
+      display: inline-block;
+      text-align: center;
+      font-size: 0; }
+      .community .inner .pagination .numbers a {
+        display: inline-block;
+        width: 30px;
+        height: 30px;
+        font: 13px/30px "arial";
+        color: #666;
+        text-align: center;
+        margin: 0 5px;
+        transition: 0.5s; }
+        .community .inner .pagination .numbers a:hover {
+          background: #666;
+          color: #fff; }
+    .community .inner .pagination .next {
+      display: inline-block;
+      width: 30px;
+      height: 30px;
+      font-size: 20px;
+      line-height: 40px;
+      color: #555;
+      text-align: center; }
+
+/*tablet------------------------------------------------------------------*/
+@media screen and (max-width: 1179px) {
+  .community .inner table tr th:nth-of-type(1) {
+    width: 11%; }
+  .community .inner table tr th:nth-of-type(3) {
+    width: 16%; }
+  .community .inner table tr th:nth-of-type(4) {
+    width: 0%;
+    display: none; }
+  .community .inner table tr td:nth-of-type(4) {
+    display: none; }
+  .community .inner .pagination .numbers a:nth-of-type(6) {
+    display: none; }
+  .community .inner .pagination .numbers a:nth-of-type(7) {
+    display: none; }
+  .community .inner .pagination .numbers a:nth-of-type(8) {
+    display: none; }
+  .community .inner .pagination .numbers a:nth-of-type(9) {
+    display: none; }
+  .community .inner .pagination .numbers a:nth-of-type(10) {
+    display: none; } }
+/*mobile------------------------------------------------------------------*/
+@media screen and (max-width: 539px) {
+  .community .inner h1 {
+    font-size: 45px; }
+  .community .inner table tr th {
+    font-size: 14px; }
+    .community .inner table tr th:nth-of-type(1) {
+      width: 0%;
+      display: none; }
+    .community .inner table tr th:nth-of-type(3) {
+      width: 27%; }
+  .community .inner table tr td {
+    font-size: 13px; }
+    .community .inner table tr td:nth-of-type(1) {
+      display: none; }
+  .community .inner .pagination .numbers {
+    display: none; } }
+.department .sub_visual {
+  background: bisque; }
+.department .division {
+  width: 100%;
+  height: 600px;
+  background: url(../img/organization.jpg) no-repeat center/contain; }
+  .department .division .div_tree {
+    opacity: 0;
+    position: absolute;
+    top: -999999px;
+    transition: all 0.3s; }
+    .department .division .div_tree li span {
+      display: block;
+      width: 40%;
+      height: 50px;
+      background: #111;
+      margin-bottom: 20px;
+      font: bold 13px/50px "arial";
+      color: #fff;
+      text-align: center;
+      border-radius: 25px; }
+      .department .division .div_tree li span::after {
+        content: "";
+        background: #aaa;
+        position: absolute;
+        top: 50px;
+        left: 50px;
+        width: 1px;
+        height: calc( (70px * 15) - 25px); }
+    .department .division .div_tree li ul li span {
+      background: #666;
+      transform: translateX(70px); }
+      .department .division .div_tree li ul li span::before {
+        content: "";
+        height: 1px;
+        width: 20px;
+        position: absolute;
+        top: 50%;
+        left: -20px;
+        background: #aaa; }
+    .department .division .div_tree li ul li:nth-of-type(1) span::after {
+      display: none; }
+    .department .division .div_tree li ul li:nth-of-type(2) span::after {
+      display: none; }
+    .department .division .div_tree li ul li:nth-of-type(3) span::after {
+      display: none; }
+    .department .division .div_tree li ul li:nth-of-type(4) span::after {
+      height: calc(70px * 3 - 25px); }
+    .department .division .div_tree li ul li:nth-of-type(5) span::after {
+      height: calc(70px * 3 - 25px); }
+    .department .division .div_tree li ul li:nth-of-type(6) span::after {
+      height: calc(70px * 2 - 25px); }
+    .department .division .div_tree li ul li:nth-of-type(7) span::after {
+      height: calc(70px * 2 - 25px); }
+    .department .division .div_tree li ul li ul li span {
+      background: #999;
+      transform: translateX(140px); }
+
+/* Tablet---------------- */
+@media screen and (max-width: 1179px) {
+  .department .division {
+    height: 60vw; } }
+/* mobile---------------- */
+@media screen and (max-width: 539px) {
+  .department .division {
+    height: auto;
+    background: none; }
+    .department .division .div_tree {
+      opacity: 1;
+      position: relative;
+      top: 0; } }
+.join {
+  padding: 0px 0px 150px; }
+  .join .sub_visual {
+    background: url(../img/brand4.jpg) no-repeat center/cover; }
+  .join .inner h2 {
+    font: bold 18px/1 "arial";
+    color: #444;
+    margin-bottom: 20px; }
+  .join .inner #terms {
+    width: 100%;
+    height: 120px;
+    resize: none;
+    padding: 20px;
+    font: 13px/1.4 " arial";
+    color: #888;
+    border: 1px solid #aaa;
+    background: rgba(0, 0, 0, 0.03);
+    margin-bottom: 10px; }
+  .join .inner .agreement {
+    margin-bottom: 70px; }
+    .join .inner .agreement label[for=agree] {
+      font: 12px/1 "arial"; }
+    .join .inner .agreement input[type=checkbox] {
+      margin-right: 5px;
+      position: relative;
+      top: -1.5px; }
+  .join .inner table {
+    width: 100%; }
+    .join .inner table tbody {
+      border-top: 2px solid #999;
+      border-bottom: 2px solid #999; }
+      .join .inner table tbody tr:last-of-type th {
+        border-right: none;
+        text-align: center;
+        background-color: #fff; }
+      .join .inner table tbody tr th {
+        width: 20%;
+        text-align: left;
+        font: bold 14px/1 "arial";
+        color: #666;
+        background-color: #eee;
+        border-bottom: 1px solid #ddd;
+        border-right: 1px solid #ddd;
+        padding: 20px 30px; }
+        .join .inner table tbody tr th input[type=reset], .join .inner table tbody tr th input[type=submit] {
+          width: 120px;
+          height: 40px;
+          font: bold 12px/40px "arial";
+          color: #666;
+          border: 1px solid #777;
+          border-radius: 20px;
+          background: #fff;
+          margin: 0px 10px; }
+      .join .inner table tbody tr td {
+        border-bottom: 1px solid #ddd;
+        padding: 20px 30px;
+        font: 12px/1.6 "arial"; }
+        .join .inner table tbody tr td input[type=text], .join .inner table tbody tr td input[type=password], .join .inner table tbody tr td select {
+          width: 30%;
+          height: 30px;
+          border: 1px solid #aaa;
+          background: rgba(0, 0, 0, 0.05);
+          padding-left: 15px;
+          font: 12px/1 "arial"; }
+        .join .inner table tbody tr td input[type=checkbox], .join .inner table tbody tr td input[type=radio] {
+          margin-right: 10px;
+          position: relative;
+          top: -1.5px; }
+        .join .inner table tbody tr td label {
+          margin-right: 30px; }
+        .join .inner table tbody tr td textarea#comments {
+          width: 80%;
+          height: 100px;
+          border: 1px solid #bbb;
+          background: rgba(0, 0, 0, 0.05);
+          padding: 20px;
+          resize: none;
+          font: 12px/1 "arial"; }
+        .join .inner table tbody tr td .hobbyTxt, .join .inner table tbody tr td .genderTxt {
+          font: 12px/1 "arial";
+          color: hotpink;
+          margin-top: 10px;
+          display: none; }
+
+/* tablet------------------------------------------ */
+@media screen and (max-width: 1179px) {
+  .join .inner table tbody tr:last-of-type th {
+    width: 100%;
+    display: block;
+    text-align: center; }
+  .join .inner table tbody tr th {
+    display: none; }
+  .join .inner table tbody tr td input[type=text], .join .inner table tbody tr td input[type=password] {
+    width: 50%; }
+  .join .inner table tbody tr td select {
+    width: 30%; }
+  .join .inner table tbody tr td textarea#comments {
+    width: 90%; }
+  .join .inner table tbody tr td .hobbyTxt, .join .inner table tbody tr td .genderTxt {
+    display: block; } }
+/* mobile------------------------------------------ */
+@media screen and (max-width: 539px) {
+  .join .inner table tbody tr:last-of-type th {
+    width: 100%;
+    display: block;
+    text-align: center;
+    box-sizing: border-box; }
+  .join .inner table tbody tr th {
+    display: none;
+    font-size: 0px; }
+    .join .inner table tbody tr th input[type=reset], .join .inner table tbody tr th input[type=submit] {
+      width: 40%;
+      margin: 0px 5%; }
+  .join .inner table tbody tr td input[type=text], .join .inner table tbody tr td input[type=password] {
+    width: 100%;
+    box-sizing: border-box; }
+  .join .inner table tbody tr td input[type=checkbox], .join .inner table tbody tr td input[type=radio] {
+    width: 30px;
+    margin-right: 10px; }
+  .join .inner table tbody tr td label {
+    display: inline-block;
+    width: calc(100% - 40px);
+    margin-right: 0px; }
+  .join .inner table tbody tr td select {
+    width: 100%;
+    margin-top: 10px; }
+  .join .inner table tbody tr td textarea#comments {
+    width: 100%; } }
+/* header -----------------------------------*/
+#header {
+  width: 100%;
+  border-bottom: 1px solid #ddd; }
+  #header .inner {
+    width: 1180px;
+    height: 120px;
+    margin: 0px auto;
+    position: relative; }
+    #header .inner > h1 {
+      position: absolute;
+      left: 0px;
+      bottom: 15px; }
+      #header .inner > h1 a {
+        font: bold 24px/1 "arial";
+        color: #333; }
+    #header .inner .menuWeb .gnb {
+      position: absolute;
+      bottom: 0;
+      right: 0; }
+      #header .inner .menuWeb .gnb::after {
+        content: "";
+        display: block;
+        clear: both; }
+      #header .inner .menuWeb .gnb li {
+        float: left; }
+        #header .inner .menuWeb .gnb li a {
+          display: block;
+          padding: 20px 40px;
+          font: bold 15px/1 "arial";
+          color: #555;
+          transition: all 0.5s; }
+        #header .inner .menuWeb .gnb li:hover a {
+          background: #555;
+          color: #fff; }
+    #header .inner .menuWeb .util {
+      position: absolute;
+      top: 20px;
+      right: 0px; }
+      #header .inner .menuWeb .util::after {
+        content: "";
+        display: block;
+        clear: both; }
+      #header .inner .menuWeb .util li {
+        float: left; }
+        #header .inner .menuWeb .util li a {
+          display: block;
+          font: 12px/1 "arial";
+          color: #999;
+          padding: 0px 10px;
+          border-right: 1px solid #aaa; }
+        #header .inner .menuWeb .util li:last-child a {
+          border-right: none; }
+    #header .inner .btnMo {
+      position: absolute;
+      color: #555;
+      font-size: 30px;
+      right: 30px;
+      top: 50%;
+      transform: translateY(-50%);
+      display: none;
+      width: 20px;
+      height: 20px; }
+      #header .inner .btnMo::before {
+        content: "";
+        display: block;
+        width: 100%;
+        height: 2px;
+        background: #000;
+        position: absolute;
+        top: 0;
+        left: 0;
+        transition: top 0.5s 0s, transform 0.5s 0.5s; }
+      #header .inner .btnMo::after {
+        content: "";
+        display: block;
+        width: 100%;
+        height: 2px;
+        background: #000;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        transition: bottom 0.5s 0s, transform 0.5s 0.5s; }
+      #header .inner .btnMo span {
+        display: block;
+        width: 100%;
+        height: 2px;
+        background: #000;
+        position: absolute;
+        top: 50%;
+        margin-top: -1px;
+        text-indent: -9999px;
+        transition: 0.5s; }
+      #header .inner .btnMo.on::before {
+        top: 50%;
+        margin-top: -1px;
+        transform: rotate(45deg); }
+      #header .inner .btnMo.on::after {
+        bottom: 50%;
+        margin-bottom: -1px;
+        transform: rotate(-45deg); }
+      #header .inner .btnMo.on span {
+        transform: translateX(100%);
+        opacity: 0; }
+    #header .inner .menuMo {
+      width: 270px;
+      height: 100vh;
+      background: rgba(0, 0, 0, 0.8);
+      position: fixed;
+      top: 0;
+      left: -270px;
+      z-index: 10;
+      transition: all 0.5s;
+      padding: 35px 30px;
+      box-sizing: border-box; }
+      #header .inner .menuMo h1 {
+        border-bottom: 1px solid #666;
+        padding-bottom: 30px; }
+        #header .inner .menuMo h1 a {
+          display: block;
+          font: bold 24px/1 "arial";
+          color: #fff;
+          text-align: center; }
+        #header .inner .menuMo h1 span {
+          font-size: 12px;
+          color: #aaa; }
+      #header .inner .menuMo #gnbMo li a {
+        display: block;
+        width: 100%;
+        padding: 20px 0;
+        border-bottom: 1px solid #444;
+        font: bold 14px/1 "arial";
+        color: #888;
+        text-align: center; }
+      #header .inner .menuMo.on {
+        left: 0; }
+
+/* visual------------------------------------ */
+#visual {
+  width: 100%;
+  height: calc(100vh - 121px);
+  background-color: #fff;
+  position: relative;
+  overflow: hidden; }
+  #visual .inner {
+    width: 1180px;
+    height: 100%;
+    margin: 0px auto;
+    position: relative; }
+
+/* footer------------------------------------ */
+#footer {
+  width: 100%;
+  padding: 30px 0px;
+  background: #555; }
+  #footer .inner {
+    width: 1180px;
+    margin: 0px auto; }
+    #footer .inner::after {
+      content: "";
+      display: block;
+      clear: both; }
+    #footer .inner h1 {
+      float: left;
+      font: bold 24px/1 "arial";
+      color: #aaa; }
+    #footer .inner ul {
+      float: right; }
+      #footer .inner ul li {
+        float: left;
+        margin-left: 20px; }
+        #footer .inner ul li a {
+          font: bold 14px/1 "arial";
+          color: #888; }
+    #footer .inner address {
+      width: 100%;
+      float: left;
+      font: 10px/1.3 "arial";
+      color: #999;
+      margin-top: 20px;
+      padding-top: 20px;
+      margin-bottom: 20px;
+      letter-spacing: 1px; }
+    #footer .inner p {
+      width: 100%;
+      float: left;
+      font: 9px/1.3 "arial";
+      color: #888;
+      letter-spacing: 1px; }
+
+/* tablet------------------------------------------ */
+@media screen and (max-width: 1179px) {
+  /* header-------------------------------- */
+  #header .inner {
+    width: 100%;
+    height: 100px; }
+    #header .inner > h1 {
+      left: 20px; }
+    #header .inner .menuWeb {
+      display: none; }
+    #header .inner .btnMo {
+      display: block; }
+
+  /* visual--------------------------------- */
+  #visual {
+    height: calc(100vh - 101px);
+    padding: 0px 30px;
+    background: url(../img/visual1.jpg) no-repeat center/cover; }
+    #visual .inner {
+      width: 100%; }
+
+  /* footer--------------------------------- */
+  #footer {
+    padding: 30px 30px; }
+    #footer .inner {
+      width: 100%; } }
+/* mobile------------------------------------------ */
+@media screen and (max-width: 539px) {
+  /* visual----------------------------------- */
+  #visual {
+    height: 400px; }
+
+  /* footer----------------------------------- */
+  #footer .inner h1 {
+    margin-bottom: 20px; }
+  #footer .inner ul {
+    width: 100%; }
+    #footer .inner ul li {
+      margin-left: 0px;
+      margin-right: 20px; } }
+
+/*# sourceMappingURL=style.css.map */
