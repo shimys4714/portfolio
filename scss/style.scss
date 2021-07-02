@@ -8,6 +8,7 @@ $mobile: 539px;
 @import "community.scss";
 @import "department.scss";
 @import "join.scss";
+@import "gallery.scss";
 
 @mixin title($fontSize:24px, $fontFamily:'arial', $color: #555, $align: center, $mb:50px) {
 
