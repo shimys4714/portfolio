@@ -5,6 +5,16 @@ $mobile: 539px;
 
 @import "reset.scss";
 
+@mixin title($fontSize:24px, $fontFamily:'arial', $color: #555, $align: center, $mb:50px) {
+
+    font: bold $fontSize/1 $fontFamily;
+            color: $color;
+            text-align: $align;
+            margin-bottom: $mb;
+}
+
+//@include title($fontSize:20px, $mb:30px);
+
 /* header--------------------------- */
 #header_sub { 
     width: 100%;
@@ -189,7 +199,6 @@ $mobile: 539px;
         }//menuMo end
     }
 }
-
 /* content-------------------------- */
 .content {
     width: 100%;

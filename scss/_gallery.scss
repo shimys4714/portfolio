@@ -1,3 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Alegreya+Sans:wght@100;300;400&family=Cormorant:ital,wght@0,300;0,400;0,500;0,600;1,300&family=Forum&family=Libre+Caslon+Display&family=Open+Sans&family=Prata&family=Song+Myung&family=Yeseva+One&display=swap');
+
+// font-family: 'Alegreya Sans', sans-serif;
+// font-family: 'Cormorant', serif;
+// font-family: 'Forum', cursive;
+// font-family: 'Libre Caslon Display', serif;
+// font-family: 'Prata', serif;
+// font-family: 'Yeseva One', cursive;
+
+.gallery { 
+    .sub_visual { 
+        background: lightcoral
+        no-repeat center/cover;
+    }
+}
 #gallery { 
     &::after { 
         content: "";
@@ -8,17 +23,26 @@
         width: 25%;
         box-sizing: border-box;
         float : left;
-        padding: 10px;
+        padding: 20px;
+        //border: 1px solid red;
+        transform: translateY(200px);
+        transition: 1s;
+        opacity: 0;
+
+        &.on { 
+            opacity: 1;
+            transform: translateY(0px);
+        }
 
         .inner { 
             width: 100%;
-            border: 1px solid #000;
+            //border: 1px solid #000;
             box-sizing: border-box;
-            padding: 16px;
+            //padding: 0px;
 
             .pic {
                 width: 100%;
-                height: 200px;
+                //height: 400px;
                 background: #000;
                 margin-bottom: 20px;
 
@@ -36,15 +60,15 @@
                 //overflow: hidden;
             }
         }
-
     }
 }
+
 #imgPop { 
     position: fixed;
     width: 100%; height: 100vh;
     top: 0; left: 0;
     z-index: 5;
-    background: rgba(0,0,0,0.7);
+    background: rgba(97, 91, 91, 0.774);
     box-sizing: border-box;
     padding: 10vw;
 
