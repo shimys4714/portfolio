@@ -3,7 +3,7 @@ var key = "9d33df771d1d59016c37bd7c118d5b28";
 var user = "193212950@N04";
 
 //flickr 갤러리 데이터 호출
-getFlicker(url, key, 25);
+getFlicker(url, key, 15);
 
 function getFlicker(url, key, num){
     $.ajax({
