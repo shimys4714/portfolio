@@ -1,4 +1,6 @@
 @charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Cormorant&family=Open+Sans&family=Prata&family=Song+Myung&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Alegreya+Sans:wght@100;300;400&family=Cormorant:ital,wght@0,300;0,400;0,500;0,600;1,300&family=Forum&family=Libre+Caslon+Display&family=Open+Sans&family=Prata&family=Song+Myung&family=Yeseva+One&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Alegreya+Sans:wght@100;300;400&family=Cormorant:ital,wght@0,300;0,400;0,500;0,600;1,300&family=Forum&family=Libre+Caslon+Display&family=Open+Sans&family=Prata&family=Song+Myung&family=Yeseva+One&display=swap");
 * {
   margin: 0px;
@@ -203,7 +205,7 @@ input, a, img, span, label, select {
   padding: 0px 0px 100px; }
   .content .sub_visual {
     width: 100%;
-    height: 250px;
+    height: 300px;
     background: #bbb;
     margin-bottom: 100px; }
   .content > .inner {
@@ -211,7 +213,7 @@ input, a, img, span, label, select {
     margin: 0px auto;
     min-height: 500px; }
     .content > .inner h1 {
-      font: normal 40px/1 "arial";
+      font: normal 40px/1 "Cormorant";
       color: #000;
       margin-bottom: 60px; }
       .content > .inner h1 span {
@@ -629,7 +631,10 @@ input, a, img, span, label, select {
   .join .inner table tbody tr td textarea#comments {
     width: 100%; } }
 .gallery .sub_visual {
-  background: lightcoral no-repeat center/cover; }
+  background-image: url(../img/robin-schreiner-jBIHew5hf0E-unsplash.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover; }
 
 #gallery::after {
   content: "";
@@ -637,9 +642,9 @@ input, a, img, span, label, select {
   clear: both; }
 #gallery article {
   width: 25%;
-  box-sizing: border-box;
   float: left;
   padding: 20px;
+  box-sizing: border-box;
   transform: translateY(200px);
   transition: 1s;
   opacity: 0; }
@@ -651,17 +656,29 @@ input, a, img, span, label, select {
     box-sizing: border-box; }
     #gallery article .inner .pic {
       width: 100%;
-      background: #000;
       margin-bottom: 20px; }
       #gallery article .inner .pic img {
         width: 100%;
-        height: 100%;
-        object-fit: cover; }
+        object-fit: cover;
+        cursor: pointer; }
     #gallery article .inner h2 {
-      font: bold 16px/1 'arial';
+      font: bold 14px/1 'Cormorant';
       color: #444;
-      margin-bottom: 15px;
-      height: 60px; }
+      text-align: center; }
+      #gallery article .inner h2::before {
+        content: "";
+        height: 1px;
+        width: 100%;
+        background: #000;
+        display: block;
+        margin-bottom: 10px; }
+      #gallery article .inner h2::after {
+        content: "";
+        height: 1px;
+        width: 100%;
+        background: #000;
+        display: block;
+        margin-top: 10px; }
 
 #imgPop {
   position: fixed;
@@ -682,12 +699,30 @@ input, a, img, span, label, select {
       height: 100%;
       object-fit: contain; }
   #imgPop span {
-    font: bold 14px/1 'arial';
-    color: orange;
+    font: bold 14px/1 'Cormorant';
+    color: #fff;
     position: absolute;
     bottom: 4vw;
     right: 4vw;
     cursor: pointer; }
+
+@media screen and (max-width: 1179px) {
+  #gallery article {
+    width: calc(100% /4); } }
+@media screen and (max-width: 799px) {
+  #gallery article {
+    width: calc(100% /3); } }
+@media screen and (max-width: 539px) {
+  #gallery article {
+    width: calc(100% / 2); } }
+@media screen and (max-width: 479px) {
+  #gallery article {
+    width: calc(100%); } }
+.youtube .sub_visual {
+  background-image: url(../img/robin-schreiner-YKE4zTW5lic-unsplash.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover; }
 
 /* header -----------------------------------*/
 #header {

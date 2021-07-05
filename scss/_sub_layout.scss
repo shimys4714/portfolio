@@ -4,6 +4,8 @@ $tablet: 1179px;
 $mobile: 539px;
 
 @import "reset.scss";
+@import url('https://fonts.googleapis.com/css2?family=Cormorant&family=Open+Sans&family=Prata&family=Song+Myung&display=swap');
+
 
 @mixin title($fontSize:24px, $fontFamily:'arial', $color: #555, $align: center, $mb:50px) {
 
@@ -206,7 +208,7 @@ $mobile: 539px;
 
     .sub_visual { 
         width: 100%;
-        height: 250px;
+        height: 300px;
         background: #bbb;
         margin-bottom: 100px;
     }
@@ -217,7 +219,7 @@ $mobile: 539px;
         min-height: 500px;
 
         h1 { 
-            font: normal 40px/1 "arial";
+            font: normal 40px/1 "Cormorant";
             color: #000;
             margin-bottom: 60px;
 

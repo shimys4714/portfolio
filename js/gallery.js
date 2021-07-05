@@ -3,7 +3,7 @@ var key = "9d33df771d1d59016c37bd7c118d5b28";
 var user = "193212950@N04";
 
 //flickr 갤러리 데이터 호출
-getFlicker(url, key, 20);
+getFlicker(url, key, 25);
 
 function getFlicker(url, key, num){
     $.ajax({
@@ -20,6 +20,8 @@ function getFlicker(url, key, num){
     .success(function(data){
         console.log(data.photos.photo);
         var imgs = data.photos.photo;
+
+        $("#gallery article").empty();
     
         $(imgs).each(function(index, data){
             var tit = data.title;
@@ -42,14 +44,14 @@ function getFlicker(url, key, num){
         })
     
         setTimeout(function(){
-            iso = new Isotope("article", { 
+            iso = new Isotope("#gallery",{ 
                 itemSelector : "article",
                 columWidth : "article",
                 transitionDuration : "0.5s",
                 percentPosition : true
             });
             $("article").addClass("on")
-        },1000)
+        },500)
     })
     .error(function(err){
         console.log(err);
@@ -70,7 +72,8 @@ $("body").on("click", "#gallery article .pic", function(e){
             <span>CLOSE</span>
         </aside>
     `;
-    $("body").append(tags).fadeIn();
+    $("body").append(tags);
+    
 });
 
 //이미지 닫기 버튼 
@@ -81,67 +84,3 @@ $("body").on("click", "#imgPop span", function(e){
         $(this).remove();
     });
 });
-
-//youtube 데이터 호출-------------------------------------
-callData({
-    target : ".swiper-wrapper",
-    key: "AIzaSyDOSnqALQfHxM4ffPCF7DwTOBnzaNHmlNM",
-    count : 5,
-    playlist : "PL7hVQ41w3GSlVLbpnyVfCrkahRjo10718" 
-});
-
-function callData(opt){
-    $.ajax({
-        url : 'https://www.googleapis.com/youtube/v3/playlistItems',
-        dataType : "jsonp", //보안필요
-        data : {
-            part: "snippet",
-            key: opt.key,
-            maxResults : opt.count,
-            playlistId : opt.playlist
-        }
-    })
-    .success(function(data){
-        console.log(data.items);
-
-        var item = data.items;
-
-        $(item).each(function(index, data){
-
-            var title_txt = data.snippet.title;
-            var leng = title_txt.length;
-            (leng > 30) ? title_txt = title_txt.substr(0,30)+"..." : title_txt;
-
-            var p_txt = data.snippet.description;
-            var len = p_txt.length;
-            (len > 60) ? p_txt = p_txt.substr(0,50)+"..." : p_txt;
-            
-            var date = data.snippet.publishedAt;
-            date = date.split("T")[0];
-
-            var videoHref = data.snippet.resourceId.videoId;
-
-            $(opt.target)
-                .append(
-                    $("<div class='swiper-slide'>")
-                        .append(
-                            $("<div class='pic'>")
-                                .append(
-                                    $("<a>")
-                                    .attr({href : data.snippet.resourceId.videoId })
-                                    .css({backgroundImage: "url("+data.snippet.thumbnails.high.url+")" })
-                                ),
-                            $("<div class='con'>")
-                                .append(
-                                    $("<h2>").text(title_txt),
-                                    $("<p>").text(p_txt),
-                                    $("<span>").text(date)
-                                )
-                        )
-                )
-        });
-    })
-    .error(function(err){
-        console.log(err);
-    })
-};
