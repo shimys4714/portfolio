@@ -2,9 +2,10 @@
 
 .community { 
     .sub_visual { 
-        background: lavender
-        no-repeat center/cover;
-    }
+        background-image: url(../img/9_robin-schreiner-7y4858E8PfA-unsplash.jpg);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;    }
 
     .inner { 
         position: relative;

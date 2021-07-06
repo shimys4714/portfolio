@@ -9,9 +9,166 @@
 
 .youtube { 
     .sub_visual { 
-        background-image: url(../img/robin-schreiner-YKE4zTW5lic-unsplash.jpg);
+        background-image: url(../img/martino-pietropoli-VSo5d9wlT7s-unsplash.jpg);
         background-repeat: no-repeat;
-        background-position: center;
+        background-position: center 70%;
         background-size: cover;
+    }
+}
+.vidList { 
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-content: flex-start;
+
+    article{
+        width: 30%;
+        height: 350px;
+        //border: 1px solid #333;
+        margin-bottom: 30px;
+        //flex:1;
+
+        .pic { 
+            display: block;
+            width: 100%;
+            height: 50%;
+            cursor: pointer;
+            position: relative;
+
+            >img{
+                width :100%;
+                height: 100%;
+                object-fit:cover;
+            };
+
+            &::after{
+                content: "View";
+                font: 14px/1 'Cormorant';
+                color: #fff;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 100%;
+                height: 100%;
+                opacity: 0;
+                transition: 1s;
+                position: absolute;
+                top:0;
+                left:0;
+                background: rgba(0,0,0,0.8);
+            }
+
+            &:hover::after{
+                opacity: 1;
+            }
+        }
+
+        .con { 
+            width: 100%;
+            height: 40%;
+            box-sizing: border-box;
+            padding: 15px 0px;
+
+            h2 { 
+                font: bold 14px/1.2 'Cormorant';
+                color: #444;
+                margin-bottom: 15px;
+
+                &::before { 
+                    content: "";
+                    display: block;
+                    width: 100%;
+                    height: 1px;
+                    background: #000;
+                    margin-bottom: 10px;
+                }
+    
+            }
+            p { 
+                font: 12px/1.4 'Alegreya Sans';
+                color: #666;
+                margin-bottom: 5px;
+
+                &::after { 
+                    content: "";
+                    display: block;
+                    width: 100%;
+                    height: 1px;
+                    background: #000;
+                    margin-top: 10px;
+                }
+            }
+            span { 
+                font: 9px 'arial';
+                color: #777;
+            }
+        }
+    }
+}
+.vidPop{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    //padding: 100px;
+    //box-sizing: border-box;
+    display: none;
+    
+
+    .inner { 
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background: rgba(0,0,0,0.8);
+    }
+
+    >span { 
+        position: absolute;
+        bottom: 40px;
+        right: 50px;
+        font: bold 14px/1.2 'Cormorant';
+        color: #fff;
+        cursor: pointer;
+    }
+}
+
+//tablet-----------
+@media screen and (max-width:$tablet) {
+    .vidList { 
+        
+        article{
+            width: 48%;
+            height: 350px;
+            margin-bottom: 30px;
+        }
+    }
+}
+//mobile-----------
+@media screen and (max-width:$mobile) {
+    .vidList { 
+        
+        article{
+            width: 100%;
+
+            .con {     
+                h2 { 
+                    &::after { 
+                        content: "";
+                        display: block;
+                        width: 100%;
+                        height: 1px;
+                        background: #000;
+                        margin-top: 10px;
+                    }
+                }
+                p { 
+                    display: none;
+                }
+            }
+        }
     }
 }

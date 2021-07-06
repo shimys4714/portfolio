@@ -2,6 +2,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Cormorant&family=Open+Sans&family=Prata&family=Song+Myung&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Alegreya+Sans:wght@100;300;400&family=Cormorant:ital,wght@0,300;0,400;0,500;0,600;1,300&family=Forum&family=Libre+Caslon+Display&family=Open+Sans&family=Prata&family=Song+Myung&family=Yeseva+One&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Alegreya+Sans:wght@100;300;400&family=Cormorant:ital,wght@0,300;0,400;0,500;0,600;1,300&family=Forum&family=Libre+Caslon+Display&family=Open+Sans&family=Prata&family=Song+Myung&family=Yeseva+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Alegreya+Sans:wght@100;300;400&family=Cormorant:ital,wght@0,300;0,400;0,500;0,600;1,300&family=Forum&family=Libre+Caslon+Display&family=Open+Sans&family=Prata&family=Song+Myung&family=Yeseva+One&display=swap");
 * {
   margin: 0px;
   padding: 0px;
@@ -318,7 +319,10 @@ input, a, img, span, label, select {
       margin-left: 0px;
       margin-right: 20px; } }
 .community .sub_visual {
-  background: lavender no-repeat center/cover; }
+  background-image: url(../img/9_robin-schreiner-7y4858E8PfA-unsplash.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover; }
 .community .inner {
   position: relative; }
   .community .inner table {
@@ -433,7 +437,10 @@ input, a, img, span, label, select {
   .community .inner .pagination .numbers {
     display: none; } }
 .department .sub_visual {
-  background: bisque; }
+  background-image: url(../img/4_kimon-maritz-mQiZnKwGXW0-unsplash.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover; }
 .department .division {
   width: 100%;
   height: 600px;
@@ -721,7 +728,120 @@ input, a, img, span, label, select {
   #gallery article {
     width: calc(100%); } }
 .youtube .sub_visual {
-  background-image: url(../img/robin-schreiner-YKE4zTW5lic-unsplash.jpg);
+  background-image: url(../img/martino-pietropoli-VSo5d9wlT7s-unsplash.jpg);
+  background-repeat: no-repeat;
+  background-position: center 70%;
+  background-size: cover; }
+
+.vidList {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-content: flex-start; }
+  .vidList article {
+    width: 30%;
+    height: 350px;
+    margin-bottom: 30px; }
+    .vidList article .pic {
+      display: block;
+      width: 100%;
+      height: 50%;
+      cursor: pointer;
+      position: relative; }
+      .vidList article .pic > img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover; }
+      .vidList article .pic::after {
+        content: "View";
+        font: 14px/1 'Cormorant';
+        color: #fff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+        opacity: 0;
+        transition: 1s;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background: rgba(0, 0, 0, 0.8); }
+      .vidList article .pic:hover::after {
+        opacity: 1; }
+    .vidList article .con {
+      width: 100%;
+      height: 40%;
+      box-sizing: border-box;
+      padding: 15px 0px; }
+      .vidList article .con h2 {
+        font: bold 14px/1.2 'Cormorant';
+        color: #444;
+        margin-bottom: 15px; }
+        .vidList article .con h2::before {
+          content: "";
+          display: block;
+          width: 100%;
+          height: 1px;
+          background: #000;
+          margin-bottom: 10px; }
+      .vidList article .con p {
+        font: 12px/1.4 'Alegreya Sans';
+        color: #666;
+        margin-bottom: 5px; }
+        .vidList article .con p::after {
+          content: "";
+          display: block;
+          width: 100%;
+          height: 1px;
+          background: #000;
+          margin-top: 10px; }
+      .vidList article .con span {
+        font: 9px 'arial';
+        color: #777; }
+
+.vidPop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: none; }
+  .vidPop .inner {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.8); }
+  .vidPop > span {
+    position: absolute;
+    bottom: 40px;
+    right: 50px;
+    font: bold 14px/1.2 'Cormorant';
+    color: #fff;
+    cursor: pointer; }
+
+@media screen and (max-width: 1179px) {
+  .vidList article {
+    width: 48%;
+    height: 350px;
+    margin-bottom: 30px; } }
+@media screen and (max-width: 539px) {
+  .vidList article {
+    width: 100%; }
+    .vidList article .con h2::after {
+      content: "";
+      display: block;
+      width: 100%;
+      height: 1px;
+      background: #000;
+      margin-top: 10px; }
+    .vidList article .con p {
+      display: none; } }
+.contact .sub_visual {
+  background-image: url(../img/5_todd-quackenbush-JJB_K8aCPU4-unsplash.jpg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover; }
