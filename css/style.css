@@ -358,6 +358,7 @@ input, a, img, span, label, select {
   .community .inner .pagination {
     width: 100%;
     position: absolute;
+    left: 0;
     bottom: -60px;
     text-align: center; }
     .community .inner .pagination .prev {

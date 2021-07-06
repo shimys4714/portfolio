@@ -1,5 +1,5 @@
 const url = "data/board.json";
-const frame = $(".community .inner");
+const frame = $(".community .inner .table");
 
 const resultData = callData(url);
 
