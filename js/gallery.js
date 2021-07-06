@@ -47,7 +47,7 @@ function getFlicker(url, key, num){
             iso = new Isotope("#gallery",{ 
                 itemSelector : "article",
                 columWidth : "article",
-                transitionDuration : "0.5s",
+                transitionDuration : "2s",
                 percentPosition : true
             });
             $("article").addClass("on")
@@ -72,9 +72,10 @@ $("body").on("click", "#gallery article .pic", function(e){
             <span>CLOSE</span>
         </aside>
     `;
+    $("#imgPop").fadeIn();
     $("body").append(tags);
-    
 });
+
 
 //이미지 닫기 버튼 
 $("body").on("click", "#imgPop span", function(e){

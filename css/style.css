@@ -690,7 +690,8 @@ input, a, img, span, label, select {
   z-index: 5;
   background: rgba(97, 91, 91, 0.774);
   box-sizing: border-box;
-  padding: 10vw; }
+  padding: 10vw;
+  display: none; }
   #imgPop .pic {
     width: 100%;
     height: 100%;
