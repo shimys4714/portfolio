@@ -78,6 +78,25 @@
         }
     }
 }
+#about { 
+    width: 100%;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
+    position: relative;
+    
+    .pic { 
+        width: 80%;
+        height: 100%;
+        background:#555;
+    }
+    .txt { 
+        padding: 30px;
+        box-sizing: border-box;
+    }
+}
+
 /* Tablet---------------- */
 @media screen and (max-width:$tablet) {
     .department { 
