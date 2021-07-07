@@ -1,14 +1,18 @@
 @charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Alegreya+Sans:wght@100;300;400&family=Cormorant:ital,wght@0,300;0,400;0,500;0,600;1,300&family=Forum&family=Libre+Caslon+Display&family=Open+Sans&family=Prata&family=Song+Myung&family=Yeseva+One&display=swap');
 
 .join { 
     padding: 0px 0px 150px;
     .sub_visual { 
-        background: url(../img/brand4.jpg) no-repeat center/cover;
+        background: url(../img/1_sumner-mahaffey-7Y0NshQLohk-unsplash.jpg);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
     }
 
     .inner { 
         h2 { 
-            font: bold 18px/1 "arial";
+            font: bold 18px/1 'Cormorant';
             color: #444;
             margin-bottom: 20px;
             // margin-top: 50px;
@@ -22,7 +26,7 @@
             font: 13px/1.4 " arial";
             color: #888;
             border: 1px solid #aaa;
-            background: rgba(0,0,0,0.03);
+            background: rgba(248, 230, 208, 0.2);
             margin-bottom:10px;
         }
         .agreement { 
@@ -35,9 +39,9 @@
                 margin-right: 5px;
                 position: relative;
                 top: -1.5px;
+                cursor: pointer;
             }
         }
-
         table { 
             width: 100%;
 
@@ -46,75 +50,135 @@
                 border-bottom: 2px solid #999;
 
                 tr { 
-                   
-                    &:last-of-type th { 
-                        border-right: none;
-                        text-align: center;
-                        background-color: #fff;
-                    }
     
                     th { 
                         width: 20%;
                         text-align: left;
-                        font: bold 14px/1 "arial";
+                        font: bold 14px/1 'Alegreya Sans';
                         color: #666;
-                        background-color: #eee;
-                        border-bottom: 1px solid #ddd;
-                        border-right: 1px solid #ddd;
+                        //border-bottom: 1px solid #ddd;
+                        //border-right: 1px solid #ddd;
                         padding: 20px 30px;
 
-                        input[type=reset], input[type=submit] { 
-                            width: 120px; height: 40px;
-                            font: bold 12px/40px "arial";
-                            color: #666;
-                            border: 1px solid #777;
-                            border-radius: 20px;
-                            background: #fff;
-                            margin: 0px 10px;
-                        }
                     }
     
                     td { 
                         // width: 80%;
-                        border-bottom: 1px solid #ddd;
+                        //border-bottom: 1px solid #ddd;
                         padding: 20px 30px;
                         font: 12px/1.6 "arial";
 
-                        input[type=text], input[type=password], select{ 
+                        input[type=text], input[type=password], input[type=date], select{ 
                             width: 30%;
                             height: 30px;
                             border: 1px solid #aaa;
-                            background: rgba(0,0,0,0.05);
+                            background: rgba(248, 230, 208, 0.2);
                             padding-left: 15px;
                             font: 12px/1 "arial";
+                            box-sizing: border-box;
+
+                            &::placeholder { 
+                                color: #999;
+                            }
+
+                            &:focus { 
+                                border: 1px solid rgb(129, 105, 73);
+                            }
                         }
 
                         input[type=checkbox], input[type=radio] { 
+                            appearance: none;
+                            width: 12px;
+                            height: 12px;
+                            border-radius: 50%;
+                            border: 1px solid #000;
                             margin-right: 10px;
                             position: relative;
                             top: -1.5px;
+
+                            &:checked { 
+                                appearance: none;
+                                width: 12px;
+                                height: 12px;
+                                border-radius: 50%;
+                                background-color: burlywood;
+                            }
                         }
 
                         label { 
                             margin-right: 30px;
                         }
 
-                        textarea#comments{ 
+                        textarea#message{ 
                             width: 80%;
                             height: 100px;
                             border: 1px solid #bbb;
-                            background: rgba(0,0,0,0.05);
+                            background: rgba(248, 230, 208, 0.2);
                             padding: 20px;
+                            box-sizing: border-box;
                             resize: none;
                             font: 12px/1 "arial";
+
+                            &:focus { 
+                                border: 1px solid rgb(129, 105, 73);
+                            }
                         }
-                        .hobbyTxt, .genderTxt { 
-                            font: 12px/1 "arial";
-                            color: hotpink;
-                            margin-top: 10px;
+                        //error
+                        p, span { 
                             display: none;
+                            font: 14px/1;
+                            margin-top: 10px;
+                            box-sizing: border-box;
+                            color: lightsalmon;
+                            transition: all 0.2s;
+
+                            &::before{
+                                content: "";
+                                display: inline-block;
+                                width: 8px;
+                                height: 8px;
+                                margin-right: 10px;
+                                border-radius: 50%;
+                                background-color: lightsalmon;
+                            }
+                        }
+
+                        span { 
+                            display: none;
+                            margin-right: 10px;
+                            color: #999;
+                            &::before {
+                                background-color: #999;
+                            }
+                            &.error { 
+                                color: lightsalmon;
+                                &::before{
+                                    background-color: lightsalmon;
+                                }
+                            }
+                            &.true { 
+                                display: none;
+                            }
                         }
                     }
+                }
+            }
+        }
+        .btn{
+            margin-top: 20px;
+            text-align: center;
+            input[type=reset], input[type=submit] { 
+                width: 120px; height: 40px;
+                font: bold 12px/40px "Cormorant";
+                color: #666;
+                border: 1px solid #777;
+                background: #fff;
+                margin: 0px 10px;
+                cursor: pointer;
+                transition: all 0.5s;
+
+                &:hover { 
+                    background-color: rgb(253, 218, 172);
                 }
             }
         }
@@ -127,31 +191,14 @@
         .inner { 
             table { 
                 tbody { 
-                    tr { 
-                        &:last-of-type th { 
-                            width: 100%;
-                            display: block;
-                            text-align: center;
-                        }
-        
+                    tr {         
                         th { 
-                            display: none;
+                            width: 30%;
                         }
         
                         td { 
-                            
-                            input[type=text], input[type=password] { 
-                                width: 50%;
-                            }
-                            select { 
-                                width: 30%;
-                            }
-    
-                            textarea#comments{ 
-                                width: 90%;
-                            }
-                            .hobbyTxt, .genderTxt { 
-                                display: block;
+                            input[type=text], input[type=password],input[type=date], select, textarea#message { 
+                                width: 80%;
                             }
                         }
                     }
@@ -159,7 +206,6 @@
             }
         }
     }
-
 }
 
 /* mobile------------------------------------------ */
@@ -168,54 +214,19 @@
         .inner { 
             table { 
                 tbody { 
-                    tr { 
-                        &:last-of-type th { 
-                            width: 100%;
-                            display: block;
-                            text-align: center;
-                            box-sizing: border-box;
-                        }
-        
+                    tr {        
                         th { 
-                            display: none;
-                            font-size: 0px;
-                            
-                            input[type=reset], input[type=submit] { 
-                                width: 40%;
-                                margin: 0px 5%;
-                            }
+                            width: 20%;                            
                         }
         
                         td { 
-                            input[type=text], input[type=password] { 
+                            input[type=text], input[type=password],input[type=date], select, textarea#message { 
                                 width: 100%;
-                                box-sizing: border-box;
                             }
-
-                            input[type=checkbox], input[type=radio] { 
-                                width: 30px;
-                                margin-right: 10px;
-                            }
-    
-                            label { 
-                                display: inline-block;
-                                width: calc(100% - 40px);
-                                margin-right: 0px;
-                            }
-    
-                            select { 
-                                width: 100%;
-                                margin-top: 10px;
-                            }
-    
-                            textarea#comments{ 
-                                width: 100%;
-                                
-                            }   
                         }
                     }
                 }
-            }            
+            }
         }
     }
 }

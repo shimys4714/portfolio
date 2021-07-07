@@ -3,6 +3,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Alegreya+Sans:wght@100;300;400&family=Cormorant:ital,wght@0,300;0,400;0,500;0,600;1,300&family=Forum&family=Libre+Caslon+Display&family=Open+Sans&family=Prata&family=Song+Myung&family=Yeseva+One&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Alegreya+Sans:wght@100;300;400&family=Cormorant:ital,wght@0,300;0,400;0,500;0,600;1,300&family=Forum&family=Libre+Caslon+Display&family=Open+Sans&family=Prata&family=Song+Myung&family=Yeseva+One&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Alegreya+Sans:wght@100;300;400&family=Cormorant:ital,wght@0,300;0,400;0,500;0,600;1,300&family=Forum&family=Libre+Caslon+Display&family=Open+Sans&family=Prata&family=Song+Myung&family=Yeseva+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Alegreya+Sans:wght@100;300;400&family=Cormorant:ital,wght@0,300;0,400;0,500;0,600;1,300&family=Forum&family=Libre+Caslon+Display&family=Open+Sans&family=Prata&family=Song+Myung&family=Yeseva+One&display=swap");
 * {
   margin: 0px;
   padding: 0px;
@@ -19,6 +20,12 @@ table, th, td {
 
 fieldset {
   border: none; }
+
+input, select, textarea {
+  outline: 0; }
+
+textarea {
+  resize: none; }
 
 .wrap::after {
   content: "";
@@ -49,6 +56,12 @@ table, th, td {
 
 fieldset {
   border: none; }
+
+input, select, textarea {
+  outline: 0; }
+
+textarea {
+  resize: none; }
 
 .wrap::after {
   content: "";
@@ -528,9 +541,12 @@ input, a, img, span, label, select {
 .join {
   padding: 0px 0px 150px; }
   .join .sub_visual {
-    background: url(../img/brand4.jpg) no-repeat center/cover; }
+    background: url(../img/1_sumner-mahaffey-7Y0NshQLohk-unsplash.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover; }
   .join .inner h2 {
-    font: bold 18px/1 "arial";
+    font: bold 18px/1 'Cormorant';
     color: #444;
     margin-bottom: 20px; }
   .join .inner #terms {
@@ -541,7 +557,7 @@ input, a, img, span, label, select {
     font: 13px/1.4 " arial";
     color: #888;
     border: 1px solid #aaa;
-    background: rgba(0, 0, 0, 0.03);
+    background: rgba(248, 230, 208, 0.2);
     margin-bottom: 10px; }
   .join .inner .agreement {
     margin-bottom: 70px; }
@@ -550,108 +566,116 @@ input, a, img, span, label, select {
     .join .inner .agreement input[type=checkbox] {
       margin-right: 5px;
       position: relative;
-      top: -1.5px; }
+      top: -1.5px;
+      cursor: pointer; }
   .join .inner table {
     width: 100%; }
     .join .inner table tbody {
       border-top: 2px solid #999;
       border-bottom: 2px solid #999; }
-      .join .inner table tbody tr:last-of-type th {
-        border-right: none;
-        text-align: center;
-        background-color: #fff; }
       .join .inner table tbody tr th {
         width: 20%;
         text-align: left;
-        font: bold 14px/1 "arial";
+        font: bold 14px/1 'Alegreya Sans';
         color: #666;
-        background-color: #eee;
-        border-bottom: 1px solid #ddd;
-        border-right: 1px solid #ddd;
         padding: 20px 30px; }
-        .join .inner table tbody tr th input[type=reset], .join .inner table tbody tr th input[type=submit] {
-          width: 120px;
-          height: 40px;
-          font: bold 12px/40px "arial";
-          color: #666;
-          border: 1px solid #777;
-          border-radius: 20px;
-          background: #fff;
-          margin: 0px 10px; }
       .join .inner table tbody tr td {
-        border-bottom: 1px solid #ddd;
         padding: 20px 30px;
         font: 12px/1.6 "arial"; }
-        .join .inner table tbody tr td input[type=text], .join .inner table tbody tr td input[type=password], .join .inner table tbody tr td select {
+        .join .inner table tbody tr td input[type=text], .join .inner table tbody tr td input[type=password], .join .inner table tbody tr td input[type=date], .join .inner table tbody tr td select {
           width: 30%;
           height: 30px;
           border: 1px solid #aaa;
-          background: rgba(0, 0, 0, 0.05);
+          background: rgba(248, 230, 208, 0.2);
           padding-left: 15px;
-          font: 12px/1 "arial"; }
+          font: 12px/1 "arial";
+          box-sizing: border-box; }
+          .join .inner table tbody tr td input[type=text]::placeholder, .join .inner table tbody tr td input[type=password]::placeholder, .join .inner table tbody tr td input[type=date]::placeholder, .join .inner table tbody tr td select::placeholder {
+            color: #999; }
+          .join .inner table tbody tr td input[type=text]:focus, .join .inner table tbody tr td input[type=password]:focus, .join .inner table tbody tr td input[type=date]:focus, .join .inner table tbody tr td select:focus {
+            border: 1px solid #816949; }
         .join .inner table tbody tr td input[type=checkbox], .join .inner table tbody tr td input[type=radio] {
+          appearance: none;
+          width: 12px;
+          height: 12px;
+          border-radius: 50%;
+          border: 1px solid #000;
           margin-right: 10px;
           position: relative;
           top: -1.5px; }
+          .join .inner table tbody tr td input[type=checkbox]:checked, .join .inner table tbody tr td input[type=radio]:checked {
+            appearance: none;
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background-color: burlywood; }
         .join .inner table tbody tr td label {
           margin-right: 30px; }
-        .join .inner table tbody tr td textarea#comments {
+        .join .inner table tbody tr td textarea#message {
           width: 80%;
           height: 100px;
           border: 1px solid #bbb;
-          background: rgba(0, 0, 0, 0.05);
+          background: rgba(248, 230, 208, 0.2);
           padding: 20px;
+          box-sizing: border-box;
           resize: none;
           font: 12px/1 "arial"; }
-        .join .inner table tbody tr td .hobbyTxt, .join .inner table tbody tr td .genderTxt {
-          font: 12px/1 "arial";
-          color: hotpink;
+          .join .inner table tbody tr td textarea#message:focus {
+            border: 1px solid #816949; }
+        .join .inner table tbody tr td p, .join .inner table tbody tr td span {
+          display: none;
+          font: 14px/1;
           margin-top: 10px;
-          display: none; }
+          box-sizing: border-box;
+          color: lightsalmon;
+          transition: all 0.2s; }
+          .join .inner table tbody tr td p::before, .join .inner table tbody tr td span::before {
+            content: "";
+            display: inline-block;
+            width: 8px;
+            height: 8px;
+            margin-right: 10px;
+            border-radius: 50%;
+            background-color: lightsalmon; }
+        .join .inner table tbody tr td span {
+          display: none;
+          margin-right: 10px;
+          color: #999; }
+          .join .inner table tbody tr td span::before {
+            background-color: #999; }
+          .join .inner table tbody tr td span.error {
+            color: lightsalmon; }
+            .join .inner table tbody tr td span.error::before {
+              background-color: lightsalmon; }
+          .join .inner table tbody tr td span.true {
+            display: none; }
+  .join .inner .btn {
+    margin-top: 20px;
+    text-align: center; }
+    .join .inner .btn input[type=reset], .join .inner .btn input[type=submit] {
+      width: 120px;
+      height: 40px;
+      font: bold 12px/40px "Cormorant";
+      color: #666;
+      border: 1px solid #777;
+      background: #fff;
+      margin: 0px 10px;
+      cursor: pointer;
+      transition: all 0.5s; }
+      .join .inner .btn input[type=reset]:hover, .join .inner .btn input[type=submit]:hover {
+        background-color: #fddaac; }
 
 /* tablet------------------------------------------ */
 @media screen and (max-width: 1179px) {
-  .join .inner table tbody tr:last-of-type th {
-    width: 100%;
-    display: block;
-    text-align: center; }
   .join .inner table tbody tr th {
-    display: none; }
-  .join .inner table tbody tr td input[type=text], .join .inner table tbody tr td input[type=password] {
-    width: 50%; }
-  .join .inner table tbody tr td select {
     width: 30%; }
-  .join .inner table tbody tr td textarea#comments {
-    width: 90%; }
-  .join .inner table tbody tr td .hobbyTxt, .join .inner table tbody tr td .genderTxt {
-    display: block; } }
+  .join .inner table tbody tr td input[type=text], .join .inner table tbody tr td input[type=password], .join .inner table tbody tr td input[type=date], .join .inner table tbody tr td select, .join .inner table tbody tr td textarea#message {
+    width: 80%; } }
 /* mobile------------------------------------------ */
 @media screen and (max-width: 539px) {
-  .join .inner table tbody tr:last-of-type th {
-    width: 100%;
-    display: block;
-    text-align: center;
-    box-sizing: border-box; }
   .join .inner table tbody tr th {
-    display: none;
-    font-size: 0px; }
-    .join .inner table tbody tr th input[type=reset], .join .inner table tbody tr th input[type=submit] {
-      width: 40%;
-      margin: 0px 5%; }
-  .join .inner table tbody tr td input[type=text], .join .inner table tbody tr td input[type=password] {
-    width: 100%;
-    box-sizing: border-box; }
-  .join .inner table tbody tr td input[type=checkbox], .join .inner table tbody tr td input[type=radio] {
-    width: 30px;
-    margin-right: 10px; }
-  .join .inner table tbody tr td label {
-    display: inline-block;
-    width: calc(100% - 40px);
-    margin-right: 0px; }
-  .join .inner table tbody tr td select {
-    width: 100%;
-    margin-top: 10px; }
-  .join .inner table tbody tr td textarea#comments {
+    width: 20%; }
+  .join .inner table tbody tr td input[type=text], .join .inner table tbody tr td input[type=password], .join .inner table tbody tr td input[type=date], .join .inner table tbody tr td select, .join .inner table tbody tr td textarea#message {
     width: 100%; } }
 .gallery .sub_visual {
   background-image: url(../img/robin-schreiner-jBIHew5hf0E-unsplash.jpg);
