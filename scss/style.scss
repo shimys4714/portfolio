@@ -78,6 +78,19 @@ $mobile: 539px;
                         top:50px; right:0;
                         display: none;
 
+                        .left  {
+                            width: 30%;
+                            height: 100%;
+                            background: lightsteelblue;
+                            float:left;
+                        }
+                        .right { 
+                            width: 70%;
+                            height: 100%;
+                            background: beige;
+                            float: right;
+                        }
+
                         &::before{
                             content: "";
                             display: block;
@@ -86,7 +99,7 @@ $mobile: 539px;
                             position: absolute;
                             top: 0px;
                             left: 100%;
-                            background: inherit;
+                            background: beige;
                         }
                         &::after{
                             content: "";
@@ -97,7 +110,7 @@ $mobile: 539px;
                             position: absolute;
                             top: 0;
                             right: 100%;
-                            background:inherit;
+                            background:lightsteelblue;
                         }
                     }
                 }

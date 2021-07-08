@@ -885,6 +885,11 @@ input, a, img, span, label, select {
   background-position: center;
   background-size: cover; }
 
+#map {
+  width: 100%;
+  height: 400px;
+  background: #111; }
+
 /* header -----------------------------------*/
 #header {
   width: 100%;
@@ -930,6 +935,16 @@ input, a, img, span, label, select {
           top: 50px;
           right: 0;
           display: none; }
+          #header .inner .menuWeb .gnb > li .sub .left {
+            width: 30%;
+            height: 100%;
+            background: lightsteelblue;
+            float: left; }
+          #header .inner .menuWeb .gnb > li .sub .right {
+            width: 70%;
+            height: 100%;
+            background: beige;
+            float: right; }
           #header .inner .menuWeb .gnb > li .sub::before {
             content: "";
             display: block;
@@ -938,7 +953,7 @@ input, a, img, span, label, select {
             position: absolute;
             top: 0px;
             left: 100%;
-            background: inherit; }
+            background: beige; }
           #header .inner .menuWeb .gnb > li .sub::after {
             content: "";
             display: block;
@@ -948,7 +963,7 @@ input, a, img, span, label, select {
             position: absolute;
             top: 0;
             right: 100%;
-            background: inherit; }
+            background: lightsteelblue; }
     #header .inner .menuWeb .util {
       position: absolute;
       top: 20px;
