@@ -911,26 +911,44 @@ input, a, img, span, label, select {
         content: "";
         display: block;
         clear: both; }
-      #header .inner .menuWeb .gnb li {
+      #header .inner .menuWeb .gnb > li {
         float: left; }
-        #header .inner .menuWeb .gnb li a {
+        #header .inner .menuWeb .gnb > li > a {
           display: block;
           padding: 0px 40px;
           height: 50px;
           font: bold 15px/50px "arial";
           color: #555;
           transition: all 0.5s; }
-        #header .inner .menuWeb .gnb li .sub {
+          #header .inner .menuWeb .gnb > li > a:hover a {
+            background: #555;
+            color: #fff; }
+        #header .inner .menuWeb .gnb > li .sub {
           width: 1180px;
           height: 300px;
-          border: 1px solid red;
           position: absolute;
           top: 50px;
           right: 0;
           display: none; }
-        #header .inner .menuWeb .gnb li:hover a {
-          background: #555;
-          color: #fff; }
+          #header .inner .menuWeb .gnb > li .sub::before {
+            content: "";
+            display: block;
+            width: calc( (100vw - 1180px) / 2);
+            height: 100%;
+            position: absolute;
+            top: 0px;
+            left: 100%;
+            background: inherit; }
+          #header .inner .menuWeb .gnb > li .sub::after {
+            content: "";
+            display: block;
+            width: calc( (100vw - 1180px) / 2);
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            right: 100%;
+            background: inherit; }
     #header .inner .menuWeb .util {
       position: absolute;
       top: 20px;
