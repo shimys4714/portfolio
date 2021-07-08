@@ -888,7 +888,9 @@ input, a, img, span, label, select {
 /* header -----------------------------------*/
 #header {
   width: 100%;
-  border-bottom: 1px solid #ddd; }
+  border-bottom: 1px solid #ddd;
+  position: relative;
+  z-index: 2; }
   #header .inner {
     width: 1180px;
     height: 120px;
@@ -913,10 +915,19 @@ input, a, img, span, label, select {
         float: left; }
         #header .inner .menuWeb .gnb li a {
           display: block;
-          padding: 20px 40px;
-          font: bold 15px/1 "arial";
+          padding: 0px 40px;
+          height: 50px;
+          font: bold 15px/50px "arial";
           color: #555;
           transition: all 0.5s; }
+        #header .inner .menuWeb .gnb li .sub {
+          width: 1180px;
+          height: 300px;
+          border: 1px solid red;
+          position: absolute;
+          top: 50px;
+          right: 0;
+          display: none; }
         #header .inner .menuWeb .gnb li:hover a {
           background: #555;
           color: #fff; }
@@ -1028,7 +1039,8 @@ input, a, img, span, label, select {
   height: calc(100vh - 121px);
   background-color: #fff;
   position: relative;
-  overflow: hidden; }
+  overflow: hidden;
+  z-index: 1; }
   #visual .inner {
     width: 1180px;
     height: 100%;

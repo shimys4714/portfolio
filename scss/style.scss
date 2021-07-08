@@ -24,6 +24,8 @@ $mobile: 539px;
 #header {
     width: 100%;
     border-bottom:1px solid #ddd;
+    position: relative;
+    z-index: 2;
 
     .inner {
         width: 1180px;
@@ -57,11 +59,22 @@ $mobile: 539px;
                     float:left;
                     a {
                         display: block;
-                        padding: 20px 40px;
-                        font: bold 15px/1 "arial";
+                        padding: 0px 40px;
+                        height: 50px;//임의 지정
+                        font: bold 15px/50px "arial";//라인하이트로 높이
                         color: #555;
                         transition: all 0.5s;
                     }
+                    .sub{
+                        width: 1180px;
+                        height: 300px;
+                        border: 1px solid red;
+                        position: absolute;
+                        top:50px; right:0;
+                        display: none;
+                    }
+
+
                     &:hover a { 
                         background: #555;
                         color: #fff;
@@ -212,6 +225,7 @@ $mobile: 539px;
     background-color:#fff;
     position: relative;
     overflow: hidden;
+    z-index: 1;
 
     .inner { 
         width: 1180px;
