@@ -890,6 +890,46 @@ input, a, img, span, label, select {
   height: 400px;
   background: #111; }
 
+.traffic {
+  float: left;
+  margin-top: 20px; }
+  .traffic li {
+    float: left;
+    margin-right: 20px; }
+    .traffic li a {
+      display: block;
+      width: 200px;
+      height: 40px;
+      border: 1px solid #222;
+      font: bold 12px/40px '맑은 고딕';
+      color: #111;
+      text-align: center;
+      transition: 0.3s; }
+    .traffic li:hover a {
+      background: beige;
+      color: #333;
+      border: 1px solid #333; }
+
+.branch {
+  float: right;
+  margin-top: 20px; }
+  .branch li {
+    float: left;
+    margin-right: 10px; }
+    .branch li a {
+      display: block;
+      width: 200px;
+      height: 40px;
+      border: 1px solid #222;
+      font: bold 12px/40px '맑은 고딕';
+      color: #111;
+      text-align: center;
+      transition: 0.3s; }
+    .branch li:hover a {
+      background: beige;
+      color: #333;
+      border: 1px solid #333; }
+
 /* header -----------------------------------*/
 #header {
   width: 100%;

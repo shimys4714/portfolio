@@ -20,3 +20,55 @@
     height: 400px;
     background: #111;
 }
+
+.traffic { 
+    float: left;
+    margin-top : 20px;
+
+    li { 
+        float: left;
+        margin-right: 20px;
+
+        a { 
+            display: block;
+            width: 200px;
+            height: 40px;
+            border: 1px solid #222;
+            font: bold 12px/40px '맑은 고딕';
+            color: #111;
+            text-align: center;
+            transition: 0.3s;
+        }
+        &:hover { 
+            a {
+                background:beige; color:#333; border:1px solid #333; 
+            }
+        }
+    }
+}
+.branch { 
+    float: right;
+    margin-top: 20px;
+
+    li { 
+        float: left;
+        margin-right: 10px;
+
+        a { 
+            display: block;
+            width: 200px;
+            height: 40px;
+            border: 1px solid #222;
+            font: bold 12px/40px '맑은 고딕';
+            color: #111;
+            text-align: center;
+            transition: 0.3s;
+        }
+        &:hover { 
+            a {
+                background:beige; color:#333; border:1px solid #333; 
+            }
+        }
+    }
+
+}
