@@ -1,6 +1,7 @@
 const btnMo = document.querySelector(".btnMo");
 const menuMo = document.querySelector(".menuMo");
 
+
 btnMo.onclick = function(e) {
     e.preventDefault();
 
@@ -11,9 +12,11 @@ btnMo.onclick = function(e) {
 //gnb 활성화
 $(".gnb>li").on("mouseenter", function(){
     $(this).find(".sub").show();
+    $(this).children("a").addClass("on");
 });
 $(".gnb>li").on("mouseleave", function(){
     $(this).find(".sub").hide();
+    $(this).children("a").removeClass("on");
 });
 
 //gnb 포커스 활성화
