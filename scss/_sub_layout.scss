@@ -1,8 +1,4 @@
 @charset "utf-8";
-
-$tablet: 1179px;
-$mobile: 539px;
-
 @import "reset.scss";
 @import url('https://fonts.googleapis.com/css2?family=Cormorant&family=Open+Sans&family=Prata&family=Song+Myung&display=swap');
 
@@ -20,9 +16,11 @@ $mobile: 539px;
 /* header--------------------------- */
 #header_sub { 
     width: 100%;
-    border-bottom:1px solid #ddd;
+    //border-bottom:1px solid #F2F2F2;
+    position: relative;
+    z-index: 2;
 
-    .inner { 
+    .inner {
         width: 1180px;
         height: 120px;
         margin: 0px auto;
@@ -31,15 +29,17 @@ $mobile: 539px;
         >h1 { 
             position: absolute;
             left:0px;
-            bottom:15px;
+            bottom: 8px;
 
-            a { 
-                font: bold 24px/1 "arial";
+            >a { 
+                font: bold 24px/1 'Playfair Display';
                 color:#333;
+                letter-spacing: 3px;
             }
         }
 
         .menuWeb {
+            width: 100%;
             .gnb {
                 position:absolute;
                 bottom:0;
@@ -50,18 +50,124 @@ $mobile: 539px;
                     display: block;
                     clear: both;
                 }
-                li {
+                >li {
                     float:left;
-                    a {
+
+                    &::after{
+                        content:"";
                         display: block;
-                        padding: 20px 40px;
-                        font: bold 15px/1 "arial";
-                        color: #555;
-                        transition: all 0.5s;
+                        width: 0px;
+                        height: 2px;
+                        background: #736868;
+                        transition: 0.5s;
                     }
-                    &:hover a { 
-                        background: #555;
-                        color: #fff;
+                    &:hover::after { 
+                        //border-bottom: 1px solid #736868;
+                        //box-sizing: border-box;
+                        height: 2px;
+                        width: 100%;
+                    }
+                    &.on { 
+                        &::after{
+                            content:"";
+                            display: block;
+                            width: 100%;
+                            height: 1.5;
+                            background: #736868;
+                        }
+                    }
+
+                    >a {
+                        //width: 100%;
+                        display: block;
+                        padding: 0px 45px;
+                        height: 50px;
+                        font: bold 18px/50px 'Cormorant Garamond';
+                        color: #555;
+                        box-sizing: border-box;
+                    }
+                    .sub{
+                        width: 1180px;
+                        height: 300px;
+                        position: absolute;
+                        top:51px; right:0;
+                        display: none;
+                        z-index: 3;
+
+                        .left  {
+                            width: 20%;
+                            height: 100%;
+                            float:left;
+                            >img { 
+                                width: 100%;
+                                height: 100%;
+                                object-fit: cover;
+                            }
+                        }
+                        .right { 
+                            width: 80%;
+                            height: 100%;
+                            background: #fff;
+                            float: right;
+                            padding: 10px;
+                            box-sizing: border-box;
+
+                            >.depth { 
+                                //width: 100%;
+                                display: flex;
+                                flex-direction: row;
+                                justify-content: space-around;
+                                align-content: flex-start;
+                                flex-wrap: wrap;
+
+                                >ul>li{
+                                    &::after{
+                                        content:"";
+                                        display: block;
+                                        width: 0px;
+                                        height: 1px;
+                                        background: #736868;
+                                        transition: 0.5s;
+                                    }
+                                    &:hover::after { 
+                                        //border-bottom: 1px solid #736868;
+                                        //box-sizing: border-box;
+                                        width: 100%;
+                                    }
+                                    a { 
+                                        display: block;
+                                        font: bold 17px 'Cormorant Garamond';
+                                        color: #999;
+                                        text-align: center;
+
+                                        &:hover { 
+                                            color: #222;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+
+                        &::before{
+                            content: "";
+                            display: block;
+                            width: calc( (100vw - 1180px) / 2);
+                            height: 100%;
+                            position: absolute;
+                            top: 0;
+                            left: 100%;
+                            background: #fff;
+                        }
+                        &::after{
+                            content: "";
+                            display: block;
+                            width: calc( (100vw - 1180px) / 2);
+                            height: 100%;
+                            position: absolute;
+                            top: 0;
+                            right: 100%;
+                            background:#fff;
+                        }
                     }
                 }
             }
@@ -205,12 +311,42 @@ $mobile: 539px;
 .content {
     width: 100%;
     padding: 0px 0px 100px;
+    z-index: 1;
 
     .sub_visual { 
         width: 100%;
         height: 300px;
         background: #bbb;
         margin-bottom: 100px;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        position: relative;
+
+        >.txt { 
+            width: 400px;
+            height: 200px;
+            position: absolute;
+            top: 50%;
+            right: 0px;
+            transform: translateY(-50%);
+            box-sizing: border-box;
+
+            h1 { 
+                font: bold 40px 'Cormorant Garamond';
+                font-weight: 900;
+                color: #000;
+                letter-spacing: 2px;
+                margin-bottom: 20px;
+            }
+            p{ 
+                font: 12px/1.5 'Open Sans';
+                color: #555;
+                background-color: #fff;
+                padding: 20px 10px;
+                box-sizing: border-box;
+            }
+        }
     }
 
     >.inner { 
@@ -218,21 +354,25 @@ $mobile: 539px;
         margin: 0px auto;
         min-height: 500px;
 
-        >h1 { 
-            font: normal 40px/1 "Cormorant";
+        h1 { 
+            font: bold 20px 'Cormorant Garamond';
+            font-weight: 700;
             color: #000;
+            letter-spacing: 2px;
             margin-bottom: 60px;
 
-            span { 
-                font:normal 20px/1 "arial";
-                color: #aaa;
-
-                &::before { 
-                    content:"/";
-                    margin-right: 20px;
-                    margin-left: 10px;
-                }
+            &::after { 
+                content: "";
+                display: block;
+                width: 90%;
+                height: 1px;
+                background: #555;
+                margin-top: 10px;
             }
+        }
+        p { 
+            font: 12px/1.5 'Open Sans';
+            color: #555;
         }
     }
 }

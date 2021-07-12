@@ -1,12 +1,14 @@
 @charset "utf-8";
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond&family=Noto+Serif+KR&family=Open+Sans:wght@300;400&family=Playfair+Display&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600&family=Cutive+Mono&family=Noto+Serif+KR&family=Open+Sans&family=Playfair+Display&display=swap');
 
 /*
 font-family: 'Cormorant Garamond', serif;
+font-family: 'Cutive Mono', monospace;
 font-family: 'Noto Serif KR', serif;
 font-family: 'Open Sans', sans-serif;
 font-family: 'Playfair Display', serif;
 */
+
 $tablet: 1179px;
 $mobile: 539px;
 
@@ -18,7 +20,6 @@ $mobile: 539px;
 @import "gallery.scss";
 @import "youtube.scss";
 @import "contact.scss";
-
 
 
 @mixin menu($fontSize:24px, $fontFamily:'Cormorant Garamond', $color: #333, $align: center) {

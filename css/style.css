@@ -1,7 +1,8 @@
 @charset "UTF-8";
-@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond&family=Noto+Serif+KR&family=Open+Sans:wght@300;400&family=Playfair+Display&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600&family=Cutive+Mono&family=Noto+Serif+KR&family=Open+Sans&family=Playfair+Display&display=swap");
 /*
 font-family: 'Cormorant Garamond', serif;
+font-family: 'Cutive Mono', monospace;
 font-family: 'Noto Serif KR', serif;
 font-family: 'Open Sans', sans-serif;
 font-family: 'Playfair Display', serif;
@@ -86,7 +87,8 @@ input, a, img, span, label, select {
 /* header--------------------------- */
 #header_sub {
   width: 100%;
-  border-bottom: 1px solid #ddd; }
+  position: relative;
+  z-index: 2; }
   #header_sub .inner {
     width: 1180px;
     height: 120px;
@@ -95,47 +97,127 @@ input, a, img, span, label, select {
     #header_sub .inner > h1 {
       position: absolute;
       left: 0px;
-      bottom: 15px; }
-      #header_sub .inner > h1 a {
-        font: bold 24px/1 "arial";
-        color: #333; }
-    #header_sub .inner .menuWeb .gnb {
-      position: absolute;
-      bottom: 0;
-      right: 0; }
-      #header_sub .inner .menuWeb .gnb::after {
-        content: "";
-        display: block;
-        clear: both; }
-      #header_sub .inner .menuWeb .gnb li {
-        float: left; }
-        #header_sub .inner .menuWeb .gnb li a {
+      bottom: 8px; }
+      #header_sub .inner > h1 > a {
+        font: bold 24px/1 'Playfair Display';
+        color: #333;
+        letter-spacing: 3px; }
+    #header_sub .inner .menuWeb {
+      width: 100%; }
+      #header_sub .inner .menuWeb .gnb {
+        position: absolute;
+        bottom: 0;
+        right: 0; }
+        #header_sub .inner .menuWeb .gnb::after {
+          content: "";
           display: block;
-          padding: 20px 40px;
-          font: bold 15px/1 "arial";
-          color: #555;
-          transition: all 0.5s; }
-        #header_sub .inner .menuWeb .gnb li:hover a {
-          background: #555;
-          color: #fff; }
-    #header_sub .inner .menuWeb .util {
-      position: absolute;
-      top: 20px;
-      right: 0px; }
-      #header_sub .inner .menuWeb .util::after {
-        content: "";
-        display: block;
-        clear: both; }
-      #header_sub .inner .menuWeb .util li {
-        float: left; }
-        #header_sub .inner .menuWeb .util li a {
+          clear: both; }
+        #header_sub .inner .menuWeb .gnb > li {
+          float: left; }
+          #header_sub .inner .menuWeb .gnb > li::after {
+            content: "";
+            display: block;
+            width: 0px;
+            height: 2px;
+            background: #736868;
+            transition: 0.5s; }
+          #header_sub .inner .menuWeb .gnb > li:hover::after {
+            height: 2px;
+            width: 100%; }
+          #header_sub .inner .menuWeb .gnb > li.on::after {
+            content: "";
+            display: block;
+            width: 100%;
+            height: 1.5;
+            background: #736868; }
+          #header_sub .inner .menuWeb .gnb > li > a {
+            display: block;
+            padding: 0px 45px;
+            height: 50px;
+            font: bold 18px/50px 'Cormorant Garamond';
+            color: #555;
+            box-sizing: border-box; }
+          #header_sub .inner .menuWeb .gnb > li .sub {
+            width: 1180px;
+            height: 300px;
+            position: absolute;
+            top: 51px;
+            right: 0;
+            display: none;
+            z-index: 3; }
+            #header_sub .inner .menuWeb .gnb > li .sub .left {
+              width: 20%;
+              height: 100%;
+              float: left; }
+              #header_sub .inner .menuWeb .gnb > li .sub .left > img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover; }
+            #header_sub .inner .menuWeb .gnb > li .sub .right {
+              width: 80%;
+              height: 100%;
+              background: #fff;
+              float: right;
+              padding: 10px;
+              box-sizing: border-box; }
+              #header_sub .inner .menuWeb .gnb > li .sub .right > .depth {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-around;
+                align-content: flex-start;
+                flex-wrap: wrap; }
+                #header_sub .inner .menuWeb .gnb > li .sub .right > .depth > ul > li::after {
+                  content: "";
+                  display: block;
+                  width: 0px;
+                  height: 1px;
+                  background: #736868;
+                  transition: 0.5s; }
+                #header_sub .inner .menuWeb .gnb > li .sub .right > .depth > ul > li:hover::after {
+                  width: 100%; }
+                #header_sub .inner .menuWeb .gnb > li .sub .right > .depth > ul > li a {
+                  display: block;
+                  font: bold 17px 'Cormorant Garamond';
+                  color: #999;
+                  text-align: center; }
+                  #header_sub .inner .menuWeb .gnb > li .sub .right > .depth > ul > li a:hover {
+                    color: #222; }
+            #header_sub .inner .menuWeb .gnb > li .sub::before {
+              content: "";
+              display: block;
+              width: calc( (100vw - 1180px) / 2);
+              height: 100%;
+              position: absolute;
+              top: 0;
+              left: 100%;
+              background: #fff; }
+            #header_sub .inner .menuWeb .gnb > li .sub::after {
+              content: "";
+              display: block;
+              width: calc( (100vw - 1180px) / 2);
+              height: 100%;
+              position: absolute;
+              top: 0;
+              right: 100%;
+              background: #fff; }
+      #header_sub .inner .menuWeb .util {
+        position: absolute;
+        top: 20px;
+        right: 0px; }
+        #header_sub .inner .menuWeb .util::after {
+          content: "";
           display: block;
-          font: 12px/1 "arial";
-          color: #999;
-          padding: 0px 10px;
-          border-right: 1px solid #aaa; }
-        #header_sub .inner .menuWeb .util li:last-child a {
-          border-right: none; }
+          clear: both; }
+        #header_sub .inner .menuWeb .util li {
+          float: left; }
+          #header_sub .inner .menuWeb .util li a {
+            display: block;
+            font: 12px/1 "arial";
+            color: #999;
+            padding: 0px 10px;
+            border-right: 1px solid #aaa; }
+          #header_sub .inner .menuWeb .util li:last-child a {
+            border-right: none; }
     #header_sub .inner .btnMo {
       position: absolute;
       color: #555;
@@ -223,27 +305,57 @@ input, a, img, span, label, select {
 /* content-------------------------- */
 .content {
   width: 100%;
-  padding: 0px 0px 100px; }
+  padding: 0px 0px 100px;
+  z-index: 1; }
   .content .sub_visual {
     width: 100%;
     height: 300px;
     background: #bbb;
-    margin-bottom: 100px; }
+    margin-bottom: 100px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    position: relative; }
+    .content .sub_visual > .txt {
+      width: 400px;
+      height: 200px;
+      position: absolute;
+      top: 50%;
+      right: 0px;
+      transform: translateY(-50%);
+      box-sizing: border-box; }
+      .content .sub_visual > .txt h1 {
+        font: bold 40px 'Cormorant Garamond';
+        font-weight: 900;
+        color: #000;
+        letter-spacing: 2px;
+        margin-bottom: 20px; }
+      .content .sub_visual > .txt p {
+        font: 12px/1.5 'Open Sans';
+        color: #555;
+        background-color: #fff;
+        padding: 20px 10px;
+        box-sizing: border-box; }
   .content > .inner {
     width: 1180px;
     margin: 0px auto;
     min-height: 500px; }
-    .content > .inner > h1 {
-      font: normal 40px/1 "Cormorant";
+    .content > .inner h1 {
+      font: bold 20px 'Cormorant Garamond';
+      font-weight: 700;
       color: #000;
+      letter-spacing: 2px;
       margin-bottom: 60px; }
-      .content > .inner > h1 span {
-        font: normal 20px/1 "arial";
-        color: #aaa; }
-        .content > .inner > h1 span::before {
-          content: "/";
-          margin-right: 20px;
-          margin-left: 10px; }
+      .content > .inner h1::after {
+        content: "";
+        display: block;
+        width: 90%;
+        height: 1px;
+        background: #555;
+        margin-top: 10px; }
+    .content > .inner p {
+      font: 12px/1.5 'Open Sans';
+      color: #555; }
 
 /* footer--------------------------- */
 #footer_sub {
@@ -457,10 +569,7 @@ input, a, img, span, label, select {
   .community .inner .pagination .numbers {
     display: none; } }
 .department .sub_visual {
-  background-image: url(../img/4_kimon-maritz-mQiZnKwGXW0-unsplash.jpg);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover; }
+  background-image: url(../img/4_kimon-maritz-mQiZnKwGXW0-unsplash.jpg); }
 .department .division {
   width: 100%;
   height: 600px;
