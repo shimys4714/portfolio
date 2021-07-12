@@ -51,8 +51,9 @@ $mobile: 539px;
             flex-direction: row;     
             flex-wrap: wrap;         
             justify-content: space-between;
-            margin-left: 110px;
+            //margin-left: 110px;
             box-sizing: border-box;
+            margin: 0px auto;
             //border: 1px solid seagreen;   
 
             &::after { 
@@ -99,8 +100,7 @@ $mobile: 539px;
         >a { 
             display: block;
             width: 90%;
-            margin-top: 10px;
-            margin-left: 110px;
+            margin: 10px auto;
             box-sizing: border-box;
             font: 12px/1.5 'Open Sans';
             color: #333;

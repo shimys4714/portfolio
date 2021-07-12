@@ -607,8 +607,8 @@ input, a, img, span, label, select {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
-    margin-left: 110px;
-    box-sizing: border-box; }
+    box-sizing: border-box;
+    margin: 0px auto; }
     .department #team .ourTeam::after {
       content: "";
       display: block;
@@ -641,8 +641,7 @@ input, a, img, span, label, select {
   .department #team > a {
     display: block;
     width: 90%;
-    margin-top: 10px;
-    margin-left: 110px;
+    margin: 10px auto;
     box-sizing: border-box;
     font: 12px/1.5 'Open Sans';
     color: #333;
