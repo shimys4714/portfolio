@@ -1,8 +1,121 @@
 @charset "utf-8";
+$tablet: 1179px;
+$mobile: 539px;
 
 .department { 
     .sub_visual { 
         background-image: url(../img/4_kimon-maritz-mQiZnKwGXW0-unsplash.jpg);
+    }
+    #process { 
+        >p { 
+            text-align: center;
+            padding: 20px 100px;
+            box-sizing: border-box;
+        }
+        >ul {
+            display: flex; 
+            justify-content: center;
+            li { 
+                display: flex;
+                flex-direction: column;
+                align-content: center;
+                text-align: center;
+                padding: 50px;
+                box-sizing: border-box;
+    
+                span { 
+                    font: bold 80px/1 'Playfair Display';
+                    color: #D9D5D2;
+                }
+
+                h2{
+                    font: bold 15px/1 'open sans';
+                    letter-spacing: 1.5;
+                    color: #000;
+                    text-align: center;
+                    margin-top: 20px;
+                    margin-bottom: 10px;
+                    letter-spacing: 1px;
+                }
+            }
+
+        }
+    }
+    #team { 
+        width: 100%; 
+        overflow: hidden;
+
+        .ourTeam { 
+            width: 90%;
+            display: flex;
+            flex-direction: row;     
+            flex-wrap: wrap;         
+            justify-content: space-between;
+            margin-left: 110px;
+            box-sizing: border-box;
+            //border: 1px solid seagreen;   
+
+            &::after { 
+                content: "";
+                display: block;
+                width: 100%;
+                height: 1px;
+                background: #555;
+            }            
+        }
+        article { 
+            width: 30%;
+            height: 400px;
+            margin-bottom: 20px;
+            //border: 1px solid orange;
+            display: flex;
+            flex-direction: column;
+
+            .pic { 
+                width: 100%;
+                height: 100%;
+                background-repeat: no-repeat;
+                background-size: cover;
+                filter: saturate(50%) ;
+            }
+
+            .txt { 
+                >h2{
+                    font: bold 12px/1 'open sans';
+                    
+                    letter-spacing: 1.5;
+                    color: #000;
+                    text-align: left;
+                    margin-top: 20px;
+                    margin-bottom: 5px;
+                    letter-spacing: 1px;
+                }
+                >p{
+                    font: 10px/1.5 'Open Sans';
+                    color: #555;
+                }
+            }
+        }
+        >a { 
+            display: block;
+            width: 90%;
+            margin-top: 10px;
+            margin-left: 110px;
+            box-sizing: border-box;
+            font: 12px/1.5 'Open Sans';
+            color: #333;
+            text-align: left;
+            box-sizing: border-box;
+            transition: all 0.3s;
+            //border: 1px solid green;
+
+            &:hover { 
+                font-style: bold;
+                font-size: 14px;
+                font-weight: 200;
+                color:#222;
+            }
+        }
     }
 
     .division{
@@ -75,46 +188,31 @@
         }
     }
 }
-#about { 
-    width: 100%;
-    height: 200px;
-    display: flex;
-    justify-content: center;
-    margin-bottom: 50px;
-    position: relative;
-    
-    .pic { 
-        width: 80%;
-        height: 100%;
-        background:#555;
-    }
-    .txt { 
-        padding: 30px;
-        box-sizing: border-box;
-    }
-}
 
 /* Tablet---------------- */
 @media screen and (max-width:$tablet) {
-    .department { 
-        .division { 
-            height: 60vw;
-        }
-    }
+   
+
+    
+    // .department { 
+    //     .division { 
+    //         height: 60vw;
+    //     }
+    // }
  }
 
  /* mobile---------------- */
 @media screen and (max-width:$mobile) {
-    .department { 
-        .division { 
-            height: auto;
-            background: none; 
+    // .department { 
+    //     .division { 
+    //         height: auto;
+    //         background: none; 
 
-            .div_tree { 
-                opacity: 1;
-                position: relative;
-                top:0;
-            }
-        }
-    }
+    //         .div_tree { 
+    //             opacity: 1;
+    //             position: relative;
+    //             top:0;
+    //         }
+    //     }
+    // }
 }

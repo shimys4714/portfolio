@@ -3,15 +3,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Cormorant&family=Open+Sans&family=Prata&family=Song+Myung&display=swap');
 
 
-@mixin title($fontSize:24px, $fontFamily:'arial', $color: #555, $align: center, $mb:50px) {
-
-    font: bold $fontSize/1 $fontFamily;
-            color: $color;
-            text-align: $align;
-            margin-bottom: $mb;
+@mixin title($fontSize:40px, $fontFamily:'Cormorant Garamond',$fontWeight:900, $letterSpa:2px, $color: #000, $align: left, $mb:20px) {
+    font: bold $fontSize/1 $fontFamily; 
+    font-weight: $fontWeight;
+    color: $color;
+    letter-spacing: $letterSpa;
+    text-align: $align;
+    margin-bottom: $mb;
 }
-
-//@include title($fontSize:20px, $mb:30px);
 
 /* header--------------------------- */
 #header_sub { 
@@ -93,6 +92,7 @@
                         top:51px; right:0;
                         display: none;
                         z-index: 3;
+                        overflow: hidden;
 
                         .left  {
                             width: 20%;
@@ -333,18 +333,13 @@
             box-sizing: border-box;
 
             h1 { 
-                font: bold 40px 'Cormorant Garamond';
-                font-weight: 900;
-                color: #000;
-                letter-spacing: 2px;
-                margin-bottom: 20px;
+                @include title();
             }
             p{ 
                 font: 12px/1.5 'Open Sans';
                 color: #555;
                 background-color: #fff;
                 padding: 20px 10px;
-                box-sizing: border-box;
             }
         }
     }
@@ -353,18 +348,15 @@
         width: 1180px;
         margin: 0px auto;
         min-height: 500px;
-
+        
         h1 { 
-            font: bold 20px 'Cormorant Garamond';
-            font-weight: 700;
-            color: #000;
-            letter-spacing: 2px;
-            margin-bottom: 60px;
+            @include title($fontSize:20px, $fontWeight:700, $mb:50px);
+            margin-top: 50px;
 
             &::after { 
                 content: "";
                 display: block;
-                width: 90%;
+                width: 100%;
                 height: 1px;
                 background: #555;
                 margin-top: 10px;

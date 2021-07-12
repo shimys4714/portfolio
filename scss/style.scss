@@ -22,20 +22,14 @@ $mobile: 539px;
 @import "contact.scss";
 
 
-@mixin menu($fontSize:24px, $fontFamily:'Cormorant Garamond', $color: #333, $align: center) {
-    font: bold $fontSize/1 $fontFamily;
+@mixin title($fontSize:40px, $fontFamily:'Cormorant Garamond',$fontWeight:900, $letterSpa:2px, $color: #000, $align: left, $mb:20px) {
+    font: bold $fontSize/1 $fontFamily; 
+    font-weight: $fontWeight;
     color: $color;
-    text-align: $align;
-}
-@mixin title($fontSize:24px, $fontFamily:'arial', $color: #555, $align: center, $mb:50px) {
-
-    font: bold $fontSize/1 $fontFamily;
-    color: $color;
+    letter-spacing: $letterSpa;
     text-align: $align;
     margin-bottom: $mb;
 }
-
-//@include title();
 
 /* header -----------------------------------*/
 #header {
@@ -117,6 +111,7 @@ $mobile: 539px;
                         top:51px; right:0;
                         display: none;
                         z-index: 3;
+                        overflow: hidden;
 
                         .left  {
                             width: 20%;

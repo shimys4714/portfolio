@@ -144,7 +144,8 @@ input, a, img, span, label, select {
             top: 51px;
             right: 0;
             display: none;
-            z-index: 3; }
+            z-index: 3;
+            overflow: hidden; }
             #header_sub .inner .menuWeb .gnb > li .sub .left {
               width: 20%;
               height: 100%;
@@ -325,31 +326,33 @@ input, a, img, span, label, select {
       transform: translateY(-50%);
       box-sizing: border-box; }
       .content .sub_visual > .txt h1 {
-        font: bold 40px 'Cormorant Garamond';
+        font: bold 40px "Cormorant Garamond";
         font-weight: 900;
         color: #000;
         letter-spacing: 2px;
+        text-align: left;
         margin-bottom: 20px; }
       .content .sub_visual > .txt p {
         font: 12px/1.5 'Open Sans';
         color: #555;
         background-color: #fff;
-        padding: 20px 10px;
-        box-sizing: border-box; }
+        padding: 20px 10px; }
   .content > .inner {
     width: 1180px;
     margin: 0px auto;
     min-height: 500px; }
     .content > .inner h1 {
-      font: bold 20px 'Cormorant Garamond';
+      font: bold 20px "Cormorant Garamond";
       font-weight: 700;
       color: #000;
       letter-spacing: 2px;
-      margin-bottom: 60px; }
+      text-align: left;
+      margin-bottom: 50px;
+      margin-top: 50px; }
       .content > .inner h1::after {
         content: "";
         display: block;
-        width: 90%;
+        width: 100%;
         height: 1px;
         background: #555;
         margin-top: 10px; }
@@ -570,6 +573,87 @@ input, a, img, span, label, select {
     display: none; } }
 .department .sub_visual {
   background-image: url(../img/4_kimon-maritz-mQiZnKwGXW0-unsplash.jpg); }
+.department #process > p {
+  text-align: center;
+  padding: 20px 100px;
+  box-sizing: border-box; }
+.department #process > ul {
+  display: flex;
+  justify-content: center; }
+  .department #process > ul li {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    text-align: center;
+    padding: 50px;
+    box-sizing: border-box; }
+    .department #process > ul li span {
+      font: bold 80px/1 'Playfair Display';
+      color: #D9D5D2; }
+    .department #process > ul li h2 {
+      font: bold 15px/1 'open sans';
+      letter-spacing: 1.5;
+      color: #000;
+      text-align: center;
+      margin-top: 20px;
+      margin-bottom: 10px;
+      letter-spacing: 1px; }
+.department #team {
+  width: 100%;
+  overflow: hidden; }
+  .department #team .ourTeam {
+    width: 90%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-left: 110px;
+    box-sizing: border-box; }
+    .department #team .ourTeam::after {
+      content: "";
+      display: block;
+      width: 100%;
+      height: 1px;
+      background: #555; }
+  .department #team article {
+    width: 30%;
+    height: 400px;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column; }
+    .department #team article .pic {
+      width: 100%;
+      height: 100%;
+      background-repeat: no-repeat;
+      background-size: cover;
+      filter: saturate(50%); }
+    .department #team article .txt > h2 {
+      font: bold 12px/1 'open sans';
+      letter-spacing: 1.5;
+      color: #000;
+      text-align: left;
+      margin-top: 20px;
+      margin-bottom: 5px;
+      letter-spacing: 1px; }
+    .department #team article .txt > p {
+      font: 10px/1.5 'Open Sans';
+      color: #555; }
+  .department #team > a {
+    display: block;
+    width: 90%;
+    margin-top: 10px;
+    margin-left: 110px;
+    box-sizing: border-box;
+    font: 12px/1.5 'Open Sans';
+    color: #333;
+    text-align: left;
+    box-sizing: border-box;
+    transition: all 0.3s; }
+    .department #team > a:hover {
+      font-style: bold;
+      font-size: 14px;
+      font-weight: 200;
+      color: #222; }
 .department .division {
   width: 100%;
   height: 600px;
@@ -626,34 +710,8 @@ input, a, img, span, label, select {
       background: #999;
       transform: translateX(140px); }
 
-#about {
-  width: 100%;
-  height: 200px;
-  display: flex;
-  justify-content: center;
-  margin-bottom: 50px;
-  position: relative; }
-  #about .pic {
-    width: 80%;
-    height: 100%;
-    background: #555; }
-  #about .txt {
-    padding: 30px;
-    box-sizing: border-box; }
-
 /* Tablet---------------- */
-@media screen and (max-width: 1179px) {
-  .department .division {
-    height: 60vw; } }
 /* mobile---------------- */
-@media screen and (max-width: 539px) {
-  .department .division {
-    height: auto;
-    background: none; }
-    .department .division .div_tree {
-      opacity: 1;
-      position: relative;
-      top: 0; } }
 .join {
   padding: 0px 0px 150px; }
   .join .sub_visual {
@@ -1106,7 +1164,8 @@ input, a, img, span, label, select {
             top: 51px;
             right: 0;
             display: none;
-            z-index: 3; }
+            z-index: 3;
+            overflow: hidden; }
             #header .inner .menuWeb .gnb > li .sub .left {
               width: 20%;
               height: 100%;
