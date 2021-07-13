@@ -32,7 +32,7 @@ $mobile: 539px;
 }
 
 /* header -----------------------------------*/
-#header {
+#header { 
     width: 100%;
     //border-bottom:1px solid #F2F2F2;
     position: relative;
@@ -57,7 +57,7 @@ $mobile: 539px;
         }
 
         .menuWeb {
-            width: 100%;
+            //width: 100%;
             .gnb {
                 position:absolute;
                 bottom:0;
@@ -72,7 +72,7 @@ $mobile: 539px;
                     float:left;
 
                     &::after{
-                        content:"";
+                        content: "";
                         display: block;
                         width: 0px;
                         height: 2px;
@@ -87,7 +87,7 @@ $mobile: 539px;
                     }
                     &.on { 
                         &::after{
-                            content:"";
+                            content: "";
                             display: block;
                             width: 100%;
                             height: 1.5;
@@ -110,8 +110,7 @@ $mobile: 539px;
                         position: absolute;
                         top:51px; right:0;
                         display: none;
-                        z-index: 3;
-                        overflow: hidden;
+                        //overflow: hidden;
 
                         .left  {
                             width: 20%;
@@ -166,26 +165,23 @@ $mobile: 539px;
                                 }
                             }
                         }
-
                         &::before{
                             content: "";
                             display: block;
-                            width: calc( (100vw - 1180px) / 2);
-                            height: 100%;
+                            width: 100%; height: 100%;
                             position: absolute;
-                            top: 0;
-                            left: 100%;
-                            background: #fff;
+                            top: 0px;
+                            right: 100%;
+                            background: #D9D5D2;
                         }
                         &::after{
                             content: "";
                             display: block;
-                            width: calc( (100vw - 1180px) / 2);
-                            height: 100%;
+                            width: 100%; height: 100%; 
                             position: absolute;
                             top: 0;
-                            right: 100%;
-                            background:#fff;
+                            left: 100%;
+                            background:#D9D5D2;
                         }
                     }
                 }
@@ -331,7 +327,7 @@ $mobile: 539px;
 #visual {
     width:100%;
     height: calc(100vh - 121px);
-    background-color:#fff;
+    background-color:#F2F2F2;
     position: relative;
     overflow: hidden;
     z-index: 1;
