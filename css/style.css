@@ -317,26 +317,31 @@ input, a, img, span, label, select {
     background-position: center;
     background-size: cover;
     position: relative; }
-    .content .sub_visual > .txt {
-      width: 400px;
-      height: 200px;
-      position: absolute;
-      top: 50%;
-      right: 0px;
-      transform: translateY(-50%);
-      box-sizing: border-box; }
-      .content .sub_visual > .txt h1 {
-        font: bold 40px "Cormorant Garamond";
-        font-weight: 900;
-        color: #000;
-        letter-spacing: 2px;
-        text-align: left;
-        margin-bottom: 20px; }
-      .content .sub_visual > .txt p {
-        font: 12px/1.5 'Open Sans';
-        color: #555;
-        background-color: #fff;
-        padding: 20px 10px; }
+    .content .sub_visual .textFrame {
+      width: 1180px;
+      height: 100%;
+      margin: 0 auto;
+      position: relative; }
+      .content .sub_visual .textFrame > .txt {
+        width: 400px;
+        height: 200px;
+        position: absolute;
+        top: 50%;
+        right: 0px;
+        transform: translateY(-50%);
+        box-sizing: border-box; }
+        .content .sub_visual .textFrame > .txt h1 {
+          font: bold 40px "Cormorant Garamond";
+          font-weight: 900;
+          color: #000;
+          letter-spacing: 2px;
+          text-align: left;
+          margin-bottom: 20px; }
+        .content .sub_visual .textFrame > .txt p {
+          font: 12px/1.5 'Open Sans';
+          color: #555;
+          background-color: #fff;
+          padding: 20px 10px; }
   .content > .inner {
     width: 1180px;
     margin: 0px auto;

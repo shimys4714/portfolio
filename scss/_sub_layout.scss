@@ -323,23 +323,30 @@
         background-size: cover;
         position: relative;
 
-        >.txt { 
-            width: 400px;
-            height: 200px;
-            position: absolute;
-            top: 50%;
-            right: 0px;
-            transform: translateY(-50%);
-            box-sizing: border-box;
-
-            h1 { 
-                @include title();
-            }
-            p{ 
-                font: 12px/1.5 'Open Sans';
-                color: #555;
-                background-color: #fff;
-                padding: 20px 10px;
+        .textFrame{
+            width: 1180px;
+            height: 100%;
+            margin:0 auto;
+            position: relative;
+            
+            >.txt { 
+                width: 400px;
+                height: 200px;
+                position: absolute;
+                top: 50%;
+                right: 0px;
+                transform: translateY(-50%);
+                box-sizing: border-box;
+    
+                h1 { 
+                    @include title();
+                }
+                p{ 
+                    font: 12px/1.5 'Open Sans';
+                    color: #555;
+                    background-color: #fff;
+                    padding: 20px 10px;
+                }
             }
         }
     }
