@@ -323,7 +323,7 @@
         background-size: cover;
         position: relative;
 
-        .textFrame{
+        >.textFrame{
             width: 1180px;
             height: 100%;
             margin:0 auto;
@@ -535,7 +535,12 @@
 
         .sub_visual { 
             height: 200px;
+            
+            .textFrame{
+                width: 100%;
+            }
         }
+       
 
         .inner { 
             width: 100%;

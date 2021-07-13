@@ -317,12 +317,12 @@ input, a, img, span, label, select {
     background-position: center;
     background-size: cover;
     position: relative; }
-    .content .sub_visual .textFrame {
+    .content .sub_visual > .textFrame {
       width: 1180px;
       height: 100%;
       margin: 0 auto;
       position: relative; }
-      .content .sub_visual .textFrame > .txt {
+      .content .sub_visual > .textFrame > .txt {
         width: 400px;
         height: 200px;
         position: absolute;
@@ -330,14 +330,14 @@ input, a, img, span, label, select {
         right: 0px;
         transform: translateY(-50%);
         box-sizing: border-box; }
-        .content .sub_visual .textFrame > .txt h1 {
+        .content .sub_visual > .textFrame > .txt h1 {
           font: bold 40px "Cormorant Garamond";
           font-weight: 900;
           color: #000;
           letter-spacing: 2px;
           text-align: left;
           margin-bottom: 20px; }
-        .content .sub_visual .textFrame > .txt p {
+        .content .sub_visual > .textFrame > .txt p {
           font: 12px/1.5 'Open Sans';
           color: #555;
           background-color: #fff;
@@ -475,6 +475,8 @@ input, a, img, span, label, select {
     padding: 0px 0px 100px; }
     .content .sub_visual {
       height: 200px; }
+      .content .sub_visual .textFrame {
+        width: 100%; }
     .content .inner {
       width: 100%;
       padding: 0px 30px; }
