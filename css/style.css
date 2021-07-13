@@ -364,7 +364,6 @@ input, a, img, span, label, select {
 /* footer--------------------------- */
 #footer_sub {
   width: 100%;
-  box-sizing: border-box;
   background: #fff;
   overflow: hidden; }
   #footer_sub::before {
@@ -375,82 +374,105 @@ input, a, img, span, label, select {
     background-color: #555; }
   #footer_sub .inner {
     width: 1180px;
-    height: 50px;
     margin: 0px auto;
     display: flex;
-    flex-direction: row;
-    justify-content: space-between; }
-    #footer_sub .inner::after {
-      content: "";
-      display: block;
-      clear: both; }
-    #footer_sub .inner h1 {
-      padding: 0 30px;
-      box-sizing: border-box;
-      border-right: 1px solid #555; }
-      #footer_sub .inner h1 a {
-        font: bold 15px/50px 'Playfair Display';
-        color: #333;
-        letter-spacing: 3px; }
-    #footer_sub .inner .footermenu {
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center; }
+    #footer_sub .inner .wrap1 {
+      width: 100%;
+      height: 60px;
       display: flex;
       justify-content: space-between;
-      padding: 0 10px;
-      box-sizing: border-box;
-      border-right: 1px solid #555; }
-      #footer_sub .inner .footermenu > li {
-        padding: 0 10px;
-        box-sizing: border-box; }
-        #footer_sub .inner .footermenu > li a {
-          font: bold 13px/50px 'Cormorant Garamond';
-          font-weight: 600;
-          color: #333; }
-    #footer_sub .inner p {
-      font: 10px/50px 'Open Sans';
-      color: #444;
-      padding: 0 50px;
-      box-sizing: border-box;
-      border-right: 1px solid #555; }
-    #footer_sub .inner .newsletter {
-      width: 30%;
+      border-bottom: 1px solid #555; }
+      #footer_sub .inner .wrap1 .sec1 {
+        width: calc( ( 100% / 3) *2);
+        display: flex;
+        justify-content: space-between; }
+        #footer_sub .inner .wrap1 .sec1 svg {
+          width: 60px;
+          height: 60px;
+          display: block;
+          color: #333;
+          opacity: 0.5;
+          transition: 0.3s;
+          margin-right: 20px;
+          padding: 20px;
+          box-sizing: border-box; }
+          #footer_sub .inner .wrap1 .sec1 svg:hover {
+            opacity: 1; }
+        #footer_sub .inner .wrap1 .sec1 .footermenu {
+          width: 100%;
+          display: flex;
+          justify-content: space-between;
+          flex-wrap: nowrap;
+          margin: 0 20px;
+          box-sizing: border-box; }
+          #footer_sub .inner .wrap1 .sec1 .footermenu > li {
+            box-sizing: border-box; }
+            #footer_sub .inner .wrap1 .sec1 .footermenu > li > a {
+              font: bold 15px/60px 'Cormorant Garamond';
+              color: #444; }
+      #footer_sub .inner .wrap1 .newsletter {
+        width: calc(100% / 3);
+        padding: 20px 0 20px 0;
+        box-sizing: border-box;
+        display: flex;
+        justify-content: flex-end;
+        flex-direction: row;
+        border-left: 1px solid #555; }
+        #footer_sub .inner .wrap1 .newsletter input[type=text] {
+          width: 80%;
+          font: bold 12px 'Open Sans';
+          border: none;
+          border-bottom: 1px solid #333; }
+          #footer_sub .inner .wrap1 .newsletter input[type=text]::placeholder {
+            font: 10px/60px 'Open Sans';
+            color: #999;
+            text-align: left; }
+        #footer_sub .inner .wrap1 .newsletter a > svg {
+          display: block;
+          width: 20px;
+          height: 18px;
+          color: #888;
+          opacity: 0.5;
+          transition: 0.3s; }
+          #footer_sub .inner .wrap1 .newsletter a > svg:hover {
+            opacity: 1;
+            color: #111; }
+    #footer_sub .inner .wrap2 {
+      width: 100%;
+      height: 100px;
       display: flex;
       justify-content: space-between;
-      padding: 10px;
-      box-sizing: border-box; }
-      #footer_sub .inner .newsletter input[type=text] {
-        width: 90%;
-        font: bold 12px/50px 'Open Sans';
-        border: none;
-        border-bottom: 1px solid #555;
-        margin-left: 20px; }
-        #footer_sub .inner .newsletter input[type=text]::placeholder {
-          font: 10px/50px 'Open Sans';
-          color: #444;
+      flex-wrap: nowrap; }
+      #footer_sub .inner .wrap2 > h1 {
+        width: calc( 100% / 3); }
+        #footer_sub .inner .wrap2 > h1 > a {
+          display: block;
+          box-sizing: border-box;
+          font: bold 20px/100px 'Playfair Display';
+          color: #333;
+          letter-spacing: 3px;
           text-align: left; }
-      #footer_sub .inner .newsletter .fa-telegram-plane {
+      #footer_sub .inner .wrap2 > p {
+        width: calc( 100% / 3);
         display: block;
-        width: 30px;
-        height: 30px;
-        padding: 3px;
         box-sizing: border-box;
-        color: #888;
-        border-bottom: 1px solid #555;
-        transition: 0.4s; }
-        #footer_sub .inner .newsletter .fa-telegram-plane:hover {
-          color: #111; }
-    #footer_sub .inner .sns {
-      display: flex;
-      justify-content: space-between;
-      padding: 0 10px;
-      box-sizing: border-box;
-      border-left: 1px solid #555; }
-      #footer_sub .inner .sns .fa-instagram, #footer_sub .inner .sns .fa-youtube {
-        display: block;
-        width: 40px;
-        height: 50px;
-        padding: 10px;
-        box-sizing: border-box;
-        color: #333; }
+        font: 10px/100px 'Open Sans';
+        color: #444;
+        letter-spacing: 1.5px;
+        text-align: center; }
+      #footer_sub .inner .wrap2 .sns {
+        width: calc( 100% / 3);
+        display: flex;
+        justify-content: flex-end; }
+        #footer_sub .inner .wrap2 .sns svg {
+          display: block;
+          width: 20px;
+          height: 100px;
+          color: #333;
+          margin-left: 15px; }
 
 /* tablet------------------------------------------ */
 @media screen and (max-width: 1179px) {
@@ -479,19 +501,16 @@ input, a, img, span, label, select {
 
   /* footer--------------------------- */
   #footer_sub .inner {
-    width: 100%; }
-    #footer_sub .inner h1 {
-      padding: 0 10px; }
-    #footer_sub .inner .footermenu {
-      padding: 0 20px; }
-      #footer_sub .inner .footermenu > li {
-        padding: 0 5px; }
-    #footer_sub .inner p {
-      display: none; }
-    #footer_sub .inner .newsletter {
-      width: 30%; }
-      #footer_sub .inner .newsletter input[type=text] {
-        margin-left: 5px; } }
+    width: 100%;
+    padding: 0 20px; }
+    #footer_sub .inner .wrap1 .sec1 svg {
+      margin-right: 0px; }
+    #footer_sub .inner .wrap1 .sec1 .footermenu {
+      margin: 0px 10px; }
+      #footer_sub .inner .wrap1 .sec1 .footermenu > li > a {
+        font: bold 14px/60px 'Cormorant Garamond'; }
+    #footer_sub .inner .wrap2 > p {
+      letter-spacing: 0px; } }
 /* mobile------------------------------------------ */
 @media screen and (max-width: 539px) {
   /* content-------------------------- */
@@ -500,22 +519,27 @@ input, a, img, span, label, select {
     padding: 0px 0px 100px; }
     .content .sub_visual {
       height: 200px; }
-      .content .sub_visual .textFrame {
-        width: 100%; }
     .content .inner {
       width: 100%;
       padding: 0px 30px; }
-      .content .inner h1 {
-        font: normal 30px/1 "arial"; }
-        .content .inner h1 span {
-          display: block;
-          font: normal 15px/1 "arial"; }
 
   /* footer--------------------------- */
-  #footer_sub .inner .footermenu {
-    border-right: none; }
-  #footer_sub .inner .newsletter {
-    display: none; } }
+  #footer_sub .inner .wrap1 .sec1 {
+    width: 100%; }
+    #footer_sub .inner .wrap1 .sec1 .footermenu {
+      margin: 0px; }
+      #footer_sub .inner .wrap1 .sec1 .footermenu > li > a {
+        font: bold 14px/60px 'Cormorant Garamond'; }
+  #footer_sub .inner .wrap1 .newsletter {
+    display: none; }
+  #footer_sub .inner .wrap2 > h1 > a {
+    font-size: 15px; }
+  #footer_sub .inner .wrap2 > p {
+    font: 5px/100px;
+    letter-spacing: 0px;
+    display: none; }
+  #footer_sub .inner .wrap2 .sns svg {
+    width: 15px; } }
 .community .sub_visual {
   background-image: url(../img/9_robin-schreiner-7y4858E8PfA-unsplash.jpg);
   background-repeat: no-repeat;
@@ -1419,7 +1443,6 @@ input, a, img, span, label, select {
 /* footer------------------------------------ */
 #footer {
   width: 100%;
-  box-sizing: border-box;
   background: #fff;
   overflow: hidden; }
   #footer::before {
@@ -1430,82 +1453,105 @@ input, a, img, span, label, select {
     background-color: #555; }
   #footer .inner {
     width: 1180px;
-    height: 50px;
     margin: 0px auto;
     display: flex;
-    flex-direction: row;
-    justify-content: space-between; }
-    #footer .inner::after {
-      content: "";
-      display: block;
-      clear: both; }
-    #footer .inner h1 {
-      padding: 0 30px;
-      box-sizing: border-box;
-      border-right: 1px solid #555; }
-      #footer .inner h1 a {
-        font: bold 15px/50px 'Playfair Display';
-        color: #333;
-        letter-spacing: 3px; }
-    #footer .inner .footermenu {
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center; }
+    #footer .inner .wrap1 {
+      width: 100%;
+      height: 60px;
       display: flex;
       justify-content: space-between;
-      padding: 0 10px;
-      box-sizing: border-box;
-      border-right: 1px solid #555; }
-      #footer .inner .footermenu > li {
-        padding: 0 10px;
-        box-sizing: border-box; }
-        #footer .inner .footermenu > li a {
-          font: bold 13px/50px 'Cormorant Garamond';
-          font-weight: 600;
-          color: #333; }
-    #footer .inner p {
-      font: 10px/50px 'Open Sans';
-      color: #444;
-      padding: 0 50px;
-      box-sizing: border-box;
-      border-right: 1px solid #555; }
-    #footer .inner .newsletter {
-      width: 30%;
+      border-bottom: 1px solid #555; }
+      #footer .inner .wrap1 .sec1 {
+        width: calc( ( 100% / 3) *2);
+        display: flex;
+        justify-content: space-between; }
+        #footer .inner .wrap1 .sec1 svg {
+          width: 60px;
+          height: 60px;
+          display: block;
+          color: #333;
+          opacity: 0.5;
+          transition: 0.3s;
+          margin-right: 20px;
+          padding: 20px;
+          box-sizing: border-box; }
+          #footer .inner .wrap1 .sec1 svg:hover {
+            opacity: 1; }
+        #footer .inner .wrap1 .sec1 .footermenu {
+          width: 100%;
+          display: flex;
+          justify-content: space-between;
+          flex-wrap: nowrap;
+          margin: 0 20px;
+          box-sizing: border-box; }
+          #footer .inner .wrap1 .sec1 .footermenu > li {
+            box-sizing: border-box; }
+            #footer .inner .wrap1 .sec1 .footermenu > li > a {
+              font: bold 15px/60px 'Cormorant Garamond';
+              color: #444; }
+      #footer .inner .wrap1 .newsletter {
+        width: calc(100% / 3);
+        padding: 20px 0 20px 0;
+        box-sizing: border-box;
+        display: flex;
+        justify-content: flex-end;
+        flex-direction: row;
+        border-left: 1px solid #555; }
+        #footer .inner .wrap1 .newsletter input[type=text] {
+          width: 80%;
+          font: bold 12px 'Open Sans';
+          border: none;
+          border-bottom: 1px solid #333; }
+          #footer .inner .wrap1 .newsletter input[type=text]::placeholder {
+            font: 10px/60px 'Open Sans';
+            color: #999;
+            text-align: left; }
+        #footer .inner .wrap1 .newsletter a > svg {
+          display: block;
+          width: 20px;
+          height: 18px;
+          color: #888;
+          opacity: 0.5;
+          transition: 0.3s; }
+          #footer .inner .wrap1 .newsletter a > svg:hover {
+            opacity: 1;
+            color: #111; }
+    #footer .inner .wrap2 {
+      width: 100%;
+      height: 100px;
       display: flex;
       justify-content: space-between;
-      padding: 10px;
-      box-sizing: border-box; }
-      #footer .inner .newsletter input[type=text] {
-        width: 90%;
-        font: bold 12px/50px 'Open Sans';
-        border: none;
-        border-bottom: 1px solid #555;
-        margin-left: 20px; }
-        #footer .inner .newsletter input[type=text]::placeholder {
-          font: 10px/50px 'Open Sans';
-          color: #444;
+      flex-wrap: nowrap; }
+      #footer .inner .wrap2 > h1 {
+        width: calc( 100% / 3); }
+        #footer .inner .wrap2 > h1 > a {
+          display: block;
+          box-sizing: border-box;
+          font: bold 20px/100px 'Playfair Display';
+          color: #333;
+          letter-spacing: 3px;
           text-align: left; }
-      #footer .inner .newsletter .fa-telegram-plane {
+      #footer .inner .wrap2 > p {
+        width: calc( 100% / 3);
         display: block;
-        width: 30px;
-        height: 30px;
-        padding: 3px;
         box-sizing: border-box;
-        color: #888;
-        border-bottom: 1px solid #555;
-        transition: 0.4s; }
-        #footer .inner .newsletter .fa-telegram-plane:hover {
-          color: #111; }
-    #footer .inner .sns {
-      display: flex;
-      justify-content: space-between;
-      padding: 0 10px;
-      box-sizing: border-box;
-      border-left: 1px solid #555; }
-      #footer .inner .sns .fa-instagram, #footer .inner .sns .fa-youtube {
-        display: block;
-        width: 40px;
-        height: 50px;
-        padding: 10px;
-        box-sizing: border-box;
-        color: #333; }
+        font: 10px/100px 'Open Sans';
+        color: #444;
+        letter-spacing: 1.5px;
+        text-align: center; }
+      #footer .inner .wrap2 .sns {
+        width: calc( 100% / 3);
+        display: flex;
+        justify-content: flex-end; }
+        #footer .inner .wrap2 .sns svg {
+          display: block;
+          width: 20px;
+          height: 100px;
+          color: #333;
+          margin-left: 15px; }
 
 /* tablet------------------------------------------ */
 @media screen and (max-width: 1179px) {
@@ -1530,19 +1576,16 @@ input, a, img, span, label, select {
 
   /* footer--------------------------------- */
   #footer .inner {
-    width: 100%; }
-    #footer .inner h1 {
-      padding: 0 10px; }
-    #footer .inner .footermenu {
-      padding: 0 20px; }
-      #footer .inner .footermenu > li {
-        padding: 0 5px; }
-    #footer .inner p {
-      display: none; }
-    #footer .inner .newsletter {
-      width: 30%; }
-      #footer .inner .newsletter input[type=text] {
-        margin-left: 5px; } }
+    width: 100%;
+    padding: 0 20px; }
+    #footer .inner .wrap1 .sec1 svg {
+      margin-right: 0px; }
+    #footer .inner .wrap1 .sec1 .footermenu {
+      margin: 0px 10px; }
+      #footer .inner .wrap1 .sec1 .footermenu > li > a {
+        font: bold 14px/60px 'Cormorant Garamond'; }
+    #footer .inner .wrap2 > p {
+      letter-spacing: 0px; } }
 /* mobile------------------------------------------ */
 @media screen and (max-width: 539px) {
   /* visual----------------------------------- */
@@ -1550,9 +1593,21 @@ input, a, img, span, label, select {
     height: 400px; }
 
   /* footer----------------------------------- */
-  #footer .inner .footermenu {
-    border-right: none; }
-  #footer .inner .newsletter {
-    display: none; } }
+  #footer .inner .wrap1 .sec1 {
+    width: 100%; }
+    #footer .inner .wrap1 .sec1 .footermenu {
+      margin: 0px; }
+      #footer .inner .wrap1 .sec1 .footermenu > li > a {
+        font: bold 14px/60px 'Cormorant Garamond'; }
+  #footer .inner .wrap1 .newsletter {
+    display: none; }
+  #footer .inner .wrap2 > h1 > a {
+    font-size: 15px; }
+  #footer .inner .wrap2 > p {
+    font: 5px/100px;
+    letter-spacing: 0px;
+    display: none; }
+  #footer .inner .wrap2 .sns svg {
+    width: 15px; } }
 
 /*# sourceMappingURL=style.css.map */
