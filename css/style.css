@@ -630,11 +630,30 @@ input, a, img, span, label, select {
   .community .inner .pagination .numbers {
     display: none; } }
 .department .sub_visual {
-  background-image: url(../img/4_kimon-maritz-mQiZnKwGXW0-unsplash.jpg); }
-.department #process > p {
-  text-align: center;
-  padding: 20px 100px;
+  background-image: url(../img/4_kimon-maritz-mQiZnKwGXW0-unsplash.jpg);
+  z-index: 1; }
+.department #process > h1 {
+  margin-bottom: 100px; }
+.department #process .quote {
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+  margin: 0 auto;
   box-sizing: border-box; }
+  .department #process .quote > p {
+    text-align: center;
+    padding: 0px 10px;
+    box-sizing: border-box;
+    font: bold 15px/2 'Playfair Display';
+    color: #111;
+    letter-spacing: 1.5px;
+    margin-bottom: 50px; }
+  .department #process .quote svg {
+    width: 10px;
+    height: 10px;
+    color: #666;
+    display: block; }
 .department #process > ul {
   display: flex;
   justify-content: center; }
@@ -656,6 +675,8 @@ input, a, img, span, label, select {
       margin-top: 20px;
       margin-bottom: 10px;
       letter-spacing: 1px; }
+    .department #process > ul li p {
+      color: #777; }
 .department #team {
   width: 100%;
   overflow: hidden; }
