@@ -1,6 +1,56 @@
+//service toggle---------------------------
+const $toggle = $(".toggle");
+const $btns = $toggle.find("dt");
+const $boxs = $toggle.find("dd");
+let speed = 500;
+let enableClick = true;
+
+$boxs.slideUp();
+
+$btns.on("click", function(e){
+    e.preventDefault();
+
+    if(enableClick){
+        enableClick =  false;
+        activation(this);
+    };
+});
+
+function activation(self){
+    var isOn = $(self).hasClass("on");
+
+    $btns.removeClass("on")
+    $boxs.slideUp(speed);
+
+    if(isOn){
+        $(self).removeClass("on")
+        $(self).next().slideUp(speed, function(){
+            enableClick = true;
+        });
+    }else { 
+        $(self).addClass("on");
+        $(self).next().slideDown(speed, function(){
+            enableClick = true;
+        });
+    };
+};
+//news 이미지 -----------------
+const news = document.querySelector("#news");
+const lists = news.querySelectorAll("article");
+const len = lists.length;
+let num = 0;
+
+for(let i=0; i<len; i++){
+    let pic = lists[i].querySelector(".pic");
+    
+    pic.style.backgroundImage = `url(img/3_community/news${i+1}.jpg)`;
+}
+
+
+
+//Q&A 테이블--------------------------------
 const url = "data/board.json";
 const frame = $(".community .inner .table");
-
 const resultData = callData(url);
 
 createTable(frame, resultData);
@@ -22,8 +72,6 @@ function callData(url){
 
     return result;
 }
-
-
 
 function createTable(target, data){
 
@@ -58,10 +106,10 @@ function createTable(target, data){
                         $("<td>").text(i+1),
                         $("<td>")                        
                             .append(
-                                $("<a>").attr("href","#").text(data[i].title)
+                                $("<a>").attr("href","#").text(data[i].Title)
                             ),
-                        $("<td>").text(data[i].writer),
-                        $("<td>").text(data[i].date)                        
+                        $("<td>").text(data[i].Writer),
+                        $("<td>").text(data[i].Date)                        
                     )
             )
     }

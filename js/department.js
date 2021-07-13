@@ -1,4 +1,4 @@
-
+//team 이미지 삽입
 const frame = document.querySelector("#team");
 const lists = frame.querySelectorAll("article");
 const len = lists.length;

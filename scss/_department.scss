@@ -4,7 +4,7 @@ $mobile: 539px;
 
 .department { 
     .sub_visual { 
-        background-image: url(../img/4_kimon-maritz-mQiZnKwGXW0-unsplash.jpg);
+        background-image: url(../img/4_visual/vis1.jpg);
         z-index: 1;
     }
     #process { 
@@ -79,10 +79,8 @@ $mobile: 539px;
             flex-direction: row;     
             flex-wrap: wrap;         
             justify-content: space-between;
-            //margin-left: 110px;
             box-sizing: border-box;
-            margin: 0px auto;
-            //border: 1px solid seagreen;   
+            margin-left: 10%;
 
             &::after { 
                 content: "";
@@ -99,6 +97,7 @@ $mobile: 539px;
             //border: 1px solid orange;
             display: flex;
             flex-direction: column;
+            //border-bottom: 1px solid #555;
 
             .pic { 
                 width: 100%;
@@ -126,121 +125,135 @@ $mobile: 539px;
             }
         }
         >a { 
+            font: 15px/1 'Cormorant Garamond';
+            color: #111;
+            width: 80px;
+            margin-left: 10%;
             display: block;
-            width: 90%;
-            margin: 10px auto;
-            box-sizing: border-box;
-            font: 12px/1.5 'Open Sans';
-            color: #333;
-            text-align: left;
-            box-sizing: border-box;
-            transition: all 0.3s;
-            //border: 1px solid green;
+            opacity: 0.8;
+            transition: 0.5s;
+            margin-top: 20px;
+
+            &::after { 
+                content: "";
+                display: block;
+                width: 0%;
+                height: 1px;
+                background-color: #555;
+                transition: 0.5s;
+                margin-top: 5px;
+            }
 
             &:hover { 
-                font-style: bold;
-                font-size: 14px;
-                font-weight: 200;
-                color:#222;
+                &::after { 
+                    content: "";
+                    display: block;
+                    width: 100%;
+                    height: 1px;
+                    background-color: #555;
+                }
             }
         }
     }
 
-    .division{
-        width: 100%;
-        height: 600px;
-        background: url(../img/organization.jpg) no-repeat center/contain;
-
-        .div_tree { 
-            opacity: 0;
-            position: absolute;
-            top: -999999px;
-            transition: all 0.3s;
-
-            //1단계
-            li { 
-                span { 
-                    display: block;
-                    width: 40%;
-                    height: 50px; 
-                    background: #111;
-                    margin-bottom: 20px;
-                    font: bold 13px/50px "arial";
-                    color: #fff;
-                    text-align: center;
-                    border-radius: 25px;
-
-                    &::after { 
-                        content: "";
-                        background: #aaa;
-                        position: absolute;
-                        top: 50px;
-                        left: 50px;
-                        width: 1px;
-                        height: calc( (70px * 15) - 25px);
-                    }
-                }        
-                //2단계
-                ul li { 
+    #org{
+        .division{
+            width: 100%;
+            height: 600px;
+            background: url(../img/organization.jpg) no-repeat center/contain;
+    
+            .div_tree { 
+                opacity: 0;
+                position: absolute;
+                top: -999999px;
+                transition: all 0.3s;
+    
+                //1단계
+                li { 
                     span { 
-                        background: #666;
-                        transform: translateX(70px);
-                        
-                        &::before { 
+                        display: block;
+                        width: 40%;
+                        height: 50px; 
+                        background: #111;
+                        margin-bottom: 20px;
+                        font: bold 13px/50px "arial";
+                        color: #fff;
+                        text-align: center;
+                        border-radius: 25px;
+    
+                        &::after { 
                             content: "";
-                            height: 1px;
-                            width: 20px;
-                            position: absolute;
-                            top: 50%;
-                            left: -20px;
                             background: #aaa;
+                            position: absolute;
+                            top: 50px;
+                            left: 50px;
+                            width: 1px;
+                            height: calc( (70px * 15) - 25px);
                         }
-                    }
-                    &:nth-of-type(1) span::after{display: none;}
-                    &:nth-of-type(2) span::after{display: none;}
-                    &:nth-of-type(3) span::after{display: none;}
-                    &:nth-of-type(4) span::after{height: calc(70px * 3 - 25px);}
-                    &:nth-of-type(5) span::after{height: calc(70px * 3 - 25px);}
-                    &:nth-of-type(6) span::after{height: calc(70px * 2 - 25px);}
-                    &:nth-of-type(7) span::after{height: calc(70px * 2 - 25px);}
-                    
-                    //3단계
+                    }        
+                    //2단계
                     ul li { 
-                        span {
-                            background: #999;
-                            transform: translateX(140px);
+                        span { 
+                            background: #666;
+                            transform: translateX(70px);
+                            
+                            &::before { 
+                                content: "";
+                                height: 1px;
+                                width: 20px;
+                                position: absolute;
+                                top: 50%;
+                                left: -20px;
+                                background: #aaa;
+                            }
+                        }
+                        &:nth-of-type(1) span::after{display: none;}
+                        &:nth-of-type(2) span::after{display: none;}
+                        &:nth-of-type(3) span::after{display: none;}
+                        &:nth-of-type(4) span::after{height: calc(70px * 3 - 25px);}
+                        &:nth-of-type(5) span::after{height: calc(70px * 3 - 25px);}
+                        &:nth-of-type(6) span::after{height: calc(70px * 2 - 25px);}
+                        &:nth-of-type(7) span::after{height: calc(70px * 2 - 25px);}
+                        
+                        //3단계
+                        ul li { 
+                            span {
+                                background: #999;
+                                transform: translateX(140px);
+                            }
                         }
                     }
                 }
             }
         }
     }
-}
+
+    }
+    
 
 /* Tablet---------------- */
 @media screen and (max-width:$tablet) {
    
-
-    
-    // .department { 
-    //     .division { 
-    //         height: 60vw;
-    //     }
-    // }
+    .department { 
+        .division { 
+            height: 60vw;
+        }
+    }
  }
 
  /* mobile---------------- */
 @media screen and (max-width:$mobile) {
-    // .department { 
-    //     .division { 
-    //         height: auto;
-    //         background: none; 
+  
+    .department { 
+        .division { 
+            height: auto;
+            background: none; 
 
-    //         .div_tree { 
-    //             opacity: 1;
-    //             position: relative;
-    //             top:0;
-    //         }
-    //     }
-    // }
+            .div_tree { 
+                opacity: 1;
+                position: relative;
+                top:0;
+            }
+        }
+    }
 }
