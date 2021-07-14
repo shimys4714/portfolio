@@ -10,6 +10,7 @@
 	<script defer src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 	<script defer src="js/custom.js"></script>
 	<script defer src="js/join.js"></script>
+	<script defer src="js/termsToggle.js"></script>
 </head>
 <body>
 
@@ -185,97 +186,139 @@
 			</div>
 		</div>
         <div class="inner">
+			<h1>Member Information</h1>
 			<form action="result.html" method="GET">
 				<fieldset>
 					<legend class="h">회원가입 입력 양식폼</legend>
+					<div class="wrap">
+						<section class="terms">
+							<h2>Terms & Conditions</h2>
+							<div class="agreement">
+								<input type="checkbox" name="agree" id="agree"><label for="agree">전체 동의</label>
+							</div>
+							
+							<article class="toggle">
+								<dl>
+									<dt>
+										<input type="checkbox" name="agree" id="agree"><label for="agree">회원이용 약관(필수)<i class="fas fa-chevron-down"></i><i class="fas fa-chevron-up"></i></label>
+									</dt>
+									<dd>
+										<textarea name="terms" id="terms" cols="30" rows="10">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi a vero corrupti repudiandae totam sit alias quidem eaque molestias ipsum debitis perspiciatis similique nostrum, ut perferendis harum assumenda quo ullam soluta nobis suscipit itaque iusto minima ad. Suscipit voluptas libero maxime nobis magni facilis vero. Deserunt excepturi iure recusandae fugit sequi similique quod animi eveniet amet voluptatum temporibus dolor voluptates sapiente harum, quo et alias nostrum? Cupiditate, reiciendis nemo sunt ipsam officia harum sequi ea, deserunt deleniti consequatur et perspiciatis illum quisquam recusandae voluptatibus necessitatibus corrupti labore aspernatur quo sit voluptate perferendis dolorem fugiat. Veniam qui inventore aperiam ducimus nobis. Deserunt excepturi iure recusandae fugit sequi similique quod animi eveniet amet voluptatum temporibus dolor voluptates sapiente harum, quo et alias nostrum? Cupiditate, reiciendis nemo sunt ipsam officia harum sequi ea, deserunt deleniti consequatur et perspiciatis illum quisquam recusandae voluptatibus necessitatibus corrupti labore aspernatur quo sit voluptate perferendis dolorem fugiat. Veniam qui inventore aperiam ducimus nobis.
+										</textarea>
+									</dd>
 
-					<section class="terms">
-						<h1><label for="terms">Terms & Policy</label></h1>
-						<textarea name="terms" id="terms" cols="30" rows="10">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi a vero corrupti repudiandae totam sit alias quidem eaque molestias ipsum debitis perspiciatis similique nostrum, ut perferendis harum assumenda quo ullam soluta nobis suscipit itaque iusto minima ad. Suscipit voluptas libero maxime nobis magni facilis vero. Deserunt excepturi iure recusandae fugit sequi similique quod animi eveniet amet voluptatum temporibus dolor voluptates sapiente harum, quo et alias nostrum? Cupiditate, reiciendis nemo sunt ipsam officia harum sequi ea, deserunt deleniti consequatur et perspiciatis illum quisquam recusandae voluptatibus necessitatibus corrupti labore aspernatur quo sit voluptate perferendis dolorem fugiat. Veniam qui inventore aperiam ducimus nobis. Deserunt excepturi iure recusandae fugit sequi similique quod animi eveniet amet voluptatum temporibus dolor voluptates sapiente harum, quo et alias nostrum? Cupiditate, reiciendis nemo sunt ipsam officia harum sequi ea, deserunt deleniti consequatur et perspiciatis illum quisquam recusandae voluptatibus necessitatibus corrupti labore aspernatur quo sit voluptate perferendis dolorem fugiat. Veniam qui inventore aperiam ducimus nobis.
-						</textarea>
-						
-						<div class="agreement">
-							<input type="checkbox" name="agree" id="agree"><label for="agree">약관에 동의합니다.</label>
-						</div>
-					</section>
+									<dt>
+										<input type="checkbox" name="agree" id="agree"><label for="agree">개인정보 처리방침 (필수)<i class="fas fa-chevron-down"></i><i class="fas fa-chevron-up"></i></label>
+									</dt>
+									<dd>
+										<textarea name="terms" id="terms" cols="30" rows="10">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi a vero corrupti repudiandae totam sit alias quidem eaque molestias ipsum debitis perspiciatis similique nostrum, ut perferendis harum assumenda quo ullam soluta nobis suscipit itaque iusto minima ad. Suscipit voluptas libero maxime nobis magni facilis vero. Deserunt excepturi iure recusandae fugit sequi similique quod animi eveniet amet voluptatum temporibus dolor voluptates sapiente harum, quo et alias nostrum? Cupiditate, reiciendis nemo sunt ipsam officia harum sequi ea.
+										</textarea>
+									</dd>
 
-					<section class="infor">
-						<h1>Member Information</h1>
-						<table summary="회원 가입 인증 양식폼">
-							<caption class="h">회원가입 인증 테이블</caption>
+									<dt>
+										<input type="checkbox" name="agree" id="agree"><label for="agree">개인정보 수집 및 이용(필수)<i class="fas fa-chevron-down"></i><i class="fas fa-chevron-up"></i></label>
+									</dt>
+									<dd>
+										<textarea name="terms" id="terms" cols="30" rows="10">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi a vero corrupti repudiandae totam sit alias quidem eaque molestias ipsum debitis perspiciatis similique nostrum, ut perferendis harum assumenda quo ullam soluta nobis suscipit itaque iusto minima ad. Suscipit voluptas libero maxime nobis magni facilis vero. Deserunt excepturi iure recusandae fugit sequi similique quod animi eveniet amet voluptatum temporibus dolor voluptates sapiente harum, quo et alias nostrum? Cupiditate, reiciendis nemo sunt ipsam officia harum sequi ea, deserunt deleniti consequatur et perspiciatis illum quisquam recusandae voluptatibus necessitatibus corrupti labore aspernatur quo sit voluptate perferendis dolorem fugiat. Veniam qui inventore aperiam ducimus nobis. Deserunt excepturi iure recusandae fugit sequi similique quod animi eveniet amet voluptatum temporibus dolor voluptates sapiente harum, quo et alias nostrum.
+										</textarea>
+									</dd>
+
+									<dt>
+										<input type="checkbox" name="agree" id="agree"><label for="agree">이메일 마케팅 수신 동의 (선택)<i class="fas fa-chevron-down"></i><i class="fas fa-chevron-up"></i></label>
+									</dt>
+									<dd>
+										<textarea name="terms" id="terms" cols="30" rows="10">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi a vero corrupti repudiandae totam sit alias quidem eaque molestias ipsum debitis perspiciatis similique nostrum, ut perferendis harum assumenda quo ullam soluta nobis suscipit itaque iusto minima ad. Suscipit voluptas libero maxime nobis magni facilis vero. Deserunt excepturi iure recusandae fugit sequi similique quod animi eveniet amet voluptatum temporibus dolor voluptates sapiente harum, quo et alias nostrum? Cupiditate, reiciendis nemo sunt ipsam officia harum sequi ea.
+										</textarea>
+									</dd>
+
+									<dt>
+										<input type="checkbox" name="agree" id="agree"><label for="agree">SNS 마케팅 수신 동의(선택)<i class="fas fa-chevron-down"></i><i class="fas fa-chevron-up"></i></label>
+									</dt>
+									<dd>
+										<textarea name="terms" id="terms" cols="30" rows="10">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi a vero corrupti repudiandae totam sit alias quidem eaque molestias ipsum debitis perspiciatis similique nostrum, ut perferendis harum assumenda quo ullam soluta nobis suscipit itaque iusto minima ad. Suscipit voluptas libero maxime nobis magni facilis vero. Deserunt excepturi iure recusandae fugit sequi similique quod animi eveniet amet voluptatum temporibus dolor voluptates sapiente harum, quo et alias nostrum? Cupiditate, reiciendis nemo sunt ipsam officia harum sequi ea.
+										</textarea>
+									</dd>
+								</dl>
+							</article>
+							
+							<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque molestiae harum nulla reprehenderit at sit, distinctio animi ab quasi architecto similique sint nesciunt recusandae, voluptas eius, vitae mollitia nisi quod officiis. Illum dolor quae dolorum accusantium, libero alias ab. Repellat tempore sapiente recusandae quae perferendis voluptates sit id est repudiandae. alias ab. Repellat tempore sapiente recusandae quae perferendis voluptates sit id est repudiandae.
+							</p>
+						</section>
 						
-							<tr class="userid">
-								<th scope="row"><label for="userid">ID</label></th>
-								<td>
-									<input type="text" name="userid" id="userid" placeholder="아이디를 입력해 주세요.">
-									<p>아이디를 입력해주세요.(5글자 이상)</p>
-								</td>
-							</tr>
-							<tr class="pwd1">
-								<th scope="row"><label for="pwd1">PASSWORD</label></th>
-								<td>
-									<input type="password" name="pwd1" id="pwd1" placeholder="비밀번호를 입력해 주세요.">
-									<p>비밀번호를 입력해주세요.</p>
-									<span class="leng">5글자 이상</span>
-									<span class="eng">영문자(대문자,소문자) 포함</span>
-									<span class="num">숫자 포함</span>
-									<span class="spc">특수문자(~!#$%^&*) 포함</span>
-								</td>
-							</tr>
-							<tr class="pwd2">
-								<th scope="row"><label for="pwd2">CONFIRM PASSWORD</label></th>
-								<td>
-									<input type="password" name="pwd2" id="pwd2" placeholder="비밀번호를 재입력해 주세요.">
-									<p>비밀번호가 일치하지 않습니다.</p>
-								</td>
-							</tr>
-							<tr class="email">
-								<th scope="row"><label for="email">E-MAIL</label></th>
-								<td>
-									<input type="text" name="email" id="email" placeholder="이메일 아이디를 입력해주세요.">
-									<select name="email2" id="email2">
-										<option value="">이메일을 선택해주세요</option>
-										<option value="naver">@naver.com</option>
-										<option value="google">@google.com</option>
-										<option value="nate">@nate.com</option>
-									</select>
-									<p>이메일을 입력해주세요.</p>
-								</td>
-							</tr>
-							<tr class="birth">
-								<th scope="row"><label for="birth">DATE OF BIRTH</label></th>
-								<td>
-									<input type="date" name="birth">								
-									<p>생일을 입력해주세요.</p>
-								</td>
-							</tr>
-							<tr class="gender">
-								<th scope="row">GENDER</th>
-								<td>
-									<label for="male"><input type="radio" name="gender" id="male" value="male">MALE</label>
-									<label for="female"><input type="radio" name="gender" id="female" value="female">FEMALE</label>
-									<p>성별을 선택해주세요.</p>
-								</td>
-							</tr>
-							<tr class="message">
-								<th scope="row"><label for="message">LEAVE MESSAGE</label></th>
-								<td>
-									<textarea name="message" id="message" cols="30" rows="10" placeholder="메세지를 입력해 주세요."></textarea>
-									<p>메세지를 남겨주세요.</p>
-								</td>
-							</tr>
-						</table>
-						<div class="btn">
-							<input type="reset" value="CANCLE">
-							<input type="submit" value="SUBMIT">
-						</div>
-					</section>
+						<section class="infor">
+							<h2>Member Information</h2>
+							<table summary="회원 가입 인증 양식폼">
+								<caption class="h">회원가입 인증 테이블</caption>
+							
+								<tr class="userid">
+									<th scope="row"><label for="userid">ID</label></th>
+									<td>
+										<input type="text" name="userid" id="userid" placeholder="아이디를 입력해 주세요.">
+										<p>아이디를 입력해주세요.(5글자 이상)</p>
+									</td>
+								</tr>
+								<tr class="pwd1">
+									<th scope="row"><label for="pwd1">PASSWORD</label></th>
+									<td>
+										<input type="password" name="pwd1" id="pwd1" placeholder="비밀번호를 입력해 주세요.">
+										<p>비밀번호를 입력해주세요.</p>
+										<span class="leng">5글자 이상</span>
+										<span class="eng">영문자(대문자,소문자) 포함</span>
+										<span class="num">숫자 포함</span>
+										<span class="spc">특수문자(~!#$%^&*) 포함</span>
+									</td>
+								</tr>
+								<tr class="pwd2">
+									<th scope="row"><label for="pwd2">CONFIRM PASSWORD</label></th>
+									<td>
+										<input type="password" name="pwd2" id="pwd2" placeholder="비밀번호를 재입력해 주세요.">
+										<p>비밀번호가 일치하지 않습니다.</p>
+									</td>
+								</tr>
+								<tr class="email">
+									<th scope="row"><label for="email">E-MAIL</label></th>
+									<td>
+										<input type="text" name="email" id="email" placeholder="이메일 아이디를 입력해주세요.">
+										<select name="email2" id="email2">
+											<option value="">이메일을 선택해주세요</option>
+											<option value="naver">@naver.com</option>
+											<option value="google">@google.com</option>
+											<option value="nate">@nate.com</option>
+										</select>
+										<p>이메일을 입력해주세요.</p>
+									</td>
+								</tr>
+								<tr class="birth">
+									<th scope="row"><label for="birth">DATE OF BIRTH</label></th>
+									<td>
+										<input type="date" name="birth">								
+										<p>생일을 입력해주세요.</p>
+									</td>
+								</tr>
+								<tr class="gender">
+									<th scope="row">GENDER</th>
+									<td>
+										<label for="male"><input type="radio" name="gender" id="male" value="male">MALE</label>
+										<label for="female"><input type="radio" name="gender" id="female" value="female">FEMALE</label>
+										<p>성별을 선택해주세요.</p>
+									</td>
+								</tr>
+								<tr class="message">
+									<th scope="row"><label for="message">LEAVE MESSAGE</label></th>
+									<td>
+										<textarea name="message" id="message" cols="30" rows="10" placeholder="메세지를 입력해 주세요."></textarea>
+										<p>메세지를 남겨주세요.</p>
+									</td>
+								</tr>
+							</table>
+							<div class="btn">
+								<input type="reset" value="CANCLE">
+								<input type="submit" value="SUBMIT">
+							</div>
+						</section>
+					</div>
 				</fieldset>
 			</form>
-			<section id="subRight">
-				<h1>Sub</h1>
-				<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quo reprehenderit alias ducimus, nemo fugit amet ea eum excepturi rerum libero.</p>
-			</section>
         </div>
     </section>
 

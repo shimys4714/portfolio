@@ -6,6 +6,7 @@ var user = "193212950@N04";
 getFlicker(url, key, 15);
 
 function getFlicker(url, key, num){
+    $(".list").removeClass("on");
     $.ajax({
         url : url,
         dataType : "json",

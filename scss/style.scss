@@ -30,6 +30,10 @@ $mobile: 539px;
     text-align: $align;
     margin-bottom: $mb;
 }
+body{
+    width: 100%;
+    overflow-X: hidden;
+}
 
 /* header -----------------------------------*/
 #header { 

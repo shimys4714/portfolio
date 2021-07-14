@@ -47,6 +47,9 @@
                             margin: 0 auto;
                             bottom:7px; right: 0;
                         }
+                        .fa-chevron-up{
+                            display: none;
+                        }
 
                         &:hover { 
                             opacity: 1;
@@ -54,6 +57,14 @@
 
                         &.on{
                             opacity: 1;
+
+                            .fa-chevron-down{
+                                display: none;
+                            }
+                            .fa-chevron-up{
+                                display: block;
+                            }
+
                         }
 
                     }
