@@ -1399,14 +1399,14 @@ body {
         content: "";
         height: 1px;
         width: 100%;
-        background: #000;
+        background: #A69FA2;
         display: block;
         margin-bottom: 10px; }
       #gallery article .inner h2::after {
         content: "";
         height: 1px;
         width: 100%;
-        background: #000;
+        background: #A69FA2;
         display: block;
         margin-top: 10px; }
 
@@ -1455,6 +1455,58 @@ body {
   background-position: center 70%;
   background-size: cover; }
 
+#story {
+  width: 100%; }
+  #story > .wrap {
+    display: flex;
+    justify-content: space-between;
+    width: 70%;
+    margin-left: 30%;
+    margin-bottom: 100px;
+    box-sizing: border-box;
+    border-bottom: 1px solid #555; }
+    #story > .wrap > article {
+      width: 100%;
+      padding: 0 0 0 20px;
+      box-sizing: border-box; }
+      #story > .wrap > article .txt > span {
+        font: bold 30px/1 'Playfair Display';
+        color: #D9D5D2; }
+      #story > .wrap > article .txt > h2 {
+        font: bold 13px/1 'open sans';
+        letter-spacing: 1.5;
+        color: #000;
+        text-align: left;
+        margin-top: 20px;
+        margin-bottom: 5px;
+        letter-spacing: 1px; }
+      #story > .wrap > article .txt > p {
+        font: 11px/1.5 'Open Sans';
+        color: #555;
+        margin-bottom: 30px; }
+  #story > a {
+    font: 15px/1 'Cormorant Garamond';
+    color: #111;
+    width: 80px;
+    margin-left: 20%;
+    display: block;
+    opacity: 0.8;
+    transition: 0.5s; }
+    #story > a::after {
+      content: "";
+      display: block;
+      width: 0%;
+      height: 1px;
+      background-color: #555;
+      transition: 0.5s;
+      margin-top: 5px; }
+    #story > a:hover::after {
+      content: "";
+      display: block;
+      width: 100%;
+      height: 1px;
+      background-color: #555; }
+
 .vidList {
   width: 100%;
   display: flex;
@@ -1463,7 +1515,7 @@ body {
   align-content: flex-start; }
   .vidList article {
     width: 30%;
-    height: 350px;
+    height: 300px;
     margin-bottom: 30px; }
     .vidList article .pic {
       display: block;
@@ -1474,10 +1526,11 @@ body {
       .vidList article .pic > img {
         width: 100%;
         height: 100%;
-        object-fit: cover; }
+        object-fit: cover;
+        filter: saturate(0.5); }
       .vidList article .pic::after {
         content: "View";
-        font: 14px/1 'Cormorant';
+        font: 15px/1 'Cormorant Garamond';
         color: #fff;
         display: flex;
         justify-content: center;
@@ -1485,7 +1538,7 @@ body {
         width: 100%;
         height: 100%;
         opacity: 0;
-        transition: 1s;
+        transition: 0.5s;
         position: absolute;
         top: 0;
         left: 0;
@@ -1498,7 +1551,8 @@ body {
       box-sizing: border-box;
       padding: 15px 0px; }
       .vidList article .con h2 {
-        font: bold 14px/1.2 'Cormorant';
+        font: bold 15px/1.2 'Cormorant Garamond';
+        font-weight: 700;
         color: #444;
         margin-bottom: 15px; }
         .vidList article .con h2::before {
@@ -1506,10 +1560,10 @@ body {
           display: block;
           width: 100%;
           height: 1px;
-          background: #000;
+          background: #A69FA2;
           margin-bottom: 10px; }
       .vidList article .con p {
-        font: 12px/1.4 'Alegreya Sans';
+        font: 11px/1.4 'Alegreya Sans';
         color: #666;
         margin-bottom: 5px; }
         .vidList article .con p::after {
@@ -1517,11 +1571,11 @@ body {
           display: block;
           width: 100%;
           height: 1px;
-          background: #000;
+          background: #A69FA2;
           margin-top: 10px; }
       .vidList article .con span {
         font: 9px 'arial';
-        color: #777; }
+        color: #888; }
 
 .vidPop {
   position: fixed;
@@ -1544,6 +1598,74 @@ body {
     font: bold 14px/1.2 'Cormorant';
     color: #fff;
     cursor: pointer; }
+
+#more {
+  width: 100%; }
+  #more > .wrap {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    box-sizing: border-box; }
+    #more > .wrap > .txt {
+      width: 35%;
+      display: flex;
+      justify-content: space-between;
+      flex-direction: column;
+      text-align: center; }
+      #more > .wrap > .txt > span {
+        font: bold 13px/1.5 'Open Sans';
+        color: #222;
+        letter-spacing: 1px;
+        padding: 20px 30px;
+        box-sizing: border-box; }
+      #more > .wrap > .txt > a {
+        font: 13px/1 'Cormorant Garamond';
+        color: #666;
+        width: 180px;
+        text-align: center;
+        margin: 0 auto;
+        margin-top: 50px;
+        padding: 10px;
+        box-sizing: border-box;
+        display: block;
+        opacity: 0.8;
+        transition: 0.5s;
+        border: 1px solid #555;
+        cursor: pointer; }
+        #more > .wrap > .txt > a:hover {
+          background-color: #D9D5D2;
+          color: #000; }
+    #more > .wrap > article {
+      width: 30%;
+      height: 200px;
+      box-sizing: border-box;
+      display: flex;
+      justify-content: space-between;
+      padding: 15px 0;
+      box-sizing: border-box;
+      border-top: 1px solid #A69FA2;
+      border-bottom: 1px solid #A69FA2;
+      margin-left: 20px; }
+      #more > .wrap > article .pic {
+        width: 100%;
+        height: 100%;
+        background-repeat: no-repeat;
+        background-size: cover;
+        filter: saturate(50%); }
+      #more > .wrap > article > .txt {
+        width: 30%;
+        text-align: right; }
+        #more > .wrap > article > .txt > h2 {
+          font: bold 13px/1 'open sans';
+          letter-spacing: 1.5;
+          color: #000;
+          margin-bottom: 5px;
+          letter-spacing: 1px; }
+        #more > .wrap > article > .txt > p {
+          font: 11px/1.5 'Open Sans';
+          color: #555;
+          margin-bottom: 30px; }
 
 @media screen and (max-width: 1179px) {
   .vidList article {

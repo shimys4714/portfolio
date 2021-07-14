@@ -1,3 +1,4 @@
+//유튜브 Api 호출
 $.ajax({
     url:"https://www.googleapis.com/youtube/v3/playlistItems",
     dataType:"jsonp", 
@@ -5,7 +6,7 @@ $.ajax({
         part:"snippet", 
         key:"AIzaSyDOSnqALQfHxM4ffPCF7DwTOBnzaNHmlNM",  
         maxResults : 6, 
-        playlistId: "PL7hVQ41w3GSlVLbpnyVfCrkahRjo10718" 
+        playlistId: "PL7hVQ41w3GSnF__Bxz4dNxR_jCB2Fd4w9" 
     }
 })
 .success(function(data){
@@ -83,3 +84,16 @@ $("body").on("click", ".vidPop span", function(){
         $(this).find("iframe").remove();
     });
 });
+
+//more story 이미지----------
+//news 이미지 -----------------
+const story = document.querySelector("#more");
+const lists = story.querySelectorAll("article");
+const len = lists.length;
+let num = 0;
+
+for(let i=0; i<len; i++){
+    let pic = lists[i].querySelector(".pic");
+    
+    pic.style.backgroundImage = `url(img/5_youtube/story${i+1}.jpg)`;
+}
