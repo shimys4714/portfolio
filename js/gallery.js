@@ -1,12 +1,52 @@
 var url = "https://www.flickr.com/services/rest/?method=flickr.people.getPhotos";
+var url_search = "https://www.flickr.com/services/rest/?method=flickr.photos.search";
 var key = "9d33df771d1d59016c37bd7c118d5b28";
 var user = "193212950@N04";
+var target = document.querySelector("article");
+
 
 //flickr 갤러리 데이터 호출
 getFlicker(url, key, 15);
 
-function getFlicker(url, key, num){
-    $(".list").removeClass("on");
+$("body").on("click", "#search .textSearch button", function(e){
+    //e.preventDefault();
+    
+    var tags = $(this).prev().val();
+
+    getFlicker(url_search, key, 15, tags);
+    console.log();
+});
+
+//이미지 클릭시 클릭시 팝업
+$("body").on("click", "#gallery article .pic", function(e){
+    e.preventDefault();
+
+    var imgSrc = $(this).attr("data-src");
+
+    var tags = `
+        <aside id="imgPop">
+            <div class="pic">
+                <img src="${imgSrc}">
+            </div>
+            <span>CLOSE</span>
+        </aside>
+    `;
+    $("#imgPop").fadeIn();
+    $("body").append(tags);
+});
+
+//이미지 닫기 버튼 
+$("body").on("click", "#imgPop span", function(e){
+    e.preventDefault();
+
+    $(this).parent("#imgPop").fadeOut(500, function(){
+        $(this).remove();
+    });
+});
+
+//flicker 데이터 호출 함수
+function getFlicker(url, key, num, tags){
+    $("article").removeClass("on");
     $.ajax({
         url : url,
         dataType : "json",
@@ -16,6 +56,9 @@ function getFlicker(url, key, num){
             format: "json",
             nojsoncallback : 1,
             user_id : user,
+            tags : tags,
+            tag_mode : "any",
+            privacy_filter : 5
         } 
     })
     .success(function(data){
@@ -44,45 +87,18 @@ function getFlicker(url, key, num){
             $("#gallery").append(tags);
         })
     
+        //isotope 플러그인 적용
         setTimeout(function(){
             iso = new Isotope("#gallery",{ 
                 itemSelector : "article",
                 columWidth : "article",
-                transitionDuration : "2s",
+                transitionDuration : "1s",
                 percentPosition : true
             });
             $("article").addClass("on")
         },500)
     })
     .error(function(err){
-        console.log(err);
+        console.log("데이터를 불러오는데 실패했습니다.");
     })
 };
-
-//이미지 클릭시 클릭시 팝업
-$("body").on("click", "#gallery article .pic", function(e){
-    e.preventDefault();
-
-    var imgSrc = $(this).attr("data-src");
-
-    var tags = `
-        <aside id="imgPop">
-            <div class="pic">
-                <img src="${imgSrc}">
-            </div>
-            <span>CLOSE</span>
-        </aside>
-    `;
-    $("#imgPop").fadeIn();
-    $("body").append(tags);
-});
-
-
-//이미지 닫기 버튼 
-$("body").on("click", "#imgPop span", function(e){
-    e.preventDefault();
-
-    $(this).parent("#imgPop").fadeOut(500, function(){
-        $(this).remove();
-    });
-});
