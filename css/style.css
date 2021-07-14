@@ -187,7 +187,7 @@ input, a, img, span, label, select {
             position: absolute;
             top: 0px;
             left: -100%;
-            background: #D9D5D2; }
+            background: #F2F2F2; }
           #header_sub .inner .menuWeb .gnb > li .sub::after {
             content: "";
             display: block;
@@ -195,8 +195,8 @@ input, a, img, span, label, select {
             height: 100%;
             position: absolute;
             top: 0;
-            right: 100%;
-            background: #D9D5D2; }
+            right: -100%;
+            background: #F2F2F2; }
     #header_sub .inner .menuWeb .util {
       position: absolute;
       top: 20px;
