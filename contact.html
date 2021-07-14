@@ -10,7 +10,11 @@
 	<script defer src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 	<script defer src="js/custom.js"></script>
 	<script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=94acdadbcea4f04670f43265f75b5cd1"></script>
+	<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>
+    <script defer src="js/mailForm.js"></script>
 	<script defer src="js/contact.js"></script>
+	<script defer src="js/serviceToggle.js"></script>
+
 	
 </head>
 <body>
@@ -181,66 +185,109 @@
 		<div class="sub_visual">
 			<div class="textFrame">
 				<div class="txt">
-					<h1>Department</h1>
+					<h1>Contact</h1>
 					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus, laborum et. Aperiam ratione eligendi beatae ipsum non recusandae perspiciatis neque.</p>
 				</div>
 			</div>
 		</div>
 		<div class="inner">
-			<section id="git">
-				<h1>Get in touch</h1>
-				<div class="wrap">
-					<article class="sendMail">
-						<h2>Send a Message(메일 폼 추가)</h2>
-					</article>
-					<article class="contactList">
-						<ul>
-							<li>
-								<h2>Call Us</h2>
-								<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas laboriosam ullam, eveniet cupiditate eos quam.</p>
-								<i class="fas fas fas fa-phone-alt"></i>
-								<span>02-123-456</span>
-							</li>
-							<li>
-								<h2>Vist Us</h2>
-								<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas laboriosam ullam, eveniet cupiditate eos quam.</p>
-								<i class="fas fa-map-marked-alt"></i><span>Lorem ipsum, dolor sit amet consectetur.</span>
-								
-							</li>
-							<li>
-								<h2>Live Chat</h2>
-								<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas laboriosam ullam, eveniet cupiditate eos quam.</p>
-								<a href="#"><i class="far fa-comments"></i>Start Chart</a>
-								
-							</li>
-						</ul>
-					
-					</article>
-				</div>
-			</section>
-
-           <section>
+				<section id="git">
+					<h1>Get in touch</h1>
+					<div class="wrapForm">
+						<article class="sendMail">
+							<h2>Send a Message</h2>
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe neque, eos sapiente error eligendi dolore accusamus soluta a ipsam totam.</p>
+							<form id="contact-form">
+								<input type="hidden" name="contact_number">
+								<div class="name">
+									<h3>Name</h3>
+									<input type="text" placeholder="이름을 입력하세요." name="to_name">
+									<p>이름을 입력해주세요.</p>
+								</div>
+								<div class="phone">
+									<h3>Phone Number</h3>
+									<input type="text" placeholder="연락처를 입력하세요" name="contact">
+									<p>연락처 입력해주세요.</p>
+								</div>
+								<div class="email">
+									<h3>Email Adress</h3>
+									<input type="email" required placeholder="이메일을 입력하세요" name="from_name">
+									<p>이메일을 입력해주세요.</p>
+								</div>
+								<div class="message">
+									<h3>Message</h3>
+									<textarea placeholder="문의내용을 입력하세요" name="message_html"></textarea>
+									<p>메세지를 남겨주세요.</p>
+								</div>
+								<input type="submit" value="문의하기">
+							</form>
+						</article>
+						<article class="contactList">
+							<ul>
+								<li>
+									<h2>Call Us</h2>
+									<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas laboriosam ullam, eveniet cupiditate eos quam.</p>
+									<i class="fas fa-phone-alt"></i>
+									<span>02-123-456</span>
+								</li>
+								<li>
+									<h2>Vist Us</h2>
+									<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas laboriosam ullam, eveniet cupiditate eos quam.</p>
+									<i class="fas fa-map-marked-alt"></i>
+									<span>Lorem ipsum, dolor sit amet consectetur.</span>
+									
+								</li>
+								<li>
+									<h2>Live Chat</h2>
+									<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas laboriosam ullam, eveniet cupiditate eos quam.</p>
+									<i class="far fa-comments"></i>
+									<span>Start Chart</span>
+								</li>
+							</ul>
+						
+						</article>
+					</div>
+				</section>
+				
+				<section class="location">
+				<h1>Location</h1>
 				<div id="map"></div>
 				<ul class="traffic">
-					<li><a href="#">교통정보 보기</a></li>
-					<li class="on"><a href="#">교통정보 끄기</a></li>
+					<li><a href="#">Traffic ON</a></li>
+					<li class="on"><a href="#">Traffic OFF</a></li>
 				</ul>
 				<ul class="branch">
-					<li data-index="0" class="on"><a href="#">본점</a></li>
-					<li data-index="1"><a href="#">지점1</a></li>
-					<li data-index="2"><a href="#">지점2</a></li>
+					<li data-index="0" class="on"><a href="#">Main office</a></li>
+					<li data-index="1"><a href="#">Branch office 1</a></li>
+					<li data-index="2"><a href="#">Branch office 2</a></li>
 				</ul>
-		   </section>
-
-			<section id="Q&A">
-				<h1>Q&A</h1>
-				<div class="wrap">
-					<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quo reprehenderit alias ducimus, nemo fugit amet ea eum excepturi rerum libero.</p>
-					<article>toggle menue. 토글메뉴 넣기</article>
-				</div>
-			</section>
+				</section>
+				
+				<section id="faq">
+					<h1>FAQ</h1>
+					<div class="wrap">
+						<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quo reprehenderit alias ducimus, nemo fugit amet ea eum excepturi rerum libero.</p>
+						<article class="toggle">
+							<dl>
+								<dt>Lorem ipsum dolor sit, amet consectetur adipisicing<i class="fas fa-chevron-down"></i><i class="fas fa-chevron-up"></i></dt>
+								<dd>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet error numquam laudantium. Facere quas enim, nihil dolorum eligendi rerum suscipit.</dd>
+				
+								<dt>Lorem ipsum dolor sit amet consectetur?<i class="fas fa-chevron-down"></i><i class="fas fa-chevron-up"></i></dt>
+								<dd>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur quae quaerat impedit quisquam quos sequi beatae, quo placeat incidunt ea.</dd>
+				
+								<dt>Lorem ipsum dolor sit amet consectetur adipisicing?<i class="fas fa-chevron-down"></i><i class="fas fa-chevron-up"></i></dt>
+								<dd>Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi vitae libero temporibus.</dd>
+				
+								<dt>Lorem ipsum dolor sit amet?<i class="fas fa-chevron-down"></i><i class="fas fa-chevron-up"></i></dt>
+								<dd>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis, error quibusdam? Eaque, aspernatur voluptatem. Eaque, officiis. Quis, quia corporis ipsa, error tempore soluta eaque quo, tenetur reprehenderit commodi quasi eligendi.</dd>
+				
+								<dt>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quia?<i class="fas fa-chevron-down"></i><i class="fas fa-chevron-up"></i></dt>
+								<dd>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ea veniam facere et labore maiores, harum nihil eos tempore!</dd>
+							</dl>
+						</article>
+					</div>
+				</section>
 		</div>
-
 	</section>
 
 	<section id="footer_sub">

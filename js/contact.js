@@ -23,25 +23,25 @@ var markerOptions = [
     {
         title:"본점", 
         latlng: new kakao.maps.LatLng(37.49595906855047 ,127.02796555611167),
-        imgSrc : 'img/locationIcon11.png', 
-        imgSize: new kakao.maps.Size(100,98),//이미지 픽셀
-        imgPos : { offset: new kakao.maps.Point(50,88)}, 
+        imgSrc : 'img/mapPin.png', 
+        imgSize: new kakao.maps.Size(64,64),//이미지 픽셀
+        imgPos : { offset: new kakao.maps.Point(32,64)}, 
         button: branch_btns[0]
     },
     {
         title:"지점1", 
         latlng: new kakao.maps.LatLng(37.57086919829189,126.97617209688083),
-        imgSrc : 'img/locationIcon11.png',
-        imgSize: new kakao.maps.Size(100,98),
-        imgPos : { offset: new kakao.maps.Point(50,88)},
+        imgSrc : 'img/mapPin.png', 
+        imgSize: new kakao.maps.Size(64,64),
+        imgPos : { offset: new kakao.maps.Point(32,64)},
         button: branch_btns[1]
     },
     {
         title:"지점2", 
         latlng: new kakao.maps.LatLng(37.39415926694563,127.11040640371255),
-        imgSrc : 'img/locationIcon11.png', 
-        imgSize: new kakao.maps.Size(100,98),
-        imgPos : { offset: new kakao.maps.Point(50,88)},
+        imgSrc : 'img/mapPin.png', 
+        imgSize: new kakao.maps.Size(64,64),
+        imgPos : { offset: new kakao.maps.Point(32,64)},
         button: branch_btns[2]
     }
 ]; 

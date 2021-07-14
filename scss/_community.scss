@@ -18,7 +18,8 @@
                 //align-items: center;
                 >p { 
                     width: 40%;
-                    font: bold 13px/1.5 'Open Sans';
+                    font: bold 13px/2 'Open Sans';
+                    font-weight: 600;
                     color: #222;
                     letter-spacing: 1px;
                     padding: 0px 100px 0 0;
@@ -38,7 +39,7 @@
                         margin-bottom: 10px;
                         cursor: pointer;
                         transition: 0.3s;
-                        opacity: 0.5;
+                        opacity: 0.6;
                         position: relative;
 
                         svg { 
@@ -73,7 +74,7 @@
                         padding: 11px 0;
                         box-sizing: border-box;
                         font: 12px/1.5 'Open Sans';
-                        color: #555;
+                        color: #666;
 
                     }
                 }
@@ -124,9 +125,9 @@
                 }
             }
             >a { 
-                font: 15px/1 'Cormorant Garamond';
+                font: 15px/1 'Cutive Mono';
                 color: #111;
-                width: 80px;
+                width: 100px;
                 margin-left: 20%;
                 display: block;
                 opacity: 0.8;
@@ -162,7 +163,8 @@
 
                 >p { 
                     width: 40%;
-                    font: bold 13px/1.5 'Open Sans';
+                    font: bold 13px/2 'Open Sans';
+                    font-weight: 600;
                     color: #222;
                     letter-spacing: 1px;
                     padding: 0px 100px 0 0;

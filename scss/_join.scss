@@ -26,7 +26,7 @@
 
             .terms { 
                 width: 50%;
-                padding: 0 30px;
+                padding-right: 40px;
                 box-sizing: border-box;
                 //border: 1px solid green;
     
@@ -137,17 +137,18 @@
                    line-height: 2;
                    text-align:justify;
                    color: #222;
+                   //font-family: 'open Sans';
                }
             }
             .infor{
                 width: 50%;
-                padding: 0 30px;
+                padding-left: 40px;
                 box-sizing: border-box;
                 //border: 1px solid red;
     
                 table { 
                     width: 100%;
-                    margin-top: 51px;
+                    margin-top: 49.5px;
         
                     tbody { 
                         border-top: 1px solid #555;
