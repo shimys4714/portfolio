@@ -2,15 +2,6 @@
 @import "reset.scss";
 @import url('https://fonts.googleapis.com/css2?family=Cormorant&family=Open+Sans&family=Prata&family=Song+Myung&display=swap');
 
-
-@mixin title($fontSize:40px, $fontFamily:'Cormorant Garamond',$fontWeight:900, $letterSpa:2px, $color: #000, $align: left, $mb:20px) {
-    font: bold $fontSize/1 $fontFamily; 
-    font-weight: $fontWeight;
-    color: $color;
-    letter-spacing: $letterSpa;
-    text-align: $align;
-    margin-bottom: $mb;
-}
 body{
     width: 100%;
     overflow-X: hidden;

@@ -1,0 +1,134 @@
+@mixin button($wid:100px, $ht:30px, $bg:gray){
+    display: block;
+    width: $wid;
+    height: $ht;
+    background-color: $bg;
+    text-align: center;
+    color: #fff;
+    line-height: $ht;
+    font-size: 12px;
+    border-radius: $ht/2;
+}
+
+// @include button();
+
+//header------------------
+@mixin logo(
+    $fontSize: 24px,
+    $fontFamily:'Playfair Display',
+    $color: #333){
+    font: bold $fontSize/1 $fontFamily;
+    color: $color;
+    letter-spacing: 3px;
+};
+//menutap
+@mixin txtLineMotion(
+    $width: 0px,
+    $height: 2px,
+    $bg: #736868,
+    $transition: 0.5s){
+    content: "";
+    display: block;
+    width: $width;
+    height: $height;
+    background: $bg;
+    transition: $transition;
+};
+
+@mixin menu(
+    $fontWeight: bold,
+    $height: 40px,
+    $fontSize: 16px,
+    $lineHeight: 40px,
+    $fontFamily:'Cormorant Garamond',
+    $color: #000,
+    $letterSpacing: 1px,
+    $textAlign: center,
+    $padding: 0px 20px
+){
+    display: block;
+    height: $height;
+    font: $fontWeight $fontSize $fontFamily;
+    line-height: $lineHeight;
+    color:$color;
+    letter-spacing: $letterSpacing;
+    text-align: $textAlign;
+    padding: $padding;
+    box-sizing: border-box;
+};
+
+@mixin menuTitle(
+    $fontWeight: bold,
+    $fontSize: 30px,
+    $lineHeight: 1,
+    $fontFamily:'Cormorant Garamond',
+    $color: #111,
+){
+    font: $fontWeight $fontSize/1 $fontFamily;
+    color: $color;
+    box-sizing: border-box;
+};
+@mixin conTxt(
+    $fontWeight: normal,
+    $fontSize: 12px,
+    $lineHeight: 1.3,
+    $fontFamily:'open Sans',
+    $color: #333
+){
+    font: $fontWeight $fontSize $fontFamily;
+    line-height: $lineHeight;
+    color: $color;
+}
+
+@mixin number(
+    $fontWeight: normal,
+    $fontSize: 15px,
+    $lineHeight: 1,
+    $fontFamily:'Playfair Display',
+    $color: #555,
+    $marginB: 10px
+){
+    font: $fontWeight $fontSize/1 $fontFamily;
+    color: $color;
+    margin-bottom: $marginB;
+};
+
+@mixin title($fontSize:40px, $fontFamily:'Cormorant Garamond',$fontWeight:900, $letterSpa:2px, $color: #000, $align: left, $mb:20px) {
+    font: bold $fontSize/1 $fontFamily; 
+    font-weight: $fontWeight;
+    color: $color;
+    letter-spacing: $letterSpa;
+    text-align: $align;
+    margin-bottom: $mb;
+}
+
+@mixin viewMore() {
+    font: 15px/1 'Cutive Mono';
+    color: #111;
+    width: 100px;
+    //margin-left: 10%;
+    display: block;
+    opacity: 0.8;
+    transition: 0.5s;
+    margin-top: 20px;
+
+    &::after { 
+        content: "";
+        display: block;
+        width: 0%;
+        height: 1px;
+        background-color: #555;
+        transition: 0.5s;
+        margin-top: 5px;
+    };
+
+    &:hover { 
+        &::after { 
+            content: "";
+            display: block;
+            width: 100%;
+            height: 1px;
+            background-color: #555;
+        }
+    };
+};
