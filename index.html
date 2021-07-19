@@ -6,10 +6,14 @@
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<title>main layout</title>
 	<script src="https://kit.fontawesome.com/12eb31fefd.js" crossorigin="anonymous"></script>
+	<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
 	<link rel="stylesheet" href="css/style.css">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 	<script defer src="js/custom.js"></script>
+	<script defer src="js/youtubeSwiper.js"></script>
 	<script defer src="js/serviceToggle.js"></script>
+
 </head>
 <body>
 
@@ -527,34 +531,46 @@
 					<h2>Our team</h2>
 					<div class="ourTeam">
 						<article>
-							<div class="pic"></div>
+							<div class="pic">
+								<img src="img/2_team/team4.jpg">
+							</div>
 							<div class="txt">
 								<h3>lorem</h3>
 								<p>Lorem, ipsum.</p>
 							</div class="txt">
 						</article>
 						<article>
-							<div class="pic"></div>
+							<div class="pic">
+								<img src="img/2_team/team5.jpg">
+							</div>
 							<div class="txt">
 								<h3>lorem</h3>
 								<p>Lorem, ipsum.</p>
 							</div class="txt">
 						</article>
 						<article>
-							<div class="pic"></div>
+							<div class="pic">
+								<img src="img/2_team/team6.jpg">
+							</div>
 							<div class="txt">
 								<h3>lorem</h3>
 								<p>Lorem, ipsum.</p>
 							</div class="txt">
 						</article>
 					</div>
-					<a href="#">View more</a>
+					<a href="department.html">View more</a>
 				</div>
 			</div>
 		</div>
 	</section>
 
 	<section id="gallery_main">
+		<div class="swiper-wrapper"></div>
+        <div class="galleryNavi">
+			<div class="swiper-button-prev"></div>
+			<div class="swiper-button-next"></div>
+		</div>
+		
 		<div class="inner">
 			<div class="vidList">
 				<!-- 
@@ -574,65 +590,204 @@
 	</section>
 
 	<section id="news_main">
-		<div class="inner">
-			<h1>News</h1>
-				<div class="wrap">
+		<div class="inner">			
+			<div class=wrap>
+				<div class="news">
 					<article>
-						<div class="pic"></div>
+						<div class="pic">
+							<img src="img/3_community/news1.jpg">
+						</div>
 						<div class="txt">
-							<h2>lorem</h2>
+							<h3>lorem</h3>
 							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat eum non maxime, nesciunt cupiditate autem aut laboriosam reiciendis natus quasi.</p>
 						</div>
 					</article>
 					<article>
-						<div class="pic"></div>
+						<div class="pic">
+							<img src="img/3_community/news2.jpg">
+						</div>
 						<div class="txt">
-							<h2>lorem</h2>
+							<h3>lorem</h3>
 							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloremque non fugit perferendis, laborum dolor repudiandae.</p>
 						</div>
 					</article>
 				</div>
-				<a href="#">View more</a>
+				<a href="community.html">View more</a>
+			</div>
+			<div class="title">
+				<i class="fas fa-arrow-left"></i>
+				<h1>News</h1>
+			</div>
 		</div>
 	</section>
 
-	<section id="faq_main">
+	<section id="banner_main">
 		<div class="inner">
-			<div class="title">
-				<h1>FAQ</h1>
-				<i class="fas fa-arrow-right"></i>
-			</div>
-			<div class="wrap">
-				<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quo reprehenderit alias ducimus, nemo fugit amet ea eum excepturi rerum libero.</p>
-				<article class="toggle">
-					<dl>
-						<dt>Lorem ipsum dolor sit, amet consectetur adipisicing<i class="fas fa-chevron-down"></i><i class="fas fa-chevron-up"></i></dt>
-						<dd>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet error numquam laudantium. Facere quas enim, nihil dolorum eligendi rerum suscipit.</dd>
-		
-						<dt>Lorem ipsum dolor sit amet consectetur?<i class="fas fa-chevron-down"></i><i class="fas fa-chevron-up"></i></dt>
-						<dd>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur quae quaerat impedit quisquam quos sequi beatae, quo placeat incidunt ea.</dd>
-		
-						<dt>Lorem ipsum dolor sit amet consectetur adipisicing?<i class="fas fa-chevron-down"></i><i class="fas fa-chevron-up"></i></dt>
-						<dd>Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi vitae libero temporibus.</dd>
-		
-						<dt>Lorem ipsum dolor sit amet?<i class="fas fa-chevron-down"></i><i class="fas fa-chevron-up"></i></dt>
-						<dd>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis, error quibusdam? Eaque, aspernatur voluptatem. Eaque, officiis. Quis, quia corporis ipsa, error tempore soluta eaque quo, tenetur reprehenderit commodi quasi eligendi.</dd>
-		
-						<dt>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quia?<i class="fas fa-chevron-down"></i><i class="fas fa-chevron-up"></i></dt>
-						<dd>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ea veniam facere et labore maiores, harum nihil eos tempore!</dd>
-					</dl>
-				</article>
-			</div>
-			
-			
-			
+			<h1>Lorem ipsum dolor sit amet consectetur.</h1>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis sit officia quos dolore illo magni nihil amet consequatur quasi sequi?</p>
 		</div>
-		
 	</section>
 
 	<section id="contact_main">
-		<div class="inner"></div>
+		<div class="inner">
+			<div class="title">
+				<h1>Contact<br> Us</h1>
+				<i class="fas fa-arrow-right"></i>
+			</div>
+			<div class="wrap">
+				<div class="contactBanner">
+					<div class="wrap">
+						<i class="fas fa-phone-alt"></i>
+						<span>02-123-456</span>
+					</div>
+					<div class="wrap">
+						<i class="fas fa-map-marked-alt"></i>
+						<span>Lorem ipsum, dolor sit amet.</span>
+					</div>
+					<div class="wrap">
+						<i class="far fa-comments"></i>
+						<a href="#">Start Chart</a>
+					</div>
+				</div>
+				<div class="wrapForm">
+					<article class="sendMail">
+						<h2>Send a Message</h2>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe neque, eos sapiente error eligendi dolore accusamus soluta a ipsam totam.</p>
+						<form id="contact-form">
+							<input type="hidden" name="contact_number">
+							<div class="name">
+								<h3>Name</h3>
+								<input type="text" placeholder="이름을 입력하세요." name="to_name">
+								<p>이름을 입력해주세요.</p>
+							</div>
+							<div class="phone">
+								<h3>Phone Number</h3>
+								<input type="text" placeholder="연락처를 입력하세요" name="contact">
+								<p>연락처 입력해주세요.</p>
+							</div>
+							<div class="email">
+								<h3>Email Adress</h3>
+								<input type="email" required placeholder="이메일을 입력하세요" name="from_name">
+								<p>이메일을 입력해주세요.</p>
+							</div>
+							<div class="message">
+								<h3>Message</h3>
+								<textarea placeholder="문의내용을 입력하세요" name="message_html"></textarea>
+								<p>메세지를 남겨주세요.</p>
+							</div>
+							<input type="submit" value="문의하기">
+						</form>
+					</article>
+					<div class="faq">
+						<h2>FAQ</h2>
+						<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quo reprehenderit alias ducimus, nemo fugit amet ea eum excepturi rerum libero.</p>
+						<article class="toggle">
+							<dl>
+								<dt>Lorem ipsum dolor sit amet.<i class="fas fa-chevron-down"></i><i class="fas fa-chevron-up"></i></dt>
+								<dd>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet error numquam laudantium. Facere quas enim, nihil dolorum eligendi rerum suscipit.</dd>
+				
+								<dt>Lorem ipsum dolor sit amet consectetur?<i class="fas fa-chevron-down"></i><i class="fas fa-chevron-up"></i></dt>
+								<dd>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur quae quaerat impedit quisquam quos sequi beatae, quo placeat incidunt ea.</dd>
+				
+								<dt>Lorem ipsum dolor sit.<i class="fas fa-chevron-down"></i><i class="fas fa-chevron-up"></i></dt>
+								<dd>Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi vitae libero temporibus.</dd>
+				
+								<dt>Lorem ipsum dolor sit amet?<i class="fas fa-chevron-down"></i><i class="fas fa-chevron-up"></i></dt>
+								<dd>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis, error quibusdam? Eaque, aspernatur voluptatem. Eaque, officiis. Quis, quia corporis ipsa, error tempore soluta eaque quo, tenetur reprehenderit commodi quasi eligendi.</dd>
+				
+								<dt>Lorem ipsum dolor sit amet consectetur.<i class="fas fa-chevron-down"></i><i class="fas fa-chevron-up"></i></dt>
+								<dd>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ea veniam facere et labore maiores, harum nihil eos tempore!</dd>
+							</dl>
+						</article>
+					</div>
+				</div>
+			</div>
+		</div>
+
 	</section>
+
+	<!-- <section id="contact_main">
+		<div class="inner">
+			<section id="git">
+				 <h1>Get in touch</h1>
+				<div class="wrapForm">
+					<article class="sendMail">
+						<h2>Send a Message</h2>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe neque, eos sapiente error eligendi dolore accusamus soluta a ipsam totam.</p>
+						<form id="contact-form">
+							<input type="hidden" name="contact_number">
+							<div class="name">
+								<h3>Name</h3>
+								<input type="text" placeholder="이름을 입력하세요." name="to_name">
+								<p>이름을 입력해주세요.</p>
+							</div>
+							<div class="phone">
+								<h3>Phone Number</h3>
+								<input type="text" placeholder="연락처를 입력하세요" name="contact">
+								<p>연락처 입력해주세요.</p>
+							</div>
+							<div class="email">
+								<h3>Email Adress</h3>
+								<input type="email" required placeholder="이메일을 입력하세요" name="from_name">
+								<p>이메일을 입력해주세요.</p>
+							</div>
+							<div class="message">
+								<h3>Message</h3>
+								<textarea placeholder="문의내용을 입력하세요" name="message_html"></textarea>
+								<p>메세지를 남겨주세요.</p>
+							</div>
+							<input type="submit" value="문의하기">
+						</form>
+					</article>
+					<article>
+						<div class="contactBanner">
+							<div class="wrap">
+								<i class="fas fa-phone-alt"></i>
+								<span>02-123-456</span>
+							</div>
+							<div class="wrap">
+								<i class="fas fa-map-marked-alt"></i>
+								<span>Lorem ipsum, dolor sit amet consectetur.</span>
+							</div>
+							<div class="wrap">
+								<i class="far fa-comments"></i>
+								<a href="#">Start Chart</a>
+							</div>
+						</div>
+					</article>
+					<article class="contactList">
+						<ul>
+							<li>
+								<h2>Call Us</h2>
+								<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas laboriosam ullam, eveniet cupiditate eos quam.</p>
+								<i class="fas fa-phone-alt"></i>
+								<span>02-123-456</span>
+							</li>
+							<li>
+								<h2>Vist Us</h2>
+								<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas laboriosam ullam, eveniet cupiditate eos quam.</p>
+								<i class="fas fa-map-marked-alt"></i>
+								<span>Lorem ipsum, dolor sit amet consectetur.</span>
+								
+							</li>
+							<li>
+								<h2>Live Chat</h2>
+								<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas laboriosam ullam, eveniet cupiditate eos quam.</p>
+								<i class="far fa-comments"></i>
+								<span>Start Chart</span>
+							</li>
+						</ul>
+					
+					</article>
+				</div>
+			</section>
+			<div class="title">
+				<i class="fas fa-arrow-left"></i>
+				<h1>Contact Us</h1>
+			</div>
+		</div>
+		
+	</section> -->
 
 	<section id="footer">
 		<div class="inner">
