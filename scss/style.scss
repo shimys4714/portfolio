@@ -902,6 +902,8 @@ body{
                     @include conLineTitle($fontSize:20px, $fontWeight:700, $mb:30px, $mt: 20px);
                 }
                 width: 100%;
+                height: 400px;
+                //border: 1px solid orange;
 
                 .ourTeam { 
                     width: 100%;
@@ -951,6 +953,7 @@ body{
                 >a { 
                 
                     @include viewMore();
+                    //border: 1px solid orange;
                     
                     text-align: right;
                     position: absolute;
@@ -1154,6 +1157,12 @@ body{
                 >article { 
                     width: 100%;
                     padding: 0 20px 0 0;
+                    transition: 0.5s;
+                    transform: translateY(100px);
+                    opacity: 0;
+
+                    &:nth-of-type(1){transition-delay: 0s;}
+                    &:nth-of-type(2){transition-delay: 0.2s;}
 
                     .pic { 
                         width: 100%;
@@ -1183,6 +1192,7 @@ body{
                     };
                 };
             };
+            
 
             >a { 
                 
@@ -1217,6 +1227,10 @@ body{
                 //border: 1px solid green;
             };
         };
+    };
+    &.on .inner .wrap .news article {
+        opacity: 1;
+        transform: translateY(0px);
     };
 };
 
@@ -1663,7 +1677,34 @@ body{
             }
         }  
     }
-}
+};
+
+#navi { 
+    position: fixed;
+    right: 15px; 
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 5;
+
+    li { 
+        margin: 20px 0;
+
+        a { 
+            display: block;
+            width: 3px;
+            height: 3px;
+            background: #888;
+            border-radius: 50px;
+            transition: 0.5s;
+
+            &.on { 
+                background: #111;
+                height: 60px;
+            }
+        }
+    }
+
+};
 
 
 /* tablet------------------------------------------ */
@@ -1684,15 +1725,64 @@ body{
         }
     }
     /* visual--------------------------------- */
-    #visual { 
+    #visual_main { 
         height: calc(100vh - 101px);
         padding:0px 30px;
-        background:url(../img/visual1.jpg) no-repeat center/cover;
+        background:#F2F2F2;
 
         .inner { 
             width: 100%;
         }
     }
+
+    /* vision------------------------------------ */
+    #vision_main {
+        padding:0px 30px;
+        .inner{
+            width: 100%;
+        };
+    };
+
+    /* about------------------------------------ */
+    #about_main {
+        padding:0px 30px;
+        .inner{
+            width: 100%;
+        };
+    };
+
+    /* gallery------------------------------------ */
+    #gallery_main {
+        padding:0px 30px;
+        .inner{
+            width: 100%;
+        };
+    };
+
+    /* news------------------------------------ */
+    #news_main {
+        padding:0px 30px;
+        .inner{
+            width: 100%;
+        };
+    };
+
+    /* banner------------------------------------ */
+    #banner_main {
+        padding:0px 30px;
+        .inner{
+            width: 100%;
+        };
+    };
+
+    /* contact------------------------------------ */
+    #contact_main {
+        padding:0px 30px;
+        .inner{
+            width: 100%;
+        };
+    };
+    
     /* footer--------------------------------- */
     #footer { 
         .inner { 

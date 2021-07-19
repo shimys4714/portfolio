@@ -7,7 +7,7 @@ var t_on = document.querySelectorAll(".traffic li")[0]; //트래픽 보기 버�
 var t_off = document.querySelectorAll(".traffic li")[1]; //트래픽 숨기기 버튼 선택자
 
 var drag = true; //드래그 가능
-var zoom = true; //줌 가능
+var zoom = false; //줌 가능
 
 //처음 로딩완료시 출력될 지도의 경도, 위도
 //1.구글맵에서 검색해서 경도,위도값 구함 (위치값이 정밀하지 못함)
@@ -23,25 +23,25 @@ var markerOptions = [
     {
         title:"본점", 
         latlng: new kakao.maps.LatLng(37.49595906855047 ,127.02796555611167),
-        imgSrc : 'img/mapPin.png', 
-        imgSize: new kakao.maps.Size(64,64),//이미지 픽셀
-        imgPos : { offset: new kakao.maps.Point(32,64)}, 
+        imgSrc : 'img/locationPin.png', 
+        imgSize: new kakao.maps.Size(60,73),//이미지 픽셀
+        imgPos : { offset: new kakao.maps.Point(30,73)}, 
         button: branch_btns[0]
     },
     {
         title:"지점1", 
         latlng: new kakao.maps.LatLng(37.57086919829189,126.97617209688083),
-        imgSrc : 'img/mapPin.png', 
-        imgSize: new kakao.maps.Size(64,64),
-        imgPos : { offset: new kakao.maps.Point(32,64)},
+        imgSrc : 'img/locationPin.png', 
+        imgSize: new kakao.maps.Size(60,73),
+        imgPos : { offset: new kakao.maps.Point(30,73)},
         button: branch_btns[1]
     },
     {
         title:"지점2", 
         latlng: new kakao.maps.LatLng(37.39415926694563,127.11040640371255),
-        imgSrc : 'img/mapPin.png', 
-        imgSize: new kakao.maps.Size(64,64),
-        imgPos : { offset: new kakao.maps.Point(32,64)},
+        imgSrc : 'img/locationPin.png', 
+        imgSize: new kakao.maps.Size(60,73),
+        imgPos : { offset: new kakao.maps.Point(30,73)},
         button: branch_btns[2]
     }
 ]; 

@@ -10,14 +10,16 @@
 	<link rel="stylesheet" href="css/style.css">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 	<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+	
 	<script defer src="js/custom.js"></script>
+	<script defer src="js/scroll.js"></script>
 	<script defer src="js/youtubeSwiper.js"></script>
 	<script defer src="js/serviceToggle.js"></script>
 
 </head>
 <body>
 
-	<header id="header">
+	<header id="header" class="myScroll">
 		<div class="inner">
 			<h1>
 				<a href="index.html">S＿MU</a>
@@ -487,12 +489,12 @@
 		</div>
 	</header>
 
-	<figure id="visual_main">	
+	<figure id="visual_main" class="myScroll">	
 		<div class="inner">
 		</div>
 	</figure>
 
-	<section id="vision_main">
+	<section id="vision_main" class="myScroll">
 		<div class="inner">
 			<div class="pic"></div>
 			<h1>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet assumenda voluptatibus adipisci deleniti ut ipsa similique qui atque amet eos!
@@ -500,7 +502,7 @@
 		</div>
 	</section>
 
-	<section id="about_main">
+	<section id="about_main" class="myScroll">
 		<div class="inner">
 			<div class="title">
 				<h1>About us</h1>
@@ -532,7 +534,7 @@
 					<div class="ourTeam">
 						<article>
 							<div class="pic">
-								<img src="img/2_team/team4.jpg">
+								<img src="img/2_team/team1.jpg">
 							</div>
 							<div class="txt">
 								<h3>lorem</h3>
@@ -541,7 +543,7 @@
 						</article>
 						<article>
 							<div class="pic">
-								<img src="img/2_team/team5.jpg">
+								<img src="img/2_team/team2.jpg">
 							</div>
 							<div class="txt">
 								<h3>lorem</h3>
@@ -550,7 +552,7 @@
 						</article>
 						<article>
 							<div class="pic">
-								<img src="img/2_team/team6.jpg">
+								<img src="img/2_team/team3.jpg">
 							</div>
 							<div class="txt">
 								<h3>lorem</h3>
@@ -564,7 +566,7 @@
 		</div>
 	</section>
 
-	<section id="gallery_main">
+	<section id="gallery_main" class="myScroll">
 		<div class="swiper-wrapper"></div>
         <div class="galleryNavi">
 			<div class="swiper-button-prev"></div>
@@ -589,7 +591,7 @@
 		</div>
 	</section>
 
-	<section id="news_main">
+	<section id="news_main" class="myScroll">
 		<div class="inner">			
 			<div class=wrap>
 				<div class="news">
@@ -621,14 +623,14 @@
 		</div>
 	</section>
 
-	<section id="banner_main">
+	<section id="banner_main" class="myScroll">
 		<div class="inner">
 			<h1>Lorem ipsum dolor sit amet consectetur.</h1>
 			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis sit officia quos dolore illo magni nihil amet consequatur quasi sequi?</p>
 		</div>
 	</section>
 
-	<section id="contact_main">
+	<section id="contact_main" class="myScroll">
 		<div class="inner">
 			<div class="title">
 				<h1>Contact<br> Us</h1>
@@ -706,89 +708,6 @@
 
 	</section>
 
-	<!-- <section id="contact_main">
-		<div class="inner">
-			<section id="git">
-				 <h1>Get in touch</h1>
-				<div class="wrapForm">
-					<article class="sendMail">
-						<h2>Send a Message</h2>
-						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe neque, eos sapiente error eligendi dolore accusamus soluta a ipsam totam.</p>
-						<form id="contact-form">
-							<input type="hidden" name="contact_number">
-							<div class="name">
-								<h3>Name</h3>
-								<input type="text" placeholder="이름을 입력하세요." name="to_name">
-								<p>이름을 입력해주세요.</p>
-							</div>
-							<div class="phone">
-								<h3>Phone Number</h3>
-								<input type="text" placeholder="연락처를 입력하세요" name="contact">
-								<p>연락처 입력해주세요.</p>
-							</div>
-							<div class="email">
-								<h3>Email Adress</h3>
-								<input type="email" required placeholder="이메일을 입력하세요" name="from_name">
-								<p>이메일을 입력해주세요.</p>
-							</div>
-							<div class="message">
-								<h3>Message</h3>
-								<textarea placeholder="문의내용을 입력하세요" name="message_html"></textarea>
-								<p>메세지를 남겨주세요.</p>
-							</div>
-							<input type="submit" value="문의하기">
-						</form>
-					</article>
-					<article>
-						<div class="contactBanner">
-							<div class="wrap">
-								<i class="fas fa-phone-alt"></i>
-								<span>02-123-456</span>
-							</div>
-							<div class="wrap">
-								<i class="fas fa-map-marked-alt"></i>
-								<span>Lorem ipsum, dolor sit amet consectetur.</span>
-							</div>
-							<div class="wrap">
-								<i class="far fa-comments"></i>
-								<a href="#">Start Chart</a>
-							</div>
-						</div>
-					</article>
-					<article class="contactList">
-						<ul>
-							<li>
-								<h2>Call Us</h2>
-								<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas laboriosam ullam, eveniet cupiditate eos quam.</p>
-								<i class="fas fa-phone-alt"></i>
-								<span>02-123-456</span>
-							</li>
-							<li>
-								<h2>Vist Us</h2>
-								<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas laboriosam ullam, eveniet cupiditate eos quam.</p>
-								<i class="fas fa-map-marked-alt"></i>
-								<span>Lorem ipsum, dolor sit amet consectetur.</span>
-								
-							</li>
-							<li>
-								<h2>Live Chat</h2>
-								<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas laboriosam ullam, eveniet cupiditate eos quam.</p>
-								<i class="far fa-comments"></i>
-								<span>Start Chart</span>
-							</li>
-						</ul>
-					
-					</article>
-				</div>
-			</section>
-			<div class="title">
-				<i class="fas fa-arrow-left"></i>
-				<h1>Contact Us</h1>
-			</div>
-		</div>
-		
-	</section> -->
-
 	<section id="footer">
 		<div class="inner">
 			<div class="wrap1">
@@ -817,6 +736,17 @@
 			</div>
 		</div>
 	</section>
+
+	<ul id="navi">
+        <li><a href="#header" class="on"></a></li>
+        <li><a href="#visual_main"></a></li>
+        <li><a href="#vision_main"></a></li>
+        <li><a href="#about_main"></a></li>
+        <li><a href="#gallery_main"></a></li>
+        <li><a href="#news_main"></a></li>
+		<li><a href="#banner_main"></a></li>
+		<li><a href="#contact_main"></a></li>
+    </ul>
 
 </body>
 </html>

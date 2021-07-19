@@ -18,7 +18,7 @@
                 //align-items: center;
                 >p { 
                     width: 40%;
-                    font: bold 13px/2 'Open Sans';
+                    font: 13px/2 'Open Sans';
                     font-weight: 600;
                     color: #222;
                     letter-spacing: 1px;
@@ -31,15 +31,15 @@
                     box-sizing: border-box;
                     dt { 
                         width: 100%;
-                        font: bold 13px/1 'Open Sans';
+                        font:  13px/1 'Open Sans';
                         letter-spacing: 1.5px;
-                        border-bottom: 1px solid #333;
+                        border-bottom: 1px solid #000;
                         padding: 10px 0;
                         box-sizing: border-box;
                         margin-bottom: 10px;
                         cursor: pointer;
                         transition: 0.3s;
-                        opacity: 0.6;
+                        opacity: 0.8;
                         position: relative;
 
                         svg { 
@@ -125,7 +125,7 @@
                 }
             }
             >a { 
-                font: 15px/1 'Cutive Mono';
+                font: 13px/1 'Open Sans';
                 color: #111;
                 width: 100px;
                 margin-left: 20%;
@@ -163,7 +163,7 @@
 
                 >p { 
                     width: 40%;
-                    font: bold 13px/2 'Open Sans';
+                    font: 13px/2 'Open Sans';
                     font-weight: 600;
                     color: #222;
                     letter-spacing: 1px;

@@ -219,7 +219,7 @@
         //align-items: center;
         >p { 
             width: 40%;
-            font: bold 13px/1.5 'Cutive Mono';
+            font: 13px/1.5 'Open Sans';
             color: #222;
             //letter-spacing: 1px;
             padding: 0px 100px 0 0;
@@ -231,15 +231,15 @@
             box-sizing: border-box;
             dt { 
                 width: 100%;
-                font: bold 13px/1 'Open Sans';
+                font: 13px/1 'Open Sans';
                 letter-spacing: 1.5px;
-                border-bottom: 1px solid #333;
+                border-bottom: 1px solid #000;
                 padding: 10px 0;
                 box-sizing: border-box;
                 margin-bottom: 10px;
                 cursor: pointer;
                 transition: 0.3s;
-                opacity: 0.6;
+                opacity: 0.8;
                 position: relative;
 
                 svg { 

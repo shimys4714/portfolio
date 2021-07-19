@@ -944,7 +944,7 @@ body {
       justify-content: space-between; }
       .community .inner #service .wrap > p {
         width: 40%;
-        font: bold 13px/2 'Open Sans';
+        font: 13px/2 'Open Sans';
         font-weight: 600;
         color: #222;
         letter-spacing: 1px;
@@ -956,15 +956,15 @@ body {
         box-sizing: border-box; }
         .community .inner #service .wrap .toggle dt {
           width: 100%;
-          font: bold 13px/1 'Open Sans';
+          font: 13px/1 'Open Sans';
           letter-spacing: 1.5px;
-          border-bottom: 1px solid #333;
+          border-bottom: 1px solid #000;
           padding: 10px 0;
           box-sizing: border-box;
           margin-bottom: 10px;
           cursor: pointer;
           transition: 0.3s;
-          opacity: 0.6;
+          opacity: 0.8;
           position: relative; }
           .community .inner #service .wrap .toggle dt svg {
             font-size: 20px;
@@ -1021,7 +1021,7 @@ body {
           color: #555;
           margin-bottom: 30px; }
     .community .inner #news > a {
-      font: 15px/1 'Cutive Mono';
+      font: 13px/1 'Open Sans';
       color: #111;
       width: 100px;
       margin-left: 20%;
@@ -1049,7 +1049,7 @@ body {
       justify-content: space-between; }
       .community .inner #question .wrap > p {
         width: 40%;
-        font: bold 13px/2 'Open Sans';
+        font: 13px/2 'Open Sans';
         font-weight: 600;
         color: #222;
         letter-spacing: 1px;
@@ -2201,7 +2201,7 @@ body {
     justify-content: space-between; }
     #faq .wrap > p {
       width: 40%;
-      font: bold 13px/1.5 'Cutive Mono';
+      font: 13px/1.5 'Open Sans';
       color: #222;
       padding: 0px 100px 0 0;
       box-sizing: border-box; }
@@ -2211,15 +2211,15 @@ body {
       box-sizing: border-box; }
       #faq .wrap .toggle dt {
         width: 100%;
-        font: bold 13px/1 'Open Sans';
+        font: 13px/1 'Open Sans';
         letter-spacing: 1.5px;
-        border-bottom: 1px solid #333;
+        border-bottom: 1px solid #000;
         padding: 10px 0;
         box-sizing: border-box;
         margin-bottom: 10px;
         cursor: pointer;
         transition: 0.3s;
-        opacity: 0.6;
+        opacity: 0.8;
         position: relative; }
         #faq .wrap .toggle dt svg {
           font-size: 20px;
@@ -2926,7 +2926,8 @@ body {
             color: #777;
             margin-bottom: 30px; }
       #about_main > .inner .wrap .team {
-        width: 100%; }
+        width: 100%;
+        height: 400px; }
         #about_main > .inner .wrap .team h2 {
           font: bold 20px "Cormorant Garamond";
           font-weight: 700;
@@ -3142,7 +3143,14 @@ body {
         border-bottom: 1px solid #555; }
         #news_main .inner .wrap .news > article {
           width: 100%;
-          padding: 0 20px 0 0; }
+          padding: 0 20px 0 0;
+          transition: 0.5s;
+          transform: translateY(100px);
+          opacity: 0; }
+          #news_main .inner .wrap .news > article:nth-of-type(1) {
+            transition-delay: 0s; }
+          #news_main .inner .wrap .news > article:nth-of-type(2) {
+            transition-delay: 0.2s; }
           #news_main .inner .wrap .news > article .pic {
             width: 100%;
             height: 250px;
@@ -3205,6 +3213,9 @@ body {
       #news_main .inner .title h1 {
         font: bold 60px/1.5 'Cormorant Garamond';
         margin-left: 70px; }
+  #news_main.on .inner .wrap .news article {
+    opacity: 1;
+    transform: translateY(0px); }
 
 /* banner------------------------------------ */
 #banner_main {
@@ -3557,6 +3568,25 @@ body {
           color: #333;
           margin-left: 15px; }
 
+#navi {
+  position: fixed;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 5; }
+  #navi li {
+    margin: 20px 0; }
+    #navi li a {
+      display: block;
+      width: 3px;
+      height: 3px;
+      background: #888;
+      border-radius: 50px;
+      transition: 0.5s; }
+      #navi li a.on {
+        background: #111;
+        height: 60px; }
+
 /* tablet------------------------------------------ */
 @media screen and (max-width: 1179px) {
   /* header-------------------------------- */
@@ -3571,11 +3601,47 @@ body {
       display: block; }
 
   /* visual--------------------------------- */
-  #visual {
+  #visual_main {
     height: calc(100vh - 101px);
     padding: 0px 30px;
-    background: url(../img/visual1.jpg) no-repeat center/cover; }
-    #visual .inner {
+    background: #F2F2F2; }
+    #visual_main .inner {
+      width: 100%; }
+
+  /* vision------------------------------------ */
+  #vision_main {
+    padding: 0px 30px; }
+    #vision_main .inner {
+      width: 100%; }
+
+  /* about------------------------------------ */
+  #about_main {
+    padding: 0px 30px; }
+    #about_main .inner {
+      width: 100%; }
+
+  /* gallery------------------------------------ */
+  #gallery_main {
+    padding: 0px 30px; }
+    #gallery_main .inner {
+      width: 100%; }
+
+  /* news------------------------------------ */
+  #news_main {
+    padding: 0px 30px; }
+    #news_main .inner {
+      width: 100%; }
+
+  /* banner------------------------------------ */
+  #banner_main {
+    padding: 0px 30px; }
+    #banner_main .inner {
+      width: 100%; }
+
+  /* contact------------------------------------ */
+  #contact_main {
+    padding: 0px 30px; }
+    #contact_main .inner {
       width: 100%; }
 
   /* footer--------------------------------- */
