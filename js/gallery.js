@@ -3,6 +3,7 @@ var url_search = "https://www.flickr.com/services/rest/?method=flickr.photos.sea
 var key = "9d33df771d1d59016c37bd7c118d5b28";
 var user = "193212950@N04";
 var target = document.querySelector("article");
+var targetEl = "#gallery article";
 
 
 //flickr 갤러리 데이터 호출
@@ -46,20 +47,41 @@ $("body").on("click", "#imgPop span", function(e){
 
 //flicker 데이터 호출 함수
 function getFlicker(url, key, num, tags){
+
+    var result = {};
+    //아이디 이미지 전용 옵션 객체
+    var opt_id = { 
+        api_key : key,
+        per_page : num,
+        format: "json",
+        nojsoncallback : 1,
+        user_id : user,
+        tag_mode : "any",
+        privacy_filter : 5
+    };
+
+    //키워드 검색 이미지 전용 옵션 객체
+    var opt_search = { 
+        api_key : key,
+        per_page : num,
+        format: "json",
+        nojsoncallback : 1,
+        tags : tags,
+        tag_mode : "any",
+        privacy_filter : 5
+    };
+
+    if(tags==undefined){
+        result = opt_id;
+    }else{
+        result = opt_search;
+    };
+
     $("article").removeClass("on");
     $.ajax({
         url : url,
         dataType : "json",
-        data : {
-            api_key : key,
-            per_page : num,
-            format: "json",
-            nojsoncallback : 1,
-            user_id : user,
-            tags : tags,
-            tag_mode : "any",
-            privacy_filter : 5
-        } 
+        data : result 
     })
     .success(function(data){
         console.log(data.photos.photo);
@@ -90,8 +112,9 @@ function getFlicker(url, key, num, tags){
         //isotope 플러그인 적용
         setTimeout(function(){
             iso = new Isotope("#gallery",{ 
+                // layoutMode: 'packery',
                 itemSelector : "article",
-                columWidth : "article",
+                //columWidth : "article",
                 transitionDuration : "1s",
                 percentPosition : true
             });

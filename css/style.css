@@ -2876,12 +2876,6 @@ body {
       #about_main > .inner .title h1 {
         font: bold 60px/1.5 'Cormorant Garamond';
         margin-right: 70px; }
-      #about_main > .inner .title svg {
-        width: 60px;
-        height: 60px;
-        transform: rotate(45deg);
-        color: #000;
-        margin-top: 15px; }
       #about_main > .inner .title .icon {
         width: 90px;
         height: 90px;
@@ -2934,7 +2928,9 @@ body {
             margin-bottom: 30px; }
       #about_main > .inner .wrap .team {
         width: 100%;
-        height: 400px; }
+        height: 500px;
+        position: relative;
+        border: 1px solid orange; }
         #about_main > .inner .wrap .team h2 {
           font: bold 20px "Cormorant Garamond";
           font-weight: 700;
@@ -2956,37 +2952,38 @@ body {
           flex-direction: row;
           flex-wrap: wrap;
           justify-content: space-between;
-          box-sizing: border-box; }
-        #about_main > .inner .wrap .team article {
-          width: 30%;
-          height: 200px;
-          margin-bottom: 40px;
-          display: flex;
-          flex-direction: column; }
-          #about_main > .inner .wrap .team article h3 {
-            font: bold 15px "Open Sans";
-            font-weight: 700;
-            color: #000;
-            letter-spacing: 1px;
-            text-align: left;
-            margin-bottom: 10px;
-            margin-top: 20px; }
-          #about_main > .inner .wrap .team article p {
-            font: 8px "Open Sans";
-            color: #777;
-            margin-bottom: 30px; }
-          #about_main > .inner .wrap .team article .pic {
-            width: 100%;
-            height: 100%;
-            background-repeat: no-repeat;
-            background-size: cover;
-            filter: saturate(50%); }
-            #about_main > .inner .wrap .team article .pic img {
+          box-sizing: border-box;
+          border: 1px solid orange; }
+          #about_main > .inner .wrap .team .ourTeam article {
+            width: 30%;
+            height: 200px;
+            margin-bottom: 40px;
+            display: flex;
+            flex-direction: column; }
+            #about_main > .inner .wrap .team .ourTeam article h3 {
+              font: bold 15px "Open Sans";
+              font-weight: 700;
+              color: #000;
+              letter-spacing: 1px;
+              text-align: left;
+              margin-bottom: 10px;
+              margin-top: 20px; }
+            #about_main > .inner .wrap .team .ourTeam article p {
+              font: 8px "Open Sans";
+              color: #777;
+              margin-bottom: 30px; }
+            #about_main > .inner .wrap .team .ourTeam article .pic {
               width: 100%;
               height: 100%;
-              object-position: top;
-              object-fit: cover; }
-        #about_main > .inner .wrap .team > a {
+              background-repeat: no-repeat;
+              background-size: cover;
+              filter: saturate(50%); }
+              #about_main > .inner .wrap .team .ourTeam article .pic img {
+                width: 100%;
+                height: 100%;
+                object-position: top;
+                object-fit: cover; }
+        #about_main > .inner .wrap .team a {
           font: 13px/1 'Open Sans';
           color: #111;
           width: 100px;
@@ -2994,11 +2991,12 @@ body {
           opacity: 0.8;
           transition: 0.5s;
           margin-top: 20px;
+          border: 1px solid orange;
           text-align: right;
           position: absolute;
           right: 0;
-          bottom: 0; }
-          #about_main > .inner .wrap .team > a::after {
+          bottom: 20px; }
+          #about_main > .inner .wrap .team a::after {
             content: "";
             display: block;
             width: 0%;
@@ -3006,7 +3004,7 @@ body {
             background-color: #555;
             transition: 0.5s;
             margin-top: 5px; }
-          #about_main > .inner .wrap .team > a:hover::after {
+          #about_main > .inner .wrap .team a:hover::after {
             content: "";
             display: block;
             width: 100%;
@@ -3632,6 +3630,13 @@ body {
   /* gallery------------------------------------ */
   #gallery_main {
     padding: 0px 30px; }
+    #gallery_main::before {
+      content: "";
+      width: 100%;
+      height: 2px;
+      background: #000;
+      display: block;
+      margin: 0 auto; }
     #gallery_main .inner {
       width: 100%; }
 
