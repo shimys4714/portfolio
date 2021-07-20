@@ -2930,9 +2930,8 @@ body {
             margin-bottom: 30px; }
       #about_main > .inner .wrap .team {
         width: 100%;
-        height: 500px;
-        position: relative;
-        border: 1px solid orange; }
+        height: 400px;
+        position: relative; }
         #about_main > .inner .wrap .team h2 {
           font: bold 20px "Cormorant Garamond";
           font-weight: 700;
@@ -2954,8 +2953,7 @@ body {
           flex-direction: row;
           flex-wrap: wrap;
           justify-content: space-between;
-          box-sizing: border-box;
-          border: 1px solid orange; }
+          box-sizing: border-box; }
           #about_main > .inner .wrap .team .ourTeam article {
             width: 30%;
             height: 200px;
@@ -2993,7 +2991,6 @@ body {
           opacity: 0.8;
           transition: 0.5s;
           margin-top: 20px;
-          border: 1px solid orange;
           text-align: right;
           position: absolute;
           right: 0;
@@ -3118,11 +3115,6 @@ body {
       transition: 0.3s; }
       #gallery_main .galleryNavi .swiper-button-next:hover {
         transform: scale(0.6); }
-  #gallery_main .inner {
-    width: 1180px;
-    height: 100%;
-    margin: 0px auto;
-    position: relative; }
 
 /* news------------------------------------ */
 #news_main {
@@ -3303,12 +3295,12 @@ body {
           border-top: none;
           margin: 0 auto; }
           #contact_main .inner .wrap .contactBanner > .wrap > svg {
-            widtH: 100%;
-            height: 30px;
+            width: 100%;
+            height: 20px;
             text-align: center;
             opacity: 0.8; }
           #contact_main .inner .wrap .contactBanner > .wrap > span, #contact_main .inner .wrap .contactBanner > .wrap a {
-            font: bold 15px "Open Sans";
+            font: bold 13px "Open Sans";
             font-weight: 700;
             color: #333;
             letter-spacing: 1px;
@@ -3625,40 +3617,77 @@ body {
 
   /* about------------------------------------ */
   #about_main {
-    padding: 0px 30px; }
-    #about_main .inner {
+    padding: 0px 30px;
+    padding-bottom: 100px; }
+    #about_main > .inner {
       width: 100%; }
+      #about_main > .inner .title h1 {
+        margin-right: 30px; }
+      #about_main > .inner .wrap .process ul li {
+        padding: 0px; }
+        #about_main > .inner .wrap .process ul li h3 {
+          font: bold 13px "Open Sans";
+          font-weight: 700;
+          color: #000;
+          letter-spacing: 1px;
+          text-align: center;
+          margin-bottom: 10px;
+          margin-top: 20px; }
+        #about_main > .inner .wrap .process ul li p {
+          font: 8px "Open Sans";
+          color: #777;
+          margin-bottom: 30px; }
 
   /* gallery------------------------------------ */
   #gallery_main {
-    padding: 0px 30px; }
+    padding: 0px 30px;
+    overflow: hidden; }
     #gallery_main::before {
-      content: "";
-      width: 100%;
-      height: 2px;
-      background: #000;
-      display: block;
-      margin: 0 auto; }
-    #gallery_main .inner {
       width: 100%; }
 
   /* news------------------------------------ */
   #news_main {
-    padding: 0px 30px; }
+    padding: 0px 30px;
+    padding-bottom: 100px; }
     #news_main .inner {
       width: 100%; }
+      #news_main .inner .title h1 {
+        margin-right: 30px; }
 
   /* banner------------------------------------ */
   #banner_main {
-    padding: 0px 30px; }
+    padding: 100px 30px; }
     #banner_main .inner {
       width: 100%; }
 
   /* contact------------------------------------ */
   #contact_main {
-    padding: 0px 30px; }
+    padding: 0px 30px;
+    padding-bottom: 100px; }
     #contact_main .inner {
       width: 100%; }
+      #contact_main .inner h1 {
+        margin-right: 30px; }
+      #contact_main .inner .wrap .contactBanner {
+        padding: 20px 10px; }
+        #contact_main .inner .wrap .contactBanner > .wrap > span, #contact_main .inner .wrap .contactBanner > .wrap a {
+          font: bold 12px "Open Sans";
+          font-weight: 700;
+          color: #333;
+          letter-spacing: 1px;
+          text-align: center;
+          margin-bottom: 0px;
+          margin-top: 20px; }
+      #contact_main .inner .wrap .wrapForm {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column; }
+        #contact_main .inner .wrap .wrapForm .sendMail {
+          width: 100%; }
+        #contact_main .inner .wrap .wrapForm .faq {
+          width: 100%;
+          margin-top: 100px; }
 
   /* footer--------------------------------- */
   #footer .inner {
@@ -3677,6 +3706,53 @@ body {
   /* visual----------------------------------- */
   #visual {
     height: 400px; }
+
+  /* about------------------------------------ */
+  #about_main > .inner {
+    flex-direction: column; }
+    #about_main > .inner .title h1 {
+      width: 100%; }
+    #about_main > .inner .title .icon {
+      transform: rotate(-270deg); }
+    #about_main > .inner .wrap {
+      width: 100%; }
+
+  /* news------------------------------------ */
+  #news_main {
+    padding: 0px 30px;
+    padding-bottom: 100px;
+    position: relative; }
+    #news_main .inner {
+      width: 100%;
+      flex-direction: column; }
+      #news_main .inner .wrap {
+        width: 100%; }
+      #news_main .inner .title {
+        width: 100%;
+        position: absolute;
+        top: 0;
+        right: 0; }
+        #news_main .inner .title .icon {
+          transform: rotate(270deg); }
+        #news_main .inner .title h1 {
+          width: 100%;
+          text-align: right;
+          margin-right: 0px; }
+
+  /* contact------------------------------------ */
+  #contact_main > .inner {
+    flex-direction: column; }
+    #contact_main > .inner .title {
+      width: 100%; }
+      #contact_main > .inner .title h1 {
+        width: 100%; }
+      #contact_main > .inner .title .icon {
+        transform: rotate(-270deg); }
+    #contact_main > .inner .wrap {
+      width: 100%; }
+      #contact_main > .inner .wrap .contactBanner {
+        width: 100%;
+        margin-bottom: 50px; }
 
   /* footer----------------------------------- */
   #footer .inner .wrap1 .sec1 {

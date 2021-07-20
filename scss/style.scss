@@ -912,9 +912,9 @@ body{
                     @include conLineTitle($fontSize:20px, $fontWeight:700, $mb:30px, $mt: 20px);
                 }
                 width: 100%;
-                height: 500px;
+                height: 400px;
                 position: relative;
-                border: 1px solid orange;
+                //border: 1px solid orange;
 
                 .ourTeam { 
                     width: 100%;
@@ -923,7 +923,7 @@ body{
                     flex-wrap: wrap;         
                     justify-content: space-between;
                     box-sizing: border-box;
-                    border: 1px solid orange;
+                    //border: 1px solid orange;
                     //margin-left: 10%;
 
                     article { 
@@ -965,7 +965,7 @@ body{
                 };
                 a { 
                     @include viewMore();
-                    border: 1px solid orange;
+                    //border: 1px solid orange;
                     
                     text-align: right;
                     position: absolute;
@@ -1121,17 +1121,8 @@ body{
             }
         };
     };
-    
-   
-
-    .inner { 
-        width: 1180px;
-        height: 100%;
-        margin: 0px auto;
-        position: relative;   
-        
-    };
 };
+
 /* news------------------------------------ */
 #news_main { 
     //margin-top: 100px;
@@ -1364,21 +1355,20 @@ body{
                     margin: 0 auto;
 
                     >svg{
-                        widtH: 100%;
-                        height: 30px;
+                        width: 100%;
+                        height: 20px;
                         text-align: center;
                         opacity: 0.8;
                         //border: 1px solid orange;
                     };
                     >span, a {
                         //border: 1px solid orange;
-                        @include title($fontSize:15px, $fontFamily:'Open Sans',
+                        @include title($fontSize:13px, $fontFamily:'Open Sans',
                             $fontWeight:700, $letterSpa:1px, $color: #333, 
                             $align: center, $mb:0px, $mt: 20px);
                     };
                 };
-                };
-
+            };
             .wrapForm{
                 width: 100%;
                 display: flex;
@@ -1777,25 +1767,47 @@ body{
     };
 
     /* about------------------------------------ */
-    #about_main {
-        padding:0px 30px;
-        .inner{
-            width: 100%;
-        };
+    #about_main { 
+    padding:0px 30px;
+    padding-bottom : 100px;
+    
+    >.inner { 
+        width: 100%;
+       
+        .title { 
+            
+            h1 { 
+                margin-right: 30px;
+            };
+        }
+        .wrap { 
+            .process { 
+                ul {
+                    li { 
+                        padding: 0px;
+                        //border: 1px solid green;                          
+                        h3{
+                            @include title($fontSize:13px, $fontFamily:'Open Sans',
+                            $fontWeight:700, $letterSpa:1px, $color: #000, 
+                            $align: center, $mb:10px, $mt: 20px);
+                        };
+                        p { 
+                            @include subTxt();
+                            //margin-bottom: 30px;
+                        };
+                    };
+                };
+            };
+        };  
+    };
     };
 
     /* gallery------------------------------------ */
     #gallery_main {
         padding:0px 30px;
+        overflow: hidden;
+
         &::before { 
-            content: "";
-            width: 100%;
-            height: 2px;
-            background: #000;
-            display: block;
-            margin: 0 auto;
-        }
-        .inner{
             width: 100%;
         };
     };
@@ -1803,14 +1815,23 @@ body{
     /* news------------------------------------ */
     #news_main {
         padding:0px 30px;
+        padding-bottom : 100px;
         .inner{
             width: 100%;
+
+            .title { 
+            
+                h1 { 
+                    margin-right: 30px;
+                };
+            }
+            
         };
     };
 
     /* banner------------------------------------ */
     #banner_main {
-        padding:0px 30px;
+        padding: 100px 30px;
         .inner{
             width: 100%;
         };
@@ -1819,11 +1840,48 @@ body{
     /* contact------------------------------------ */
     #contact_main {
         padding:0px 30px;
+        padding-bottom : 100px;
         .inner{
             width: 100%;
+            h1 { 
+                margin-right: 30px;
+            };
+            .wrap { 
+                .contactBanner { 
+                    padding: 20px 10px;
+        
+                    >.wrap{
+                    
+                        >span, a {
+                            @include title($fontSize:12px, $fontFamily:'Open Sans',
+                                $fontWeight:700, $letterSpa:1px, $color: #333, 
+                                $align: center, $mb:0px, $mt: 20px);
+                        };
+                    };
+                };
+
+                .wrapForm{
+                    width: 100%;
+                    display: flex;
+                    justify-content: space-between;
+                    flex-direction: column;
+                    //border: 1px solid orange;
+
+                    .sendMail { 
+                        width: 100%;
+                    };
+
+                    .faq{
+                        width: 100%;
+                        margin-top: 100px;
+                    };
+                };
+            };
+
+
         };
     };
-    
+
     /* footer--------------------------------- */
     #footer { 
         .inner { 
@@ -1859,7 +1917,87 @@ body{
     /* visual----------------------------------- */
     #visual { 
         height: 400px;
-    }
+    };
+
+     /* about------------------------------------ */
+    #about_main { 
+    
+        >.inner { 
+            flex-direction: column;
+            
+            .title {                 
+                h1 { 
+                    width: 100%;
+                };
+                .icon { 
+                    transform: rotate(-270deg);
+                };
+            }
+            .wrap { 
+                width: 100%;
+            };  
+        };
+    };
+
+     /* news------------------------------------ */
+     #news_main {
+        padding:0px 30px;
+        padding-bottom : 100px;
+        position: relative;
+        .inner{
+            width: 100%;
+            flex-direction: column;
+
+            .wrap { 
+                width: 100%;                
+            };
+
+            .title { 
+                width: 100%;
+                position: absolute;
+                top:0; right: 0;
+
+                .icon { 
+                    transform: rotate(270deg);
+                };
+            
+                h1 { 
+                    width: 100%;
+                    text-align: right;
+                    margin-right: 0px;
+                    
+                };
+            };
+            
+        };
+    };
+
+     /* contact------------------------------------ */
+     #contact_main {
+        >.inner{
+            flex-direction: column;
+
+            .title { 
+                width: 100%;
+                h1 { 
+                    width: 100%;
+                };
+                .icon { 
+                    transform: rotate(-270deg);
+                };
+            }
+           
+            .wrap { 
+                width: 100%;
+                .contactBanner { 
+                   width: 100%;
+                   margin-bottom: 50px;
+                  
+                };
+            };
+        };
+    };
+
  
     /* footer----------------------------------- */
     #footer { 
