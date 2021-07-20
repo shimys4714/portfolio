@@ -1,20 +1,21 @@
 var url = "https://www.flickr.com/services/rest/?method=flickr.people.getPhotos";
 var url_search = "https://www.flickr.com/services/rest/?method=flickr.photos.search";
 var key = "9d33df771d1d59016c37bd7c118d5b28";
+var num = 16;
 var user = "193212950@N04";
 var target = document.querySelector("article");
-var targetEl = "#gallery article";
 
 
 //flickr 갤러리 데이터 호출
-getFlicker(url, key, 15);
+getFlicker(url, key, num);
+
 
 $("body").on("click", "#search .textSearch button", function(e){
     //e.preventDefault();
     
     var tags = $(this).prev().val();
 
-    getFlicker(url_search, key, 15, tags);
+    getFlicker(url_search, key, num, tags);
     console.log();
 });
 
@@ -44,6 +45,7 @@ $("body").on("click", "#imgPop span", function(e){
         $(this).remove();
     });
 });
+
 
 //flicker 데이터 호출 함수
 function getFlicker(url, key, num, tags){
@@ -77,7 +79,8 @@ function getFlicker(url, key, num, tags){
         result = opt_search;
     };
 
-    $("article").removeClass("on");
+    $("#gallery article").removeClass("on");
+
     $.ajax({
         url : url,
         dataType : "json",
@@ -85,11 +88,11 @@ function getFlicker(url, key, num, tags){
     })
     .success(function(data){
         console.log(data.photos.photo);
-        var imgs = data.photos.photo;
+        var items = data.photos.photo;
 
-        $("#gallery article").empty();
+        $("#gallery").empty();
     
-        $(imgs).each(function(index, data){
+        $(items).each(function(index, data){
             var tit = data.title;
             if(!data.title) tit = "default text";
 
@@ -107,15 +110,16 @@ function getFlicker(url, key, num, tags){
                 </article>
             `;
             $("#gallery").append(tags);
-        })
-    
+        });
+
+        
         //isotope 플러그인 적용
         setTimeout(function(){
             iso = new Isotope("#gallery",{ 
                 // layoutMode: 'packery',
-                itemSelector : "article",
-                //columWidth : "article",
-                transitionDuration : "1s",
+                itemSelector : "#gallery article",
+                columWidth : "#gallery article",
+                transitionDuration : "0.5s",
                 percentPosition : true
             });
             $("article").addClass("on")

@@ -701,8 +701,7 @@ body {
           padding: 20px 10px; }
   .content .inner {
     width: 1180px;
-    margin: 0px auto;
-    min-height: 500px; }
+    margin: 0px auto; }
     .content .inner h1 {
       font: bold 20px "Cormorant Garamond";
       font-weight: 700;
@@ -1747,12 +1746,15 @@ body {
     transform: translateY(0px); }
   #gallery article .inner {
     width: 100%;
+    height: 250px;
     box-sizing: border-box; }
     #gallery article .inner .pic {
       width: 100%;
+      height: 200px;
       margin-bottom: 20px; }
       #gallery article .inner .pic img {
         width: 100%;
+        height: 100%;
         object-fit: cover;
         cursor: pointer; }
     #gallery article .inner h2 {
