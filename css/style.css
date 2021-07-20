@@ -2882,6 +2882,13 @@ body {
         transform: rotate(45deg);
         color: #000;
         margin-top: 15px; }
+      #about_main > .inner .title .icon {
+        width: 90px;
+        height: 90px;
+        transform: rotate(0deg);
+        background-image: url(../img/arrow3.png);
+        background-position: center;
+        background-size: cover; }
     #about_main > .inner .wrap {
       width: 65%;
       margin-top: 100px; }
@@ -3204,12 +3211,13 @@ body {
       justify-content: flex-start;
       align-content: center;
       align-items: top; }
-      #news_main .inner .title svg {
-        width: 60px;
-        height: 60px;
-        transform: rotate(-45deg);
-        color: #000;
-        margin-top: 15px; }
+      #news_main .inner .title .icon {
+        width: 90px;
+        height: 90px;
+        transform: rotate(0deg);
+        background-image: url(../img/arrow31.png);
+        background-position: center;
+        background-size: cover; }
       #news_main .inner .title h1 {
         font: bold 60px/1.5 'Cormorant Garamond';
         margin-left: 70px; }
@@ -3266,12 +3274,13 @@ body {
       #contact_main .inner .title h1 {
         font: bold 60px/1.5 'Cormorant Garamond';
         margin-right: 70px; }
-      #contact_main .inner .title svg {
-        width: 60px;
-        height: 60px;
-        transform: rotate(45deg);
-        color: #000;
-        margin-top: 15px; }
+      #contact_main .inner .title .icon {
+        width: 90px;
+        height: 90px;
+        transform: rotate(0deg);
+        background-image: url(../img/arrow3.png);
+        background-position: center;
+        background-size: cover; }
     #contact_main .inner .wrap {
       width: 65%;
       display: flex;

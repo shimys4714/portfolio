@@ -858,6 +858,16 @@ body{
                 margin-top : 15px;
                 //border: 1px solid green;
             };
+
+            .icon { 
+                width: 90px;
+                height: 90px;
+                transform: rotate(0deg);
+                background-image: url(../img/arrow3.png);
+                background-position: center;
+                background-size: cover;
+                //border: 1px solid green;
+            };
         }
         .wrap { 
             width: 65%;
@@ -1212,12 +1222,23 @@ body{
             align-items: top;
             //border: 1px solid green;
 
-            svg { 
-                width: 60px;
-                height: 60px;
-                transform: rotate(-45deg);
-                color: #000;
-                margin-top : 15px;
+            // svg { 
+            //     width: 60px;
+            //     height: 60px;
+            //     transform: rotate(-45deg);
+            //     color: #000;
+            //     margin-top : 15px;
+            //     //border: 1px solid green;
+            // };
+
+            .icon { 
+                width: 90px;
+                height: 90px;
+                transform: rotate(0deg);
+                background-image: url(../img/arrow31.png);
+                background-position: center;
+                background-size: cover;
+                
                 //border: 1px solid green;
             };
 
@@ -1292,14 +1313,24 @@ body{
                 margin-right: 70px;
             };
     
-            svg { 
-                width: 60px;
-                height: 60px;
-                transform: rotate(45deg);
-                color: #000;
-                margin-top : 15px;
+            .icon { 
+                width: 90px;
+                height: 90px;
+                transform: rotate(0deg);
+                background-image: url(../img/arrow3.png);
+                background-position: center;
+                background-size: cover;
                 //border: 1px solid green;
             };
+
+            // svg { 
+            //     width: 60px;
+            //     height: 60px;
+            //     transform: rotate(45deg);
+            //     color: #000;
+            //     margin-top : 15px;
+            //     //border: 1px solid green;
+            // };
         };
 
         .wrap { 
