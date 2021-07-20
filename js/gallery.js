@@ -119,7 +119,7 @@ function getFlicker(url, key, num, tags){
                 // layoutMode: 'packery',
                 itemSelector : "#gallery article",
                 columWidth : "#gallery article",
-                transitionDuration : "0.5s",
+                transitionDuration : "0.3s",
                 percentPosition : true
             });
             $("article").addClass("on")

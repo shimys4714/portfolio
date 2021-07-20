@@ -282,3 +282,142 @@
     }
 
 }
+
+//tablet-----------
+@media screen and (max-width:$tablet) {
+
+    .location { 
+
+        .traffic{
+
+            li { 
+                a { 
+                    width: 100px;
+                };
+            };
+        };
+        .branch{
+            //float: left;
+            li { 
+                margin-right: 20px;
+                a { 
+                    width: 120px;
+
+                }
+            }
+        };
+        
+    }
+   
+    #faq { 
+        .wrap { 
+            >p { 
+                padding: 0px 50px 0 0 ;
+            };
+        };
+    };
+};
+//mobile-----------
+@media screen and (max-width:$mobile) {
+
+    .contact { 
+        .inner{
+            .wrapForm{
+                flex-direction: column;
+    
+                .sendMail { 
+                    width: 100%;
+                    padding-right: 0px;
+                    margin-bottom: 100px;
+                    
+                };
+                .contactList{
+                    width: 100%;
+                    padding-left: 0px;
+                    
+
+                    ul { 
+                        display: flex;
+                        flex-direction: row;
+                        justify-content: space-between;
+                        border: 1px solid #555;
+                        padding: 20px;
+                        margin-bottom: 50px;
+
+                        li{
+                            width: 30%;
+                            margin-bottom: 0px;
+                            display: flex;
+                            flex-direction: column;
+                            justify-content: flex-start;
+                            align-content: center;
+                            align-items: center;
+
+                            >p { 
+                                display: none;
+                            }
+                            >svg { 
+                                font-size: 20px;
+                                margin-right: 0px;
+                                margin-bottom: 20px;;
+                                //border: 1px solid orange;
+                            }
+                            span { 
+                                font: bold 13px/1.5 'Playfair Display';
+                                letter-spacing: 1.5px;
+                                text-align: center;
+                            };
+                        };
+                    };
+                };
+            };
+        };
+    };
+    .location { 
+
+        .traffic{
+            display: none;
+
+        };
+        .branch{
+            //border : 1px solid orange;
+            width: 100%;
+            //float: left;
+            li { 
+                width: 100%;
+                margin-right: 0px;
+                a { 
+                    width: 100%;
+                    margin-bottom: 10px;
+                }
+            }
+        };
+        
+    }
+   
+    #faq { 
+        .wrap { 
+            flex-direction: column;
+            >p { 
+                width: 100%;
+                padding: 0px;
+                margin-bottom: 50px;
+            };
+            .toggle {
+                width: 100%;
+                padding: 0;
+                dt { 
+                    //border: 1px solid orange;
+                    padding: 10px 15px 10px 0px;
+                    //padding: 0 10px;
+
+                    svg { 
+                        //border: 1px solid red;
+                        bottom: 10px;
+                    };
+                };
+            };
+        };
+    };
+};
+    

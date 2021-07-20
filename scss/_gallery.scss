@@ -20,7 +20,7 @@ $mobile: 539px;
         @include title($fontSize:18px, $fontWeight:400, $mb:0px);
         line-height: 30px;
     }
-}
+};
 #collection{
     width: 100%;
     >p { 
@@ -155,15 +155,18 @@ $mobile: 539px;
 }
 
 #gallery { 
-    &::after { 
-        content: "";
-        display: block;
-        clear: both;
-    }
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    // &::after { 
+    //     content: "";
+    //     display: block;
+    //     clear: both;
+    // }
     article { 
         width: 25%;
-        float : left;
-        padding: 20px;
+        // float : left;
+        padding: 15px;
         box-sizing: border-box;
         transform: translateY(200px);
         transition: 1s;
@@ -173,17 +176,16 @@ $mobile: 539px;
         &.on { 
             opacity: 1;
             transform: translateY(0px);
-        }
+        };
 
         .inner { 
             width: 100%;
-            height: 250px;
-            box-sizing: border-box;
+            //height: 250px;
             //border: 1px solid #000;
-
+            
             .pic {
                 width: 100%;
-                height: 200px;
+                height: 300px;
                 //background: #000;
                 margin-bottom: 20px;
 
@@ -192,8 +194,9 @@ $mobile: 539px;
                     height: 100%;
                     object-fit: cover;
                     cursor: pointer;
-                }
-            }
+                    //border: 1px solid orange;
+                };
+            };
             h2 { 
                 font: bold 14px/1 'Cormorant';
                 color: #444;
@@ -219,8 +222,8 @@ $mobile: 539px;
                     display: block;
                     margin-top: 10px;
                 }
-            }
-        }
+            };
+        };
     }
 }
 
@@ -252,23 +255,29 @@ $mobile: 539px;
     }
 }
 
-@media screen and (max-width: $tablet){
-    #gallery{
-        article{width: calc(100% /4) }
-    }
+/*tablet------------------------------------------------------------------*/
+@media screen and (max-width:$tablet) { 
+    #gallery { 
+
+        article { 
+            width: 50%;
+        };
+    };
 };
-@media screen and (max-width: 799px){
-    #gallery{
-        article{width: calc(100% /3) }
-    }
-};
-@media screen and (max-width: $mobile){
-    #gallery{
-        article{width: calc(100% / 2) }
-    }
-};
-@media screen and (max-width: 479px){
-    #gallery{
-        article{width: calc(100%) }
-    }
+
+/*mobile------------------------------------------------------------------*/
+@media screen and (max-width:$mobile) { 
+
+    #collection { 
+        >P { 
+            width: 100%;
+            text-align: justify;
+        };
+    };
+    #gallery { 
+
+        article { 
+            width: 100%;
+        };
+    };
 };
