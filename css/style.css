@@ -1403,7 +1403,7 @@ body {
       width: 50%;
       padding-right: 40px;
       box-sizing: border-box; }
-      .join > .inner .wrap > .terms > #terms {
+      .join > .inner .wrap > .terms #terms {
         width: 100%;
         height: 120px;
         resize: none;
