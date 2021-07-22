@@ -739,13 +739,14 @@ body{
         .menuMo { 
             width: 100%;
             height: 100vh;
-            background: #D9D5D2;
+            background: #d9d5d29a;
             position: fixed;
             top:0;
             left:-100%;
             z-index: 10;
             transition: all 0.8s;
             padding: 35px 30px;
+            backdrop-filter: blur(8px);
 
             h1 { 
                 //border-bottom: 1px solid #666;
@@ -823,7 +824,8 @@ body{
         width: 100%;
         height: 100%;
         margin: 0px auto;
-        //padding: 0px 30px;
+        padding-bottom: 100px;
+        //padding: 0px 20px;
         //position: relative;   
         .visualWrap{
             width: 100%;
@@ -872,6 +874,7 @@ body{
                     flex-direction: row;
                     justify-content: space-between;
                     align-content: center;
+                    padding:20px;
                     //border: 1px solid green;
 
                     >span { 
@@ -948,14 +951,15 @@ body{
 
         .visualPop { 
             width: 100%;
-            height: 100%;
+            height: 1500px;
             //padding: 20px 0;
-            //border: 1px solid#000;
+            border: 1px solid#000;
             z-index: 2;
             position: absolute;
             top: 0px;
             left: -100%;
             transition: 1s;
+            background: #fff;
             //display: none;
 
             &.on { 
@@ -1007,18 +1011,40 @@ body{
     width: 100%;
     //border: 1px solid orange;
     //height: 100vh;
-    padding: 100px 0;
-    //border: 1px solid green;
+    //background: #F2F2F2;
 
     .inner { 
         width: 1180px;
         height: 100%;
         margin: 0px auto;
         position: relative;   
+        border-top: 2px solid #000;
+        padding: 50px;
+        //border: 1px solid orange;
+        
+        >.pic{ 
+            position: absolute;
+            top: 150px; left: 60px;
+
+            img { 
+                width: 100px;
+            }
+        }
+        >.pic2{ 
+            position: absolute;
+            bottom: 150px; right: 60px;
+
+            >img { 
+                width: 100px;
+                transform: rotate(180deg);
+            }
+        }
 
         h1 { 
             font: bold 30px/2 'Playfair Display';
-            padding: 100px;
+            padding: 150px 100px;
+            text-align: center;
+            //border: 1px solid orange;
         }
     };
 };
@@ -1026,7 +1052,6 @@ body{
 /* about------------------------------------ */
 #about_main { 
     width: 100%;
-    padding-bottom : 200px;
     //border: 1px solid orange;
     //height: 100vh;
     
@@ -1039,6 +1064,7 @@ body{
         display: flex;
         justify-content: space-between;
         flex-direction: row;
+        padding-bottom: 100px;
         //border: 1px solid red;
         
         .title { 
@@ -1066,8 +1092,8 @@ body{
             >.icon { 
                 width: 90px;
                 height: 90px;
-                transform: rotate(0deg);
-                background-image: url(../img/arrow3.png);
+                transform: rotate(225deg);
+                background-image: url(../img/arrowIcon.svg);
                 background-position: center;
                 background-size: cover;
                 //border: 1px solid green;
@@ -1332,7 +1358,6 @@ body{
     //margin-top: 100px;
     width: 100%;
     //border: 1px solid orange;
-    padding-bottom : 200px;
     //height: 100vh;
 
     .inner { 
@@ -1344,6 +1369,7 @@ body{
         display: flex;
         justify-content: space-between;
         flex-direction: row;
+        padding-bottom : 100px;
         //border: 1px solid red;
 
         .wrap { 
@@ -1431,8 +1457,8 @@ body{
             .icon { 
                 width: 90px;
                 height: 90px;
-                transform: rotate(0deg);
-                background-image: url(../img/arrow31.png);
+                transform: rotate(-45deg);
+                background-image: url(../img/arrowIcon.svg);
                 background-position: center;
                 background-size: cover;
                 
@@ -1455,7 +1481,6 @@ body{
 /* banner------------------------------------ */
 #banner_main { 
     width: 100%;
-    padding: 150px 0px;
     background: #444;
     background-image: url(../img/mainBanner.jpg);
     background-repeat: no-repeat;
@@ -1463,11 +1488,13 @@ body{
     background-size: cover;
     background-attachment: fixed;
     filter: saturate(40%);
+    //border: 1px solid orange;
     
 
     .inner { 
         width: 1180px;
         margin: 0px auto;
+        padding: 150px 0px;
         text-align: center;
 
         h1 { 
@@ -1513,8 +1540,8 @@ body{
             .icon { 
                 width: 90px;
                 height: 90px;
-                transform: rotate(0deg);
-                background-image: url(../img/arrow3.png);
+                transform: rotate(225deg);
+                background-image: url(../img/arrowIcon.svg);
                 background-position: center;
                 background-size: cover;
                 //border: 1px solid green;
@@ -1953,14 +1980,178 @@ body{
         }
     }
     /* visual--------------------------------- */
-    #visual_main { 
-        height: calc(100vh - 101px);
-        padding:0px 30px;
-        
-        .inner { 
-            width: 100%;
-        }
-    }
+    #visual_main {
+        padding:0px 0px;
+    
+        >.inner {  
+            .visualWrap{
+            
+                &.on { 
+                    transform: translateX(2000px);
+                }
+    
+                article  { 
+                    width: 25%;
+                    height: 800px;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+                    align-content: center;
+                    flex: 1;
+                    transition: all 1s;
+                    cursor: pointer;
+                    //border: 1px solid orange;
+                    figure { 
+                        width: 100%;
+                        height: 70%;
+                        //border: 1px solid #555;
+                        transition: 1s;
+                        video { 
+                            width: 100%;
+                            height: 100%;
+                            object-fit: cover;
+                            transition: 1s;
+                            filter: saturate(30%);
+                        };
+                    };
+                    .visualTxt { 
+                        width: 100%;
+                        height: 30%;
+                        display: flex;
+                        flex-direction: row;
+                        justify-content: space-between;
+                        align-content: center;
+                        padding:20px;
+                        //border: 1px solid green;
+    
+                        >span { 
+                            display: block;
+                            width: 30%;
+                            font: bold 60px/1 'Playfair Display';
+                            color: #D9D5D2;
+                            padding: 0 20px 0 0;
+                            //border: 1px solid red;
+                            // &::after{
+                            //     display: block;
+                            //     content: "";
+                            //     width: 100%;
+                            //     height: 1px;
+                            //     background: #555;
+                            //     margin-top: 20px;
+                            // };
+                        };
+    
+                        .conTxt { 
+                            display: flex;
+                            flex-direction: column;
+                            justify-content: flex-start;
+                            position: relative;
+                            //border: 1px solid orange;
+    
+                            >h2 { 
+                                font: 20px/1.3 'Cormorant Garamond';
+                                font-weight: 700;
+                                //border: 1px solid orange;
+                                margin-top: 15px;
+                            }
+    
+                            >p{
+                                width: 100%;
+                                //height: 80%;
+                                //border: 1px solid blue;
+                                padding: 10px 20px 10px 0px;
+                                font: 13px/1.5 'Open Sans';
+                                color: #000;
+                                text-align: left;
+                            };
+                            >a { 
+                                //width: 100%;
+                                //border: 1px solid green;
+    
+                                .icon { 
+                                    width: 40px;
+                                    height: 40px;
+                                    transform: rotate(180deg);
+                                    background-image: url(../img/arrowIcon.svg);
+                                    background-position: center;
+                                    background-size: cover;
+                                    position: absolute;
+                                    bottom: 10px; right: 0;
+                                    //border: 1px solid green;
+                                };
+                            };
+                        };  
+                    };
+    
+                    &:hover { 
+                        flex: 2;
+    
+                        figure{
+                            video { 
+                                filter: saturate(100%);
+                            };
+                        };
+                    };
+                };
+    
+            };
+    
+            .visualPop { 
+                width: 100%;
+                height: 1500px;
+                //padding: 20px 0;
+                border: 1px solid#000;
+                z-index: 2;
+                position: absolute;
+                top: 0px;
+                left: -100%;
+                transition: 1s;
+                background: #fff;
+                //display: none;
+    
+                &.on { 
+                    left : 0%;
+                };
+    
+                figure{
+                    width: 100%;
+                    height: 560px;
+    
+                    video { 
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                    };
+                };
+    
+                .conTxt{
+                    //border: 1px solid orange;
+                    position: relative;
+                    padding: 50px;
+                    bottom: -100%;
+                    transition: 2s;
+                    //display: none;
+                    &.on { 
+                        bottom : 0%;
+                    };
+                    h1 { 
+                        @include conLineTitle($fontSize:20px, $fontWeight:700, $mb:30px, $mt: 20px);
+                    };
+                    p { 
+                        font: 13px/2 'Open Sans';
+                    };
+                    span { 
+                        @include viewMore();
+                        text-align: right;
+                        cursor: pointer;
+                        position: absolute;
+                        bottom: 0px;
+                        right: 50px;
+                    }
+                };
+            };
+        };
+    };
 
     /* vision------------------------------------ */
     #vision_main {

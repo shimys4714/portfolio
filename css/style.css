@@ -630,13 +630,14 @@ body {
     #header_sub .inner .menuMo {
       width: 100%;
       height: 100vh;
-      background: #D9D5D2;
+      background: #d9d5d29a;
       position: fixed;
       top: 0;
       left: -100%;
       z-index: 10;
       transition: all 0.8s;
-      padding: 35px 30px; }
+      padding: 35px 30px;
+      backdrop-filter: blur(8px); }
       #header_sub .inner .menuMo h1 {
         padding-bottom: 30px; }
         #header_sub .inner .menuMo h1 a {
@@ -3025,13 +3026,14 @@ body {
     #header .inner .menuMo {
       width: 100%;
       height: 100vh;
-      background: #D9D5D2;
+      background: #d9d5d29a;
       position: fixed;
       top: 0;
       left: -100%;
       z-index: 10;
       transition: all 0.8s;
-      padding: 35px 30px; }
+      padding: 35px 30px;
+      backdrop-filter: blur(8px); }
       #header .inner .menuMo h1 {
         padding-bottom: 30px; }
         #header .inner .menuMo h1 a {
@@ -3086,7 +3088,8 @@ body {
   #visual_main > .inner {
     width: 100%;
     height: 100%;
-    margin: 0px auto; }
+    margin: 0px auto;
+    padding-bottom: 100px; }
     #visual_main > .inner .visualWrap {
       width: 100%;
       display: flex;
@@ -3123,7 +3126,8 @@ body {
           display: flex;
           flex-direction: row;
           justify-content: space-between;
-          align-content: center; }
+          align-content: center;
+          padding: 20px; }
           #visual_main > .inner .visualWrap article .visualTxt > span {
             display: block;
             width: 30%;
@@ -3161,12 +3165,14 @@ body {
             filter: saturate(100%); }
     #visual_main > .inner .visualPop {
       width: 100%;
-      height: 100%;
+      height: 1500px;
+      border: 1px solid #000;
       z-index: 2;
       position: absolute;
       top: 0px;
       left: -100%;
-      transition: 1s; }
+      transition: 1s;
+      background: #fff; }
       #visual_main > .inner .visualPop.on {
         left: 0%; }
       #visual_main > .inner .visualPop figure {
@@ -3230,21 +3236,35 @@ body {
 
 /* vision------------------------------------ */
 #vision_main {
-  width: 100%;
-  padding: 100px 0; }
+  width: 100%; }
   #vision_main .inner {
     width: 1180px;
     height: 100%;
     margin: 0px auto;
-    position: relative; }
+    position: relative;
+    border-top: 2px solid #000;
+    padding: 50px; }
+    #vision_main .inner > .pic {
+      position: absolute;
+      top: 150px;
+      left: 60px; }
+      #vision_main .inner > .pic img {
+        width: 100px; }
+    #vision_main .inner > .pic2 {
+      position: absolute;
+      bottom: 150px;
+      right: 60px; }
+      #vision_main .inner > .pic2 > img {
+        width: 100px;
+        transform: rotate(180deg); }
     #vision_main .inner h1 {
       font: bold 30px/2 'Playfair Display';
-      padding: 100px; }
+      padding: 150px 100px;
+      text-align: center; }
 
 /* about------------------------------------ */
 #about_main {
-  width: 100%;
-  padding-bottom: 200px; }
+  width: 100%; }
   #about_main > .inner {
     width: 1180px;
     height: 100%;
@@ -3253,7 +3273,8 @@ body {
     border-top: 2px solid #000;
     display: flex;
     justify-content: space-between;
-    flex-direction: row; }
+    flex-direction: row;
+    padding-bottom: 100px; }
     #about_main > .inner .title {
       display: flex;
       justify-content: flex-start;
@@ -3265,8 +3286,8 @@ body {
       #about_main > .inner .title > .icon {
         width: 90px;
         height: 90px;
-        transform: rotate(0deg);
-        background-image: url(../img/arrow3.png);
+        transform: rotate(225deg);
+        background-image: url(../img/arrowIcon.svg);
         background-position: center;
         background-size: cover; }
     #about_main > .inner .wrap {
@@ -3502,8 +3523,7 @@ body {
 
 /* news------------------------------------ */
 #news_main {
-  width: 100%;
-  padding-bottom: 200px; }
+  width: 100%; }
   #news_main .inner {
     width: 1180px;
     height: 100%;
@@ -3512,7 +3532,8 @@ body {
     border-top: 2px solid #000;
     display: flex;
     justify-content: space-between;
-    flex-direction: row; }
+    flex-direction: row;
+    padding-bottom: 100px; }
     #news_main .inner .wrap {
       width: 65%;
       position: relative; }
@@ -3590,8 +3611,8 @@ body {
       #news_main .inner .title .icon {
         width: 90px;
         height: 90px;
-        transform: rotate(0deg);
-        background-image: url(../img/arrow31.png);
+        transform: rotate(-45deg);
+        background-image: url(../img/arrowIcon.svg);
         background-position: center;
         background-size: cover; }
       #news_main .inner .title h1 {
@@ -3604,7 +3625,6 @@ body {
 /* banner------------------------------------ */
 #banner_main {
   width: 100%;
-  padding: 150px 0px;
   background: #444;
   background-image: url(../img/mainBanner.jpg);
   background-repeat: no-repeat;
@@ -3615,6 +3635,7 @@ body {
   #banner_main .inner {
     width: 1180px;
     margin: 0px auto;
+    padding: 150px 0px;
     text-align: center; }
     #banner_main .inner h1 {
       font: bold 30px "Cormorant Garamond";
@@ -3653,8 +3674,8 @@ body {
       #contact_main .inner .title .icon {
         width: 90px;
         height: 90px;
-        transform: rotate(0deg);
-        background-image: url(../img/arrow3.png);
+        transform: rotate(225deg);
+        background-image: url(../img/arrowIcon.svg);
         background-position: center;
         background-size: cover; }
     #contact_main .inner .wrap {
@@ -3988,10 +4009,142 @@ body {
 
   /* visual--------------------------------- */
   #visual_main {
-    height: calc(100vh - 101px);
-    padding: 0px 30px; }
-    #visual_main .inner {
-      width: 100%; }
+    padding: 0px 0px; }
+    #visual_main > .inner .visualWrap.on {
+      transform: translateX(2000px); }
+    #visual_main > .inner .visualWrap article {
+      width: 25%;
+      height: 800px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-content: center;
+      flex: 1;
+      transition: all 1s;
+      cursor: pointer; }
+      #visual_main > .inner .visualWrap article figure {
+        width: 100%;
+        height: 70%;
+        transition: 1s; }
+        #visual_main > .inner .visualWrap article figure video {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          transition: 1s;
+          filter: saturate(30%); }
+      #visual_main > .inner .visualWrap article .visualTxt {
+        width: 100%;
+        height: 30%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-content: center;
+        padding: 20px; }
+        #visual_main > .inner .visualWrap article .visualTxt > span {
+          display: block;
+          width: 30%;
+          font: bold 60px/1 'Playfair Display';
+          color: #D9D5D2;
+          padding: 0 20px 0 0; }
+        #visual_main > .inner .visualWrap article .visualTxt .conTxt {
+          display: flex;
+          flex-direction: column;
+          justify-content: flex-start;
+          position: relative; }
+          #visual_main > .inner .visualWrap article .visualTxt .conTxt > h2 {
+            font: 20px/1.3 'Cormorant Garamond';
+            font-weight: 700;
+            margin-top: 15px; }
+          #visual_main > .inner .visualWrap article .visualTxt .conTxt > p {
+            width: 100%;
+            padding: 10px 20px 10px 0px;
+            font: 13px/1.5 'Open Sans';
+            color: #000;
+            text-align: left; }
+          #visual_main > .inner .visualWrap article .visualTxt .conTxt > a .icon {
+            width: 40px;
+            height: 40px;
+            transform: rotate(180deg);
+            background-image: url(../img/arrowIcon.svg);
+            background-position: center;
+            background-size: cover;
+            position: absolute;
+            bottom: 10px;
+            right: 0; }
+      #visual_main > .inner .visualWrap article:hover {
+        flex: 2; }
+        #visual_main > .inner .visualWrap article:hover figure video {
+          filter: saturate(100%); }
+    #visual_main > .inner .visualPop {
+      width: 100%;
+      height: 1500px;
+      border: 1px solid #000;
+      z-index: 2;
+      position: absolute;
+      top: 0px;
+      left: -100%;
+      transition: 1s;
+      background: #fff; }
+      #visual_main > .inner .visualPop.on {
+        left: 0%; }
+      #visual_main > .inner .visualPop figure {
+        width: 100%;
+        height: 560px; }
+        #visual_main > .inner .visualPop figure video {
+          width: 100%;
+          height: 100%;
+          object-fit: cover; }
+      #visual_main > .inner .visualPop .conTxt {
+        position: relative;
+        padding: 50px;
+        bottom: -100%;
+        transition: 2s; }
+        #visual_main > .inner .visualPop .conTxt.on {
+          bottom: 0%; }
+        #visual_main > .inner .visualPop .conTxt h1 {
+          font: bold 20px "Cormorant Garamond";
+          font-weight: 700;
+          color: #000;
+          letter-spacing: 2px;
+          text-align: left;
+          margin-bottom: 30px;
+          margin-top: 20px; }
+          #visual_main > .inner .visualPop .conTxt h1::after {
+            content: "";
+            display: block;
+            width: 100%;
+            height: 1px;
+            background: #555;
+            margin-top: 10px; }
+        #visual_main > .inner .visualPop .conTxt p {
+          font: 13px/2 'Open Sans'; }
+        #visual_main > .inner .visualPop .conTxt span {
+          font: 13px/1 'Open Sans';
+          color: #111;
+          width: 100px;
+          display: block;
+          opacity: 0.8;
+          transition: 0.5s;
+          margin-top: 20px;
+          text-align: right;
+          cursor: pointer;
+          position: absolute;
+          bottom: 0px;
+          right: 50px; }
+          #visual_main > .inner .visualPop .conTxt span::after {
+            content: "";
+            display: block;
+            width: 0%;
+            height: 1px;
+            background-color: #555;
+            transition: 0.5s;
+            margin-top: 5px; }
+          #visual_main > .inner .visualPop .conTxt span:hover::after {
+            content: "";
+            display: block;
+            width: 100%;
+            height: 1px;
+            background-color: #555; }
 
   /* vision------------------------------------ */
   #vision_main {

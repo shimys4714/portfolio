@@ -18,7 +18,7 @@ for(let el of items){
         let vidSrc = e.currentTarget.querySelector("video").getAttribute("src");
 
         asidePop.querySelector("h1").innerText = tit;
-        asidePop.querySelector("p").innerText = txt;
+        //asidePop.querySelector("p").innerText = txt;
         asidePop.querySelector("video").setAttribute("src", vidSrc);
         asidePop.querySelector("video").play();
         frame.classList.add("on");
